@@ -5,12 +5,14 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import configureStore from './store';
+import csrfFetch, { restoreCSRF } from './store/csrf';
 
 
 const store = configureStore();
 
 if (process.env.NODE_ENV !== 'production') {
   window.store = store;
+  window.csrfFetch = csrfFetch;
 }
 
 function Root() {
@@ -23,10 +25,17 @@ function Root() {
   );
 }
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Root />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const renderApplication = () => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <Root />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+}
 
+if (sessionStorage.getItem("X-CSRF-Token") === null){
+  restoreCSRF().then(renderApplication);
+} else {
+  renderApplication();
+}
