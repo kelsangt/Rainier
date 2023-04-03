@@ -94,11 +94,11 @@ function LoginFormPage() {
             </div>
 
             <div id="welcomeDiv">
-                <p>New to Amazon?</p>
+                <p>New to Rainier?</p>
             </div>
             <div id="creationDiv">
                 <NavLink to="/signup">
-                    <button id="accountCreation">Create your Amazon account</button>
+                    <button id="accountCreation">Create your Rainier account</button>
                 </NavLink>
             </div>
         </div>
