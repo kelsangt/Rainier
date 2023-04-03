@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: rainier_production
-  username: rainier
-  password: <%= ENV["RAINIER_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
