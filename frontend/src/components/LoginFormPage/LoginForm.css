@@ -1,0 +1,119 @@
+#signInButton {
+    background-color: rgb(240, 193, 75);
+    border-color: #a88734 #9c7e31 #846a29;
+    font-family: Amazon Ember Regular;
+    width: 294px;
+    height: 29px;
+    margin-bottom: 20px;
+    border: 1px rgb(132, 106, 41);
+}
+
+.credential {
+    font-family: Amazon Ember;
+    font-size: 13px;
+}
+
+.password {
+    font-family: Amazon Ember;
+    font-size: 13px;
+}
+#credentialInput {
+    display: flex;
+    margin-bottom: 20px;
+    width: 280px;
+    height: 23px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid rgb(166, 166, 166);
+}
+
+#passwordInput {
+    display: flex;
+    margin-bottom: 20px;
+    width: 280px;
+    height: 23px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid rgb(166, 166, 166);
+
+}
+
+#loginMainDiv{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    padding: 40px;
+}
+
+#loginSubDiv {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    align-items: center;
+}
+
+#signInH3 {
+    display: flex;
+    width: 200px;
+    font-family: Amazon Ember;
+    font-size: 28px;
+    padding-bottom: 20px;
+    margin: 20px;
+}
+
+.amazonlogo {
+    display: flex;
+    width: 160px;
+    height: 90px;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+}
+
+#welcomeDiv {
+    display: flex;
+    justify-content: center;
+    font-family: Amazon Ember Regular;
+    color: #767676;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+#creationDiv {
+    display: flex;
+    justify-content: center;
+}
+
+#accountCreation {
+    font-family: Amazon Ember Regular;
+    color: black;
+    background-color: #e7e9ec;
+    width: 327px;
+    height: 29px;
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    padding-left: 11px;
+    padding-right: 10px;
+    margin-top: 20px;
+}
+
+#demoDiv {
+    display: flex;
+    justify-content: center;
+}
+
+#demoLoginButton {
+    font-family: Amazon Ember Regular;
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 100px;
+    border: 1px solid gray;
+}
+
+
+

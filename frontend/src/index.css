@@ -1,1 +1,19 @@
 /* TODO Add site wide styles */
+
+@font-face {
+    font-family: "Amazon Ember";
+    src: url('./font/Amazon-Ember-Medium.ttf')
+}
+
+@font-face {
+    font-family: "Amazon Ember Regular";
+    src: url('./font/AmazonEmber_Rg.ttf')
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}

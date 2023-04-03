@@ -16,7 +16,7 @@ function Navigation() {
     links = (
       <>
         <NavLink to="/login">Log In</NavLink>
-        <NavLink to="/signup">Sign Up</NavLink>
+        {/* <NavLink to="/signup">Sign Up</NavLink> */}
       </>
     );
   }
