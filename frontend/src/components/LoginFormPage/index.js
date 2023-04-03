@@ -33,12 +33,12 @@ function LoginFormPage() {
     }
 
     return (
-        <form class="LoginFormPage" onSubmit={submitProcessor}>
+        <form className="LoginFormPage" onSubmit={submitProcessor}>
         <ul>
             {errors.map(error => <li key={error}>{error}</li>)}
         </ul>
-        <div class= "div1">  
-          <label class="credential">
+        <div className= "div1">  
+          <label className="credential">
               Email
               <input
               type="text"
@@ -48,8 +48,8 @@ function LoginFormPage() {
               />
           </label>
         </div>
-        <div class="div2">
-          <label class="password">
+        <div className="div2">
+          <label className="password">
               Password
               <input
               type="password"
@@ -59,8 +59,8 @@ function LoginFormPage() {
               />
           </label>
         </div>
-        <div class="div3">
-          <button class="button" type="submit">Log In</button>
+        <div className="div3">
+          <button className="button" type="submit">Log In</button>
         </div>
 
         </form>

@@ -36,12 +36,12 @@ function SignupFormPage() {
   };
 
   return (
-    <div class= "form1"> 
+    <div className= "form1"> 
         <form onSubmit={submitProcessor}>
         <ul>
             {errors.map(error => <li key={error}>{error}</li>)}
         </ul>
-        <div class="signupEmail">
+        <div className="signupEmail">
             <label>
                 Email
                 <input
@@ -52,7 +52,7 @@ function SignupFormPage() {
                 />
             </label>
         </div>
-        <div class="signupName">
+        <div className="signupName">
             <label>
                 Name
                 <input
@@ -63,7 +63,7 @@ function SignupFormPage() {
                 />
             </label>
         </div>
-        <div class="signupPassword">
+        <div className="signupPassword">
             <label>
                 Password
                 <input
@@ -74,7 +74,7 @@ function SignupFormPage() {
                 />
             </label>
         </div>
-        <div class="signupConfirm">
+        <div className="signupConfirm">
             <label>
                 Confirm Password
                 <input
@@ -85,8 +85,8 @@ function SignupFormPage() {
                 />
             </label>
         </div>
-        <div class="signupButton">
-            <button class="signupButton2" type="submit">Sign Up</button>
+        <div className="signupButton">
+            <button className="signupButton2" type="submit">Sign Up</button>
         </div>
         </form>
     </div>
