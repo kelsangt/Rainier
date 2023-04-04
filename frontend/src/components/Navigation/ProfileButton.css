@@ -1,0 +1,23 @@
+#profileButtonMainDiv {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 150px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+#usersName {
+    color: white;
+}
+
+#usersEmail {
+    color: white;
+}
+
+#profileButton {
+    background-color: #0F1111;
+    color: white;
+    border: none;
+    font-family: Amazon Ember Regular;
+}

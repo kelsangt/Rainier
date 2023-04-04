@@ -8,9 +8,9 @@
 
 .navAmazonlogo {
     display: flex;
-    width: 130px;
-    height: 30px;
-    margin-top: 15px;
+    width: 120px;
+    height: 25px;
+    margin-top: 20px;
     margin-left: 10px;
 }
 
@@ -37,27 +37,49 @@
     height: 40px;
     width: 120px;
     font-size: 12px;
-    margin-left: 30px;
+    margin-left: 40px;
     margin-top: 5px;
 }
 
 #categoriesSelector {
-    height: 34px;
+    text-align: center;
+    height: 37px;
     margin-left: 30px;
     font-family: Amazon Ember Regular;
+    background-color: #e7e9ec;;
+    border: none;
+    outline-color: orange;
 }
+
 
 
 #searchBar {
-    width: 500px;
+    /* margin: auto; */
+    /* width: 800px;
+    min-width: 800px; */
+    min-width: 800px;
+    overflow: auto;
+    height: 20px;
     padding-top: 7px;
     padding-bottom: 10px;
+    padding-left: 10px;
     font-family: Amazon Ember Regular;
+    outline-color: orange;
+    border: 1px ;
 }
+
 #searchBarDiv {
-   
+    display: flex;
+    width: 800px;
+    margin-top: 10px;
+    /* width: auto; */
+}
+
+#categoryDiv {
+    display: flex;
     margin-top: 10px;
 }
+
 
 
 .magnifyingGlassIcon {
@@ -72,8 +94,70 @@
     flex-direction: column;
     align-items: center;
     background-color: white;
-    height: 34px;
-    width: 30px;
-    margin-top: 11px;
+    height: 37px;
+    width: 40px;
+    margin-top: 10px;
     background-color: orange;
+    outline-color: orange;
 }
+
+#shoppingCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
+    margin-left: 30px;
+}
+
+.cartImage {
+    width: 30px;
+}
+
+#cartText {
+    color: white;
+    font-family: Amazon Ember Regular;
+    font-weight: lighter;
+    height: 5px;
+    font-size: 14px;
+    margin-left: 3px;
+}
+
+#profileDiv {
+    display: flex;
+    height: 30px;
+    margin-left: 10px;
+}
+
+#returnsOrders {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 50px;
+    font-family: Amazon Ember Regular;
+    font-size: 14px;
+}
+
+/* For Nav's Lower Components */
+
+#navMainDivLower {
+ 
+    display: flex;
+    justify-content: center;
+    background-color: #232f3e;
+    width: 100%;
+    height: 40px;
+    
+}
+
+#toysCategory, #clothesCategory {
+    /* background-color: white; */
+    color: white;
+    font-family: Amazon Ember Regular;
+    margin-right: 20px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
