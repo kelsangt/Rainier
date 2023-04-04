@@ -53,11 +53,15 @@ function LoginFormPage() {
                 </NavLink>
             </div>
             <div id="loginSubDiv">
-                <h3 id="signInH3">Sign In</h3>
+                <div id="signInHeader">
+                    <h3 id="signInH3">Sign In</h3>
+                </div>
                 <form className="LoginFormPage" onSubmit={submitProcessor}>
-                <ul>
-                    {errors.map(error => <li key={error}>{error}</li>)}
-                </ul>
+                <div id="loginErrorsDiv">
+                    <ul id="loginErrors">
+                        {errors.map(error => <li id="loginError" key={error}>{error}</li>)}
+                    </ul>
+                </div>
                 <div className= "div1">  
                 <label className="credential">
                     Email

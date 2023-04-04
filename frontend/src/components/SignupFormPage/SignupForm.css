@@ -7,9 +7,13 @@
 #signupSubDiv {
     display: flex;
     flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
     border: 1px solid #ddd;
     align-items: center;
     padding: 20px;
+    margin: auto;
+    width: 450px;
 }
 
 #createAccountHeader {
@@ -19,12 +23,15 @@
 }
 
 #signupError {
+    display: flex;
     font-family: Amazon Ember Regular;
     font-size: 13px;
     color: red;
 }
 
 #errors {
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
 }
 
@@ -39,6 +46,8 @@
     font-family: Amazon Ember Medium;
     font-weight: bolder;
     font-size: 13px;
+    width: 280px;
+    height: 23px;
 }
 
 
@@ -53,7 +62,11 @@
     padding-bottom: 3px;
     border: 1px solid rgb(166, 166, 166);
     margin-top: 5px;
+    font-family: Amazon Ember Regular;
+    outline-color: orange;
 }
+
+
 
 
 

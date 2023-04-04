@@ -34,7 +34,7 @@ function SignupFormPage() {
         else setErrors([res.statusText]);
       });
     }
-    return setErrors(['Confirm Password field must be the same as the Password field']);
+    return setErrors(['Passwords must match']);
   };
 
   return (
@@ -60,6 +60,7 @@ function SignupFormPage() {
                     <input
                     id="signupNameInput"
                     type="text"
+                    placeholder="First and last name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
@@ -84,6 +85,7 @@ function SignupFormPage() {
                     <input
                     id="signupPasswordInput"
                     type="password"
+                    placeholder="At least 6 characters"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required

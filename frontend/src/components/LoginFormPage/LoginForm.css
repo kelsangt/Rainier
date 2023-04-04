@@ -18,7 +18,7 @@
     font-size: 13px;
 }
 
-#credentialInput {
+#credentialInput, #passwordInput {
     display: flex;
     margin-bottom: 20px;
     width: 280px;
@@ -28,19 +28,18 @@
     padding-top: 3px;
     padding-bottom: 3px;
     border: 1px solid rgb(166, 166, 166);
+    margin-top: 5px;
+    outline-color: orange;
 }
 
-#passwordInput {
-    display: flex;
-    margin-bottom: 20px;
-    width: 280px;
-    height: 23px;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border: 1px solid rgb(166, 166, 166);
+#loginError {
+    font-family: Amazon Ember Regular;
+    font-size: 13px;
+    color: red;
+}
 
+#loginErrorsDiv {
+    margin-bottom: 15px;
 }
 
 #loginMainDiv{
@@ -55,15 +54,22 @@
     flex-direction: column;
     border: 1px solid #ddd;
     align-items: center;
+    width: 350px;
+    height: 340px;
 }
 
+#signInHeader {
+    display: flex;
+    
+}
 #signInH3 {
     display: flex;
     width: 200px;
     font-family: Amazon Ember;
     font-size: 28px;
     padding-bottom: 20px;
-    margin: 20px;
+    margin-top: 20px;
+    /* margin: 20px; */
 }
 
 .amazonlogo {
@@ -112,7 +118,8 @@
     font-family: Amazon Ember Regular;
     margin-bottom: 20px;
     padding: 5px;
-    width: 100px;
+    width: 294px;
+    height: 29px;
     border: 1px solid gray;
 }
 
