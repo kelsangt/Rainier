@@ -1,0 +1,17 @@
+.signupMainDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+#signupSubDiv {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    align-items: center;
+}
+
+#createAccountHeader {
+    font-family: Amazon Ember Regular;
+    font-size: 28px;
+}

@@ -47,11 +47,10 @@ function LoginFormPage() {
     return (
         
         <div id="loginMainDiv">
-            <div id="logo">
+            <div id="signupLogo">
                 <NavLink to="/">  
                     <img src={logo} alt="amazonlogo" className="amazonlogo" /> 
                 </NavLink>
-                
             </div>
             <div id="loginSubDiv">
                 <h3 id="signInH3">Sign In</h3>
