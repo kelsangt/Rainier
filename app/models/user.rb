@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :name, presence: true 
   validates :email, length: { in: 3..255 }
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
-  validates :password, length: { in: 6..255 }, allow_nil: true 
+  validates :password, length: { in: 6..255 }, allow_nil: true
 
   def self.find_by_credentials(credential, password)
     if URI::MailTo::EMAIL_REGEXP.match(credential)

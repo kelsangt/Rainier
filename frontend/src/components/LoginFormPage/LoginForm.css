@@ -45,8 +45,9 @@
 #loginMainDiv{
     display: flex;
     flex-direction: column;
-    /* border: 1px solid black; */
-    padding: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 #loginSubDiv {
@@ -60,7 +61,7 @@
 
 #signInHeader {
     display: flex;
-    
+    width: 300px;
 }
 #signInH3 {
     display: flex;
@@ -99,6 +100,7 @@
 
 #accountCreation {
     font-family: Amazon Ember Regular;
+    font-weight: lighter;
     color: black;
     background-color: #e7e9ec;
     width: 327px;
