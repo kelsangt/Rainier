@@ -72,7 +72,7 @@ function SignupFormPage() {
                     Email
                     <input
                     id="signupCredentialInput"
-                    type="text"
+                    type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required

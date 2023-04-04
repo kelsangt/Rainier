@@ -67,7 +67,7 @@ function LoginFormPage() {
                     Email
                     <input
                     id="credentialInput"
-                    type="text"
+                    type="email"
                     value={credential}
                     onChange={(e) => setCredential(e.target.value)}
                     required
