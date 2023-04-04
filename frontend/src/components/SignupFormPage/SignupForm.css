@@ -9,9 +9,60 @@
     flex-direction: column;
     border: 1px solid #ddd;
     align-items: center;
+    padding: 20px;
 }
 
 #createAccountHeader {
     font-family: Amazon Ember Regular;
     font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#signupError {
+    font-family: Amazon Ember Regular;
+    font-size: 13px;
+    color: red;
+}
+
+#errors {
+    margin-bottom: 10px;
+}
+
+
+#signupLogo {
+    display: flex;
+    justify-content: center;
+}
+
+
+#signupNameLabel, #signupCredentialLabel, #signupPasswordLabel, #signupConfirmLabel {
+    font-family: Amazon Ember Medium;
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+
+#signupNameInput, #signupCredentialInput, #signupPasswordInput, #signupConfirmInput {
+    display: flex;
+    margin-bottom: 20px;
+    width: 280px;
+    height: 23px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid rgb(166, 166, 166);
+    margin-top: 5px;
+}
+
+
+
+.signupButton2 {
+    background-color: rgb(240, 193, 75);
+    border-color: #a88734 #9c7e31 #846a29;
+    font-family: Amazon Ember Regular;
+    width: 294px;
+    height: 29px;
+    margin-bottom: 20px;
+    border: 1px rgb(132, 106, 41);
 }

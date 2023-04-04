@@ -49,13 +49,16 @@ function SignupFormPage() {
                 <h1>Create Account</h1>
             </div>
             <form onSubmit={submitProcessor}>
-            <ul>
-                {errors.map(error => <li key={error}>{error}</li>)}
-            </ul>
+            <div id="errors">
+                <ul id="signupErrors">
+                    {errors.map(error => <li id="signupError" key={error}>{error}</li>)}
+                </ul>
+            </div>
             <div className="signupName">
-                <label>
+                <label id="signupNameLabel">
                     Your name
                     <input
+                    id="signupNameInput"
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -64,9 +67,10 @@ function SignupFormPage() {
                 </label>
             </div>
             <div className="signupEmail">
-                <label>
+                <label id="signupCredentialLabel">
                     Email
                     <input
+                    id="signupCredentialInput"
                     type="text"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -75,9 +79,10 @@ function SignupFormPage() {
                 </label>
             </div>
             <div className="signupPassword">
-                <label>
+                <label id="signupPasswordLabel">
                     Password
                     <input
+                    id="signupPasswordInput"
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
@@ -86,9 +91,10 @@ function SignupFormPage() {
                 </label>
             </div>
             <div className="signupConfirm">
-                <label>
+                <label id="signupConfirmLabel">
                     Re-enter password
                     <input
+                    id="signupConfirmInput"
                     type="password"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
