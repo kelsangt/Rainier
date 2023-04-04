@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
-import logo from '../../images/amazonlogo.png';
 import logo2 from '../../images/amazonlogo2.png';
 import magnifyingGlass from '../../images/magnifying_glass.png';
 import './Navigation.css';

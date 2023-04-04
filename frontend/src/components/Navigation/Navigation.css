@@ -1,5 +1,6 @@
 #navMainDiv {
     display: flex;
+    justify-content: center;
     background-color: #0F1111;
     width: 100%;
     height: 60px;
@@ -41,7 +42,9 @@
 }
 
 #categoriesSelector {
-    margin-left: 20px;
+    height: 34px;
+    margin-left: 30px;
+    font-family: Amazon Ember Regular;
 }
 
 
@@ -49,6 +52,7 @@
     width: 500px;
     padding-top: 7px;
     padding-bottom: 10px;
+    font-family: Amazon Ember Regular;
 }
 #searchBarDiv {
    
