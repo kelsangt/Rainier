@@ -2,6 +2,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
+import logo from '../../images/amazonlogo.png';
+import logo2 from '../../images/amazonlogo2.png';
+import magnifyingGlass from '../../images/magnifying_glass.png';
 import './Navigation.css';
 
 function Navigation() {
@@ -10,24 +13,44 @@ function Navigation() {
   let links;
   if (sessionUser) {
     links = (
-      <ProfileButton user={sessionUser} />
+        <div id="profileDiv">
+            <ProfileButton user={sessionUser} />
+        </div>
     );
   } else {
     links = (
-      <>
-        <NavLink to="/login">Log In</NavLink>
-        {/* <NavLink to="/signup">Sign Up</NavLink> */}
-      </>
+        <>
+        <div id="signInDiv">
+            <NavLink to="/login">
+               <p id="signInDivText">Hello, sign in <br></br>Account & Lists</p>
+            </NavLink>
+        </div>
+        </>
     );
   }
 
   return (
-    <ul>
-      <li>
-        <NavLink exact to="/">Rainier</NavLink>
+    <div id="navMainDiv">
+        <div id="navLogo">
+            <NavLink exact to="/">  
+                <img src={logo2} alt="navAmazonlogo" className="navAmazonlogo" /> 
+            </NavLink>
+        </div>
+        <div id="searchBarDiv">
+            <select name="categoriesSelector" id="categoriesSelector">
+                <option value="toysGames">Toys & Games</option> 
+                <option value="clothing">Clothing</option> 
+            </select>
+            <input id="searchBar" type="text" placeholder="Search Rainier"></input>
+        </div>
+        <div id="magnifyingGlassDiv">
+            <NavLink exact to="/">
+                <img src={magnifyingGlass} alt="magnifyingGlassIcon" className="magnifyingGlassIcon" /> 
+            </NavLink>
+        </div>
         {links}
-      </li>
-    </ul>
+        
+    </div>
   );
 }
 
