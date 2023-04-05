@@ -24,7 +24,7 @@ function ProfileModal({user}) {
                     <div id="modalOpenedDiv">
                         <div id="signOutEntryButtonContainer">
                             <NavLink to="/login" style={{textDecoration: 'none'}}>
-                                <button id="signOutEntryButton" onClick={logout}>Sign Out</button>
+                                <div id="signOutEntryButton" onClick={logout}>Sign Out</div>
                             </NavLink>
                         </div>   
                     </div>
