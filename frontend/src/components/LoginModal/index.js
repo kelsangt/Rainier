@@ -1,0 +1,34 @@
+import React, {useState} from 'react';
+import { Modal } from '../../context/Modal';
+import './LoginModal.css';
+import { NavLink } from 'react-router-dom';
+
+
+function LoginModal() {
+    const [displayModal, setDisplayModal] = useState(false);
+
+    return (
+        <>  
+        <div id="loginModalDiv">
+            <div id="modalEntryDiv" onMouseOver={()=> {setDisplayModal(true)}}>Hello, sign in <br></br> Account & Lists </div>
+            {displayModal && (
+                <Modal whenClosing={() => setDisplayModal(false)}>
+                    <div id="modalOpenedDiv">
+                        <div id="signInEntryButtonContainer">
+                            <NavLink to="/login" style={{textDecoration: 'none'}}>
+                                <div id="signInEntryButton">
+                                    Sign In
+                                </div>
+                            </NavLink>
+                        </div>   
+                    </div>
+                    
+                </Modal>
+            )}
+        </div>
+        </>
+    )
+}
+
+export default LoginModal
+

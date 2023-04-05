@@ -24,7 +24,8 @@
     display: flex;
     background-color: #0F1111;
     height: 40px;
-    width: 120px;
+    width: 100px;
+    margin-left: 30px;
     margin-top: 10px;
     justify-content: center;
 }

@@ -1,10 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import ProfileButton from './ProfileButton';
+// import ProfileButton from './ProfileButton';
 import logo2 from '../../images/amazonlogo2.png';
 import cart from '../../images/cart.png'
 import magnifyingGlass from '../../images/magnifying_glass.png';
+import LoginModal from '../LoginModal/index'
+import ProfileModal from '../ProfileModal/index'
 import './Navigation.css';
 
 function Navigation() {
@@ -14,9 +16,10 @@ function Navigation() {
   if (sessionUser) {
     links = (
         <>
-        <div id="profileDiv">
+        {/* <div id="profileDiv">
             <ProfileButton user={sessionUser} />
-        </div>
+        </div> */}
+        <ProfileModal user={sessionUser}/>
         <NavLink to="/" style={{textDecoration: 'none'}}>
             <div id="returnsOrders">
                 <p>Returns <br></br> & Orders</p>
@@ -33,11 +36,12 @@ function Navigation() {
   } else {
     links = (
         <>
-        <div id="signInDiv">
+        <LoginModal />
+        {/* <div id="signInDiv">
             <NavLink to="/login" style={{textDecoration: 'none'}}>
                <p id="signInDivText">Hello, sign in <br></br>Account & Lists</p>
             </NavLink>
-        </div>
+        </div> */}
         <NavLink to="/login" style={{textDecoration: 'none'}}>
             <div id="returnsOrders">
                 <p>Returns <br></br> & Orders</p>

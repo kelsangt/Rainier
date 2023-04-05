@@ -1,14 +1,14 @@
-#profileMainDiv {
+/* #profileMainDiv { */
     /* display: flex;
     justify-content: center;
     flex-direction: column; */
-    position: relative;
+    /* position: relative;
     width: 150px;
     margin-right: 20px;
-    margin-top: 20px;
-}
+    margin-top: 20px; */
+/* } */
 
-#usersName {
+/* #usersName {
     color: white;
 }
 
@@ -25,4 +25,4 @@
 
 #profileAndDropdown {
     background-color: aqua;
-}
+} */
