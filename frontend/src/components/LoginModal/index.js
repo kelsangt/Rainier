@@ -20,6 +20,9 @@ function LoginModal() {
                                     Sign In
                                 </div>
                             </NavLink>
+                            <NavLink to="/signup" style={{textDecoration: 'none'}}>
+                                <p id="newCustomer">New customer? Start here.</p>
+                            </NavLink>
                         </div>   
                     </div>
                     

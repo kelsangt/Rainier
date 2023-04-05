@@ -38,3 +38,12 @@
     /* margin-bottom: 20px; */
     border: 1px rgb(132, 106, 41);
 }
+
+#newCustomer {
+    display: flex;
+    justify-content: center;
+    font-family: Amazon Ember Regular;
+    font-size: 13px;
+    margin-top: 10px;
+    color: blue;
+}
