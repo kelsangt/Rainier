@@ -21,9 +21,9 @@ function ProfileButton({ user }) {
       setDisplayMenu(false);
     };
 
-    document.addEventListener('click', hideMenu);
+    document.addEventListener('mouseover', hideMenu);
   
-    return () => document.removeEventListener("click", hideMenu);
+    return () => document.removeEventListener("mouseover", hideMenu);
   }, [displayMenu]);
 
   const logout = (e) => {
@@ -34,7 +34,7 @@ function ProfileButton({ user }) {
   return (
     <>
     <div id="profileButtonMainDiv">
-      <button id="profileButton" onClick={menuProcessor}>
+      <button id="profileButton" onMouseOver={menuProcessor}>
         <div>Hello, {user.name}</div>
       </button>
       {displayMenu && (

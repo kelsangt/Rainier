@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     background-color: #0F1111;
+    position: relative;
     width: 100%;
     height: 60px;
 }
@@ -113,6 +114,7 @@
 
 .cartImage {
     width: 30px;
+    margin-left: 10px;
 }
 
 #cartText {
@@ -148,11 +150,11 @@
     justify-content: center;
     background-color: #232f3e;
     width: 100%;
-    height: 40px;
+    height: 35px;
     
 }
 
-#toysCategory, #clothesCategory {
+#toysCategory, #clothingCategory, #booksCategory, #electronicsCategory, #homeGoodsCategory {
     /* background-color: white; */
     color: white;
     font-family: Amazon Ember Regular;

@@ -67,6 +67,9 @@ function Navigation() {
                 <option value="all">All</option> 
                 <option value="toysGames">Toys & Games</option> 
                 <option value="clothing">Clothing</option> 
+                <option value="books">Books</option> 
+                <option value="electronics">Electronics</option> 
+                <option value="homeGoods">Home Goods</option> 
             </select>
         </div>
         <div id="searchBarDiv">
@@ -84,14 +87,29 @@ function Navigation() {
     <div id="navMainDivLower">   
         <NavLink exact to="/" style={{textDecoration: 'none'}}>  
             <div id="toysCategory">
-                Toys 
+                Toys & Games
             </div>
         </NavLink>   
         <NavLink exact to="/" style={{textDecoration: 'none'}}>  
-            <div id="clothesCategory">
-                Clothes
+            <div id="clothingCategory">
+                Clothing
             </div>
         </NavLink>   
+        <NavLink exact to="/" style={{textDecoration: 'none'}}>  
+            <div id="booksCategory">
+                Books
+            </div>
+        </NavLink>  
+        <NavLink exact to="/" style={{textDecoration: 'none'}}>  
+            <div id="electronicsCategory">
+                Electronics
+            </div>
+        </NavLink>  
+        <NavLink exact to="/" style={{textDecoration: 'none'}}>  
+            <div id="homeGoodsCategory">
+                Home Goods
+            </div>
+        </NavLink>  
     </div>
     </>
   );
