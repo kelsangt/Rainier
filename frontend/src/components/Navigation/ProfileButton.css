@@ -1,12 +1,11 @@
-#profileButtonMainDiv {
+#profileMainDiv {
     /* display: flex;
     justify-content: center;
     flex-direction: column; */
     position: relative;
     width: 150px;
-    /* margin-right: 20px; */
+    margin-right: 20px;
     margin-top: 20px;
-
 }
 
 #usersName {
@@ -17,9 +16,13 @@
     color: white;
 }
 
-#profileButton {
+#profileDiv {
     background-color: #0F1111;
     color: white;
     border: none;
     font-family: Amazon Ember Regular;
+}
+
+#profileAndDropdown {
+    background-color: aqua;
 }

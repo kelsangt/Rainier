@@ -33,23 +33,27 @@ function ProfileButton({ user }) {
 
   return (
     <>
-    <div id="profileButtonMainDiv">
-      <button id="profileButton" onMouseOver={menuProcessor}>
+    <div id="profileMainDiv" onMouseOver={menuProcessor}>
+      <div id="profileDiv" >
         <div>Hello, {user.name}</div>
-      </button>
-      {displayMenu && (
-        <ul className="profile-dropdown">
-          <li>
-            <p id="usersName">{user.name}</p>
-          </li>
-          <li>
-            <p id="usersEmail">{user.email}</p>
-          </li>
-          <li>
-            <button onClick={logout}>Log Out</button>
-          </li>
-        </ul>
-      )}
+      </div>
+      <div id="profileAndDropdown" onMouseOver={menuProcessor}>
+        {displayMenu && (
+          <div id="profileDropdown" >
+            <ul className="profile-dropdown">
+              <li>
+                <p id="usersName">{user.name}</p>
+              </li>
+              <li>
+                <p id="usersEmail">{user.email}</p>
+              </li>
+              <li>
+                <button onClick={logout}>Log Out</button>
+              </li>
+            </ul>
+          </div>
+        )}
+      </div>
     </div>
     </>
   );
