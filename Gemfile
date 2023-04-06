@@ -51,6 +51,9 @@ group :development do
   # gem "spring"
   gem "annotate"
   gem "pry-rails"
+
+  gem "aws-sdk-s3"
+  
   gem "better_errors"
   gem "binding_of_caller"
 end

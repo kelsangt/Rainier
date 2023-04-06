@@ -28,6 +28,7 @@ class User < ApplicationRecord
   end 
 
 
+
   private 
 
   def generate_unique_session_token

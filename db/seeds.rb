@@ -9,9 +9,11 @@
 ApplicationRecord.transaction do 
     puts "Destroying tables..."
     User.destroy_all
+    Product.destroy_all
   
     puts "Resetting primary keys..."
     ApplicationRecord.connection.reset_pk_sequence!('users')
+    ApplicationRecord.connection.reset_pk_sequence!('products')
   
     puts "Generating users..."
     User.create!(
@@ -27,6 +29,11 @@ ApplicationRecord.transaction do
         password: 'password'
       }) 
     end
+
+    puts "Creating Products"
+    capybaraPlush = Product.create!(name: "Capybara Plush", category: "Toys & Games", price: 19.99, description: "The best plush in the world!")
+    legoSet = Product.create!(name: "Lego set", category: "Toys & Games", price: 49.99, description: "Building blocks that are fun")
+    underArmourSneakers = Product.create!(name: "Underarmour Sneakers", category: "Clothing", price: 149.99, description: "Very comfortable white sneakers")
   
     puts "Done!"
   end
