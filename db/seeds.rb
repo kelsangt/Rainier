@@ -1,3 +1,5 @@
+require "open-uri"
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -6,7 +8,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-ApplicationRecord.transaction do 
+# ApplicationRecord.transaction do 
     puts "Destroying tables..."
     User.destroy_all
     Product.destroy_all
@@ -32,8 +34,15 @@ ApplicationRecord.transaction do
 
     puts "Creating Products"
     capybaraPlush = Product.create!(name: "Capybara Plush", category: "Toys & Games", price: 19.99, description: "The best plush in the world!")
-    legoSet = Product.create!(name: "Lego set", category: "Toys & Games", price: 49.99, description: "Building blocks that are fun")
-    underArmourSneakers = Product.create!(name: "Underarmour Sneakers", category: "Clothing", price: 149.99, description: "Very comfortable white sneakers")
+    legoCrane = Product.create!(name: "Lego Mobile Crane", category: "Toys & Games", price: 39.99, description: "Mobile Crane Toy")
+    lotr = Product.create!(name: "Lord of the Rings", category: "Books", price: 24.99, description: "Enter a fantasy world with every page of this book!")
+    ps5 = Product.create!(name: "Playstation 5", category: "Toys & Games", price: 499.99, description: "A fun gaming console")
+
+
+    capybaraPlush.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/capybara_plush.jpeg"), filename: "capybara_plush.jpeg")
+    ps5.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/ps5.jpeg"), filename: "ps5.jpeg")
+    legoCrane.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/legoCrane.jpg"), filename: "legoCrane.jpg")
+    lotr.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/lotr.jpeg"), filename: "lotr.jpeg")
   
     puts "Done!"
-  end
+  # end

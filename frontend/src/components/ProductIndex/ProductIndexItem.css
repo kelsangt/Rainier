@@ -1,4 +1,14 @@
 #productIndex {
-    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 300px;
+    border: 1px solid gray;
     margin: 10px;
+    font-family: Amazon Ember Regular;
+}
+
+#indexImage {
+    height: 200px;
 }
