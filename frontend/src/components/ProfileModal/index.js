@@ -18,18 +18,17 @@ function ProfileModal({user}) {
     return (
         <>  
         <div id="profileModalDiv">
-            <div id="modalEntryDiv" onMouseOver={()=> {setDisplayModal(true)}}>Hello, {user.name}</div>
-            {displayModal && (
-                <Modal whenClosing={() => setDisplayModal(false)}>
-                    <div id="modalOpenedDiv">
-                        <div id="signOutEntryButtonContainer">
-                            <NavLink to="/login" style={{textDecoration: 'none'}}>
-                                <div id="signOutEntryButton" onClick={logout}>Sign Out</div>
-                            </NavLink>
-                        </div>   
-                    </div>
-                </Modal>
-            )}
+            <div id="modalEntryDiv" onMouseOver={()=> {setDisplayModal(true)}}>Hello, {user.name} <br></br> Account & Lists
+                {displayModal && (
+                    <Modal whenClosing={() => setDisplayModal(false)}>
+                            <div id="signOutEntryButtonContainer">
+                                <NavLink to="/login" style={{textDecoration: 'none'}}>
+                                    <div id="signOutEntryButton" onClick={logout}>Sign Out</div>
+                                </NavLink>
+                            </div>      
+                    </Modal>
+                )}
+            </div>
         </div>
         </>
     )

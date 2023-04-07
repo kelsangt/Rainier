@@ -11,9 +11,11 @@
 
 #modalEntryDiv {
     color: white;
+    display: flex;
+    justify-content: center;
 }
 
-#modalOpenedDiv {
+/* #modalOpenedDiv {
     position: relative;
     display: flex;
     justify-content: center;
@@ -23,7 +25,9 @@
     height: 300px;
     top: -260px;
     left: 500px;
-}
+} */
+
+
 
 #signInEntryButton {
     display: flex;
@@ -35,7 +39,6 @@
     height: 29px;
     margin-top: 20px;
     padding-top: 10px;
-    /* margin-bottom: 20px; */
     border: 1px rgb(132, 106, 41);
 }
 

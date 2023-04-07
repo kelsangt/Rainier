@@ -28,13 +28,13 @@ export function Modal({ whenClosing, children }){
     
     if(!modalActual) return null;
 
-    return ReactDOM.createPortal(
+    return (
         <div id="modal">
             <div id="backgroundModal"  />
             <div id="contentModal" onMouseLeave={whenClosing}>           
                 {children}
             </div>
-        </div>,
-        modalActual 
+        </div>
+        // modalActual 
     )
 }

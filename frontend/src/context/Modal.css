@@ -1,12 +1,12 @@
 #modal {
-    position: fixed;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 0;
+    /* top: 0;
     right: 0;
     left: 0;
-    bottom: 0;
+    bottom: 0; */
 }
 
 #backgroundModal {
@@ -20,6 +20,14 @@
 }
 
 #contentModal {
+    display: flex;
+    justify-content: center;
     position: absolute;
+    z-index: 100;
+    top: 150%;
+    width: 400px;
+    height: 300px;
+    background-color: white;
+   
     /* background-color: white; */
 }

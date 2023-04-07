@@ -1,8 +1,9 @@
 import { useState } from "react"
+import './ProductIndexItem.css'
 
 const ProductIndexItem = (({product}) => {
     return (
-        <div key={product.id}>
+        <div id="productIndex" key={product.id}>
             <ul>
                 <li>
                     <h3>

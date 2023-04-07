@@ -8,12 +8,11 @@ function LoginModal() {
     const [displayModal, setDisplayModal] = useState(false);
 
     return (
-        <>  
+         
         <div id="loginModalDiv">
-            <div id="modalEntryDiv" onMouseOver={()=> {setDisplayModal(true)}}>Hello, sign in <br></br> Account & Lists </div>
-            {displayModal && (
-                <Modal whenClosing={() => setDisplayModal(false)}>
-                    <div id="modalOpenedDiv">
+            <div id="modalEntryDiv" onMouseOver={()=> {setDisplayModal(true)}}>Hello, sign in <br></br> Account & Lists 
+                {displayModal && (
+                    <Modal whenClosing={() => setDisplayModal(false)}>
                         <div id="signInEntryButtonContainer">
                             <NavLink to="/login" style={{textDecoration: 'none'}}>
                                 <div id="signInEntryButton">
@@ -23,13 +22,12 @@ function LoginModal() {
                             <NavLink to="/signup" style={{textDecoration: 'none'}}>
                                 <p id="newCustomer">New customer? Start here.</p>
                             </NavLink>
-                        </div>   
-                    </div>
-                    
-                </Modal>
-            )}
+                        </div>        
+                    </Modal>
+                )}
+            </div>
         </div>
-        </>
+        
     )
 }
 

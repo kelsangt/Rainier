@@ -11,9 +11,11 @@
 
 #modalEntryDiv {
     color: white;
+    display: flex;
+    justify-content: center;
 }
 
-#modalOpenedDiv {
+/* #modalOpenedDiv {
     position: relative;
     display: flex;
     justify-content: center;
@@ -23,7 +25,7 @@
     height: 300px;
     top: -260px;
     left: 500px;
-}
+} */
 
 #signOutEntryButton {
     display: flex;
