@@ -4,6 +4,7 @@ import LoginFormPage from './components/LoginFormPage';
 import SignupFormPage from './components/SignupFormPage';
 import Navigation from './components/Navigation';
 import ProductIndex from './components/ProductIndex';
+import ProductShow from './components/ProductShow';
 
 
 function App() {
@@ -13,7 +14,10 @@ function App() {
         <Route exact path="/">
           <Navigation />
           <ProductIndex />
-          
+        </Route>
+        <Route path="/products/:productId">
+          <Navigation />
+          <ProductShow />
         </Route>
         <Route path="/login">
           <LoginFormPage />
