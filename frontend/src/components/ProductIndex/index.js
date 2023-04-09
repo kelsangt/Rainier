@@ -10,7 +10,7 @@ const ProductIndex = props => {
 
     useEffect(()=>{
         dispatch(fetchAllProducts())
-    }, []);
+    }, [dispatch]);
 
    
     return(

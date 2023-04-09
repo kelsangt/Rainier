@@ -11,10 +11,6 @@ function App() {
   return (
     <>
       <Switch>
-        <Route exact path="/">
-          <Navigation />
-          <ProductIndex />
-        </Route>
         <Route path="/products/:productId">
           <Navigation />
           <ProductShow />
@@ -24,6 +20,10 @@ function App() {
         </Route>
         <Route path="/signup">
           <SignupFormPage />
+        </Route>
+        <Route path="/">
+          <Navigation />
+          <ProductIndex />
         </Route>
       </Switch>
     </>

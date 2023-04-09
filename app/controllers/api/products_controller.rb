@@ -12,4 +12,5 @@ class Api::ProductsController < ApplicationController
             render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
         end 
     end 
+
 end 

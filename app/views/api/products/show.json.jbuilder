@@ -1,3 +1,2 @@
-json.set! @product.id do 
-    json.extract! @product, :name, :category, :price, :description
-end
+json.extract! @product, :id, :name, :category, :price, :description
+json.photoUrl url_for(@product.image) if @product.image.attached?    
