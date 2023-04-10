@@ -6,6 +6,11 @@
     height: 29px;
     margin-bottom: 20px;
     border: 1px rgb(132, 106, 41);
+    cursor: pointer;
+}
+
+#signInButton:hover {
+    background-color: rgb(228, 184, 72)
 }
 
 .credential {
@@ -109,6 +114,11 @@
     padding-left: 11px;
     padding-right: 10px;
     margin-top: 20px;
+    cursor: pointer;
+}
+
+#accountCreation:hover {
+    background-color: #d7d5d5;
 }
 
 #demoDiv {
@@ -123,6 +133,11 @@
     width: 294px;
     height: 29px;
     border: 1px solid gray;
+    cursor: pointer;
+}
+
+#demoLoginButton:hover {
+    background-color: #d7d5d5;
 }
 
 

@@ -82,4 +82,9 @@
     height: 29px;
     margin-bottom: 20px;
     border: 1px rgb(132, 106, 41);
+    cursor: pointer;
+}
+
+.signupButton2:hover {
+    background-color: rgb(227, 183, 72);
 }
