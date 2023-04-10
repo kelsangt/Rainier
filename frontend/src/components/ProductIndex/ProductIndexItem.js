@@ -1,8 +1,15 @@
 // import { useState } from "react"
 import './ProductIndexItem.css'
 import primeLogo from '../../images/primeLogo.png'
+import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 
 const ProductIndexItem = (({product}) => {
+    const { categoryName } = useParams();
+
+    if(product.category !== categoryName){
+        return null;
+    }
+    
     return (
         <div id="productIndex" key={product.id}>
             <a id="productShowAnchor" href={`/products/${product.id}`}>

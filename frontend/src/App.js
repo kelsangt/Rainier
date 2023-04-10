@@ -11,6 +11,10 @@ function App() {
   return (
     <>
       <Switch>
+        <Route exact path="/products/category/:categoryName">
+          <Navigation />
+          <ProductIndex />
+        </Route>
         <Route path="/products/:productId">
           <Navigation />
           <ProductShow />
