@@ -48,6 +48,7 @@ const ProductShow = () => {
                 <h1 id="productPrice2">${product.price}</h1>
                 <span id="freeReturns">FREE Returns</span>
                 <span id="freeDelivery">FREE delivery</span>
+                <span id="inStock">In Stock</span>
                 <div id="quantityDiv">
                     <span id="quantity">Qty:</span>
                     <select name="quantitySelector" id="quantitySelector">
@@ -61,6 +62,23 @@ const ProductShow = () => {
 
                 <button id="addToCart">Add to Cart</button>
                 <button id="buyNow">Buy Now</button>
+                <div id="paymentDiv">
+                    <span id="payment">Payment</span>
+                    <a href="/" id="secureTransaction">Secure transaction</a>
+                </div>
+                <div id="shipsFromDiv">
+                    <span id="shipsFrom">Ships from</span>
+                    <span id="rainierSiteLink">Rainier.com</span>
+                </div>
+                <div id="soldByDiv">
+                    <span id="soldBy">Sold by</span>
+                    <span id="rainierSiteLink">Rainier.com</span>
+                </div>
+                <div id="returnsDiv">
+                    <span id="returns">Returns</span>
+                    <a href="/" id="eligibleForReturn">Eligible for Return</a>
+                </div>
+                
             </div>
         </div>
         </>

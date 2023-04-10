@@ -89,7 +89,7 @@ function Navigation() {
         {links}
     </div>
     <div id="navMainDivLower">   
-        <NavLink exact to="/" style={{textDecoration: 'none'}}>  
+        <NavLink exact to="/products/category/toysgames" style={{textDecoration: 'none'}}>  
             <div id="toysCategory">
                 Toys & Games
             </div>
@@ -99,7 +99,7 @@ function Navigation() {
                 Clothing
             </div>
         </NavLink>   
-        <NavLink exact to="/" style={{textDecoration: 'none'}}>  
+        <NavLink exact to="/products/category/books" style={{textDecoration: 'none'}}>  
             <div id="booksCategory">
                 Books
             </div>
