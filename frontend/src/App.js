@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Switch>
-        <Route exact path="/products/category/:categoryName">
+        <Route exact path="/categories/:categoryName">
           <Navigation />
           <ProductIndex />
         </Route>

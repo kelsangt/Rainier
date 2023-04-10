@@ -16,7 +16,7 @@ const ProductIndex = props => {
     return(
         <>
         <div id="fillerDiv"></div>
-        <div >
+        <div id="productsIndexDiv">
             <ul id="productsIndexList" className='productsList'>
                 {products.map((product) =>{
                     return (

@@ -80,11 +80,47 @@ require "open-uri"
       Lightning Speed - Harness the power of a custom CPU, GPU, and SSD with Integrated I/O that rewrite the rules of what a PlayStation console can do"
     )
 
+    lgMonitor = Product.create!(
+      name: "LG FHD 27-Inch Computer Monitor 27MK600M-B, IPS with AMD FreeSync, Black",
+      category: "electronics",
+      price: 199.99,
+      description: "Versatile, color-calibrated monitor delivers shorter response times, improved color reproduction, and wider viewing angles with IPS (In-Plane Switching) technology.
+      A sleek addition to any desktop, this monitor's ultra-thin bezel creates a virtually borderless visual experience to reduce distractions from the on-screen image.
+      With supported video cards such as the AMD Radeon series, AMD FreeSync manages refresh rate, reducing screen tearing, flicker, and stuttering for an effortlessly smooth gaming experience.
+      Reader Mode provides optimal conditions for reading by reducing blue light to lessen eye fatigue. Make adjustments via On-Screen control with a few clicks of your mouse.
+      Dynamic Action Sync helps reduce input lag to help you respond to on-screen action quickly. Black Stabilizer dynamically brightens dark scenes to help you find enemies in the dark. Enhance your accuracy in firefights with the Crosshair feature.
+      60 hertz"
+    )
+
+    lgTv = Product.create!(
+      name: "LG C2 Series 42-Inch Class OLED evo Smart TV OLED42C2PUA, 2022 - AI-Powered 4K TV, Alexa Built-in",
+      category: "electronics",
+      price: 999.99,
+      description: "Experience amazing, beautiful picture quality with infinite contrast, deep black, and over a billion colors, now even brighter*, thanks to LG's 8 million self-lit OLED pixels.
+      Engineered exclusively for LG, the α9 Gen 5 AI Processor 4K adapts to the content you're watching, automatically adjusting the TV's settings for improved picture and sound quality.
+      Eliminate unnecessary processing with movies and preserve the action the way film directors intend with Filmmaker Mode, and enhance every moment of your viewing experience with Dolby Vision IQ and Dolby Atmos**.
+      LG Game Optimizer mode with NVIDIA G-SYNC, FreeSync Premium, and Variable Refresh Rate (VRR) improve your gaming experience with fluid on-screen motion. Game Optimizer manages your game settings all in one place.
+      Mount it on the wall with a 300 x 200 VESA mount (sold separately). Magic Remote with Magic Tap, remote control batteries (AA), power cable, wall mount, and quick start guide are included. TV stand sold separately.
+      Welcome to the Gallery - Transform your home into a more artful space with the all-new, contemporary LG OLED design that leaves virtually no gap when you hang it on the wall***"
+    )
+
+    percyJacksonSet = Product.create!(
+      name: "Percy Jackson and the Olympians Hardcover Boxed Set (Percy Jackson & the Olympians) ",
+      category: "books",
+      price: 89.99,
+      description: "The complete Percy Jackson & the Olympians series in hardcover. A perfect gift for Percy fans, as well as readers just discovering this epic and blockbuster adventure.
+      At last the wait is over! All five books in the blockbuster Percy Jackson and the Olympus series, in hardcover, have been collected in a box fit for demigods. This beautiful set includes 
+      the best-selling The Lightning Thief, The Sea of Monsters, The Titan's Curse, The Battle of the Labyrinth, and The Last Olympians. Whether it is for readers who are experiencing Percy's thrilling 
+      adventures with Greek gods and monsters for the first time or for fans who want to devour the saga again, this gift will be prized by young and old"
+    )
 
     capybaraPlush.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/capybara_plush.jpeg"), filename: "capybara_plush.jpeg")
     ps5.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/ps5.jpeg"), filename: "ps5.jpeg")
     legoCrane.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/legoCrane.jpg"), filename: "legoCrane.jpg")
     lotr.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/lotr.jpeg"), filename: "lotr.jpeg")
-  
+    lgMonitor.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/lgMonitor.png"), filename: "lgMonitor.png")
+    lgTv.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/lgTv.png"), filename: "lgTv.png")
+    percyJacksonSet.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/percyJacksonSet.png"), filename: "percyJacksonSet.png")
+
     puts "Done!"
   # end
