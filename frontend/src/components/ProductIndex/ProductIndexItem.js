@@ -5,13 +5,16 @@ import primeLogo from '../../images/primeLogo.png'
 const ProductIndexItem = (({product}) => {
     return (
         <div id="productIndex" key={product.id}>
-            <div id="indexImageDiv">
-                <img id="indexImage" src={product.photoUrl} alt=""/>
-            </div>
-            
-            <h1 id="indexProductName">
-                {product.name}
-            </h1>
+            <a id="productShowAnchor" href={`/products/${product.id}`}>
+                <div id="indexImageDiv">
+                    <img id="indexImage" src={product.photoUrl} alt=""/>
+                </div>
+            </a>
+            <a id="productShowAnchor" href={`/products/${product.id}`}>
+                <h1 id="indexProductName">
+                    {product.name}
+                </h1>
+            </a>
             <h1 id="indexProductReview">
                 Ratings 
             </h1>

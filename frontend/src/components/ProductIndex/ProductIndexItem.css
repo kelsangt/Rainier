@@ -46,3 +46,12 @@
     height: 15px;
     margin-left: 5px;
 }
+
+#productShowAnchor {
+    color: black;
+    text-decoration: none;
+}
+
+#productShowAnchor:hover {
+    color: #ffa41c;
+}

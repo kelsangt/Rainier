@@ -36,7 +36,7 @@ require "open-uri"
 
     capybaraPlush = Product.create!(
       name: "Capybara Stuffed Animal,Realistic Capybara Plush Lovely 7'' Stuffed Capybara, Capybara Gifts for Kids Adults", 
-      category: "Toys & Games", 
+      category: "ToysGames", 
       price: 15.99, 
       description: "Soft Material ---This lovely capybara stuffed animal is made of plush and PP cotton, which makes the doll soft and smooth to the touch, fluffy and elastic, strong resilience and not easy to deform.
       Capybara Gifts ---This stuffed capybara has really cute design and excellent workmanship, it's can be a great gift for your friends, family or colleagues,and your lovely girls boys will definitely love this 7'' small stuffed animals.
@@ -48,7 +48,7 @@ require "open-uri"
 
     legoCrane = Product.create!(
       name: "LEGO City Great Vehicles Mobile Crane Truck Toy, 60324 Construction Vehicle Model Building Kit with Tool Toys", 
-      category: "Toys & Games", 
+      category: "ToysGames", 
       price: 39.99, 
       description: "This LEGO construction vehicle building set features a mobile toy crane with workable legs, boom and winch, on top of a 6-wheeled toy truck
       After driving the truck toy into position, kids can lower the crane's support legs, rotate and extend the boom and raise and lower the winch
@@ -74,7 +74,7 @@ require "open-uri"
 
     ps5 = Product.create!(
       name: "Playstation 5", 
-      category: "Toys & Games", 
+      category: "ToysGames", 
       price: 499.99, 
       description: "Model Number CFI-1215A01X
       Stunning Games - Marvel at incredible graphics and experience new PS5 features.
