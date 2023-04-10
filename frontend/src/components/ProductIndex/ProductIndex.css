@@ -2,10 +2,5 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    
 }
 
-#ps5image {
-    z-index: 1000;
-    background-color: aqua;
-}

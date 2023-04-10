@@ -1,0 +1,140 @@
+#fillerDiv {
+    height: 50px;
+    width: 100%;
+    background-color: gray;
+    opacity: 10%;
+    margin-bottom: 80px;
+}
+
+#showMainDiv {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: none;
+    width: 100%;
+    height: 100%;
+}
+
+#showImage {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#imageDiv {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 600px;
+    margin-right: 25px;
+}
+
+#descriptionDiv {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    width: 25%;
+}
+
+#productTitle {
+    font-family: Amazon Ember Regular;
+    line-height: 32px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#productRatings {
+    font-family: Amazon Ember Regular;
+    color: #ffa41c;
+    margin-bottom: 10px;
+}
+
+#lineSeparator {
+    height: 1px;
+    width: 100%;
+    background-color: #d5d9d9;
+    margin-bottom: 10px;
+}
+
+#productPrice1 {
+    font-family: Amazon Ember Regular;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#productDescription {
+    font-family: Amazon Ember Regular;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#transactionDiv {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d5d9d9;
+    font-family: Amazon Ember Regular;
+    width: 206px;
+    height: 500px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+#productPrice2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#freeReturns {
+    font-family: Amazon Ember Regular;
+    font-size: 14px;
+    color: #007185;
+    margin-bottom: 20px;
+}
+
+#freeDelivery {
+    font-family: Amazon Ember Regular;
+    font-size: 14px;
+    color: #007185;
+    margin-bottom: 20px;
+}
+
+#quantityDiv {
+    margin-bottom: 10px;
+}
+
+#quantity {
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+#quantitySelector {
+    background-color: #f0f2f2;
+    width: 50px;
+    border-radius: 5px;
+    outline-color: #08c6de;
+}
+
+#addToCart {
+    background-color: #ffd814;
+    border-color: #a88734 #9c7e31 #846a29;
+    font-family: Amazon Ember Regular;
+    width: 200px;
+    height: 35px;
+    border: 1px rgb(132, 106, 41);
+    cursor: pointer;
+    border-radius: 200px;
+    margin-bottom: 10px;
+}
+
+#buyNow {
+    background-color: #ffa41c;
+    border-color: #a88734 #9c7e31 #846a29;
+    font-family: Amazon Ember Regular;
+    width: 200px;
+    height: 35px;
+    border: 1px rgb(132, 106, 41);
+    cursor: pointer;
+    border-radius: 200px;
+}

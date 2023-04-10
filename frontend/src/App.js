@@ -15,6 +15,10 @@ function App() {
           <Navigation />
           <ProductShow />
         </Route>
+        <Route path="/products">
+          <Navigation />
+          <ProductIndex />
+        </Route>
         <Route path="/login">
           <LoginFormPage />
         </Route>
@@ -23,7 +27,6 @@ function App() {
         </Route>
         <Route path="/">
           <Navigation />
-          <ProductIndex />
         </Route>
       </Switch>
     </>

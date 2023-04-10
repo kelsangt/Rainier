@@ -3,6 +3,7 @@ import { fetchProduct, getProduct } from "../../store/products";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import './ProductShow.css'
 
 
 const ProductShow = () => {
@@ -18,10 +19,37 @@ const ProductShow = () => {
 
     return (
         <>
-        <div>
-            <h1>{product.name}</h1>
-            <img id="indexImage" src={product.photoUrl} alt=""/>
-            <h1>{product.price}</h1>
+        <div id="fillerDiv"></div>
+        <div id="showMainDiv">
+            <div id="imageDiv">
+                <img id="showImage" src={product.photoUrl} alt=""/>
+            </div>
+            <div id="descriptionDiv">
+                <h1 id="productTitle">{product.name}</h1>
+                <h1 id="productRatings">Ratings</h1>
+                <div id="lineSeparator"></div>
+                <h1 id="productPrice1">${product.price}</h1>
+                <span id="freeReturns">FREE Returns</span>
+                <p id="productDescription">{product.description}</p>
+            </div>
+            <div id="transactionDiv">
+                <h1 id="productPrice2">${product.price}</h1>
+                <span id="freeReturns">FREE Returns</span>
+                <span id="freeDelivery">FREE delivery</span>
+                <div id="quantityDiv">
+                    <span id="quantity">Qty:</span>
+                    <select name="quantitySelector" id="quantitySelector">
+                        <option value="one">1</option> 
+                        <option value="two">2</option> 
+                        <option value="three">3</option> 
+                        <option value="four">4</option> 
+                        <option value="five">5</option> 
+                    </select>
+                </div>
+
+                <button id="addToCart">Add to Cart</button>
+                <button id="buyNow">Buy Now</button>
+            </div>
         </div>
         </>
     )
