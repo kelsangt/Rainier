@@ -76,7 +76,7 @@ const ProductShow = () => {
                 </div>
                 <div id="returnsDiv">
                     <span id="returns">Returns</span>
-                    <a href="/" id="eligibleForReturn">Eligible for Return</a>
+                    <a href="/" id="eligibleForReturn">Eligible for Return, Refund or Replacement within 30 days of receipt</a>
                 </div>
                 
             </div>
