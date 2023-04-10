@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 const ProductIndexItem = (({product}) => {
     const { categoryName } = useParams();
 
-    if(product.category !== categoryName){
+    if((product.category !== categoryName) && (categoryName !== "all")){
         return null;
     }
     
