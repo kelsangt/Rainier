@@ -43,3 +43,7 @@
 #signOutEntryButton:hover {
     background-color: rgb(227, 183, 72);
 }
+
+#signOutEntryButton:active {
+    background-color: rgb(214, 173, 69);
+}

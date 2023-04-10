@@ -150,6 +150,10 @@
     background-color: #f5cf12;
 }
 
+#addToCart:active {
+    background-color: #dfbd15;
+}
+
 #buyNow {
     background-color: #ffa41c;
     border-color: #a88734 #9c7e31 #846a29;
@@ -163,6 +167,10 @@
 
 #buyNow:hover {
     background-color: #f39c1a;
+}
+
+#buyNow:active {
+    background-color: #e59319;
 }
 
 #paymentDiv {

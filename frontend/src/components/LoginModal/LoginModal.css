@@ -47,6 +47,10 @@
     background-color: rgb(227, 183, 72);
 }
 
+#signInEntryButton:active {
+    background-color: rgb(214, 173, 69);
+}
+
 #newCustomer {
     display: flex;
     justify-content: center;

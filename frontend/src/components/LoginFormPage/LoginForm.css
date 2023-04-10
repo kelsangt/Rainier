@@ -13,6 +13,10 @@
     background-color: rgb(228, 184, 72)
 }
 
+#signInButton:active {
+    background-color: rgb(215, 174, 69)
+}
+
 .credential {
     font-family: Amazon Ember;
     font-size: 13px;
@@ -121,6 +125,10 @@
     background-color: #d7d5d5;
 }
 
+#accountCreation:active {
+    background-color: #cac9c9;
+}
+
 #demoDiv {
     display: flex;
     justify-content: center;
@@ -138,6 +146,10 @@
 
 #demoLoginButton:hover {
     background-color: #d7d5d5;
+}
+
+#demoLoginButton:active {
+    background-color: #c2c0c0;
 }
 
 

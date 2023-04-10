@@ -88,3 +88,7 @@
 .signupButton2:hover {
     background-color: rgb(227, 183, 72);
 }
+
+.signupButton2:active {
+    background-color: rgb(216, 174, 69);
+}
