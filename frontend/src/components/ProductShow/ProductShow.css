@@ -61,10 +61,20 @@
     margin-bottom: 20px;
 }
 
-#productDescription {
+/* #productDescription {
     font-family: Amazon Ember Regular;
     font-size: 14px;
     line-height: 20px;
+} */
+
+#descriptionList {
+    list-style-type: disc;
+}
+
+#sentence {
+    font-family: Amazon Ember Regular;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 #transactionDiv {

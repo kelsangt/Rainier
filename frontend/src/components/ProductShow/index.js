@@ -10,12 +10,16 @@ const ProductShow = () => {
     const { productId } = useParams();
     const product = useSelector(getProduct(productId));
     const dispatch = useDispatch();
+    
+    
 
     useEffect(()=>{
         dispatch(fetchProduct(productId))
     }, [dispatch, productId])
 
     if(!product) return null;
+
+    const descriptionArray = product.description.split(".");
 
     return (
         <>
@@ -30,7 +34,15 @@ const ProductShow = () => {
                 <div id="lineSeparator"></div>
                 <h1 id="productPrice1">${product.price}</h1>
                 <span id="freeReturns">FREE Returns</span>
-                <p id="productDescription">{product.description}</p>
+                <ul id="descriptionList">
+                    {descriptionArray.map((sentence)=>{
+                        return (
+                            <li id="sentence">
+                                {sentence}
+                            </li>
+                        )
+                    })}
+                </ul>
             </div>
             <div id="transactionDiv">
                 <h1 id="productPrice2">${product.price}</h1>
