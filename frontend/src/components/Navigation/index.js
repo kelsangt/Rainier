@@ -25,7 +25,7 @@ function Navigation() {
                 <p>Returns <br></br> & Orders</p>
             </div>
         </NavLink>
-        <NavLink to="/" style={{textDecoration: 'none'}}>
+        <NavLink to="/cart" style={{textDecoration: 'none'}}>
             <div id="shoppingCart">
                 <img src={cart} alt="cartImage" className="cartImage" /> 
                 <p id="cartText">Cart</p>

@@ -5,6 +5,7 @@ import SignupFormPage from './components/SignupFormPage';
 import Navigation from './components/Navigation';
 import ProductIndex from './components/ProductIndex';
 import ProductShow from './components/ProductShow';
+import CartItemIndex from './components/CartItemIndex';
 
 
 function App() {
@@ -22,6 +23,10 @@ function App() {
         <Route path="/products">
           <Navigation />
           <ProductIndex />
+        </Route>
+        <Route path="/cart">
+            <Navigation />
+            <CartItemIndex />
         </Route>
         <Route path="/login">
           <LoginFormPage />

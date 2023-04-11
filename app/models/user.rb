@@ -27,7 +27,11 @@ class User < ApplicationRecord
     return session_token  
   end 
 
-
+  has_many :cart_items, 
+    primary_key: :id, 
+    foreign_key: :user_id, 
+    class_name: :CartItem, 
+    dependent: :destroy
 
   private 
 

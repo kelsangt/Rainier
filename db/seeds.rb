@@ -12,25 +12,27 @@ require "open-uri"
     puts "Destroying tables..."
     User.destroy_all
     Product.destroy_all
+    CartItem.destroy_all
   
     puts "Resetting primary keys..."
     ApplicationRecord.connection.reset_pk_sequence!('users')
     ApplicationRecord.connection.reset_pk_sequence!('products')
   
     puts "Generating users..."
+
     User.create!(
-      name: 'Demo-lition', 
+      name: 'Demo User', 
       email: 'demo@user.io', 
       password: 'password'
     )
   
-    10.times do 
-      User.create!({
-        name: Faker::Internet.unique.username(specifier: 3),
-        email: Faker::Internet.unique.email,
-        password: 'password'
-      }) 
-    end
+    # 10.times do 
+    #   User.create!({
+    #     name: Faker::Internet.unique.username(specifier: 3),
+    #     email: Faker::Internet.unique.email,
+    #     password: 'password'
+    #   }) 
+    # end
 
     puts "Creating Products"
 
@@ -121,6 +123,16 @@ require "open-uri"
     lgMonitor.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/lgMonitor.png"), filename: "lgMonitor.png")
     lgTv.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/lgTv.png"), filename: "lgTv.png")
     percyJacksonSet.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/percyJacksonSet.png"), filename: "percyJacksonSet.png")
+
+
+    puts "Creating Cart Items"
+    
+    testing1 = CartItem.create!(
+      product_quantity: 1,
+      user_id: 1,
+      product_id: 1
+    )
+
 
     puts "Done!"
   # end
