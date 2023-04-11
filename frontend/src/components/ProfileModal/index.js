@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Modal } from '../../context/Modal';
 import './ProfileModal.css';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import * as sessionActions from '../../store/session';
 import { useDispatch } from 'react-redux';
 
@@ -13,7 +13,7 @@ function ProfileModal({user}) {
     const logout = (e) => {
         e.preventDefault();
         dispatch(sessionActions.logout());
-      };
+    };
 
     return (
         <>  
@@ -22,9 +22,9 @@ function ProfileModal({user}) {
                 {displayModal && (
                     <Modal whenClosing={() => setDisplayModal(false)}>
                             <div id="signOutEntryButtonContainer">
-                                <NavLink to="/login" style={{textDecoration: 'none'}}>
+                                {/* <NavLink to="/" style={{textDecoration: 'none'}}> */}
                                     <div id="signOutEntryButton" onClick={logout}>Sign Out</div>
-                                </NavLink>
+                                {/* </NavLink> */}
                             </div>      
                     </Modal>
                 )}

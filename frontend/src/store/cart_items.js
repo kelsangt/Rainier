@@ -5,17 +5,17 @@ export const RETRIEVE_CART_ITEM = 'RETRIEVE_CART_ITEM'
 export const RETRIEVE_CART_ITEMS = 'RETRIEVE_CART_ITEMS'
 export const REMOVE_CART_ITEM = 'REMOVE_CART_ITEM'
 
-const retrieveCartItems = cart_items => {
+const retrieveCartItems = cartItems => {
     return {
         type: RETRIEVE_CART_ITEMS,
-        cart_items
+        cartItems
     }
 }
 
-const retrieveCartItem = cart_item => {
+const retrieveCartItem = cartItem => {
     return {
         type: RETRIEVE_CART_ITEM,
-        cart_item
+        cartItem
     }
 }
 
@@ -27,11 +27,11 @@ const removeCartItem = cartItemId => {
 }
 
 export const getCartItem = cartItemId => state => {
-    return state?.cart_items ? state.cart_items[cartItemId] : null;
+    return state?.cartItems ? state.cartItems[cartItemId] : null;
 }
 
 export const getCartItems = state => {
-    return state?.cart_items ? Object.values(state.cart_items) : [];
+    return state?.cartItems ? Object.values(state.cartItems) : [];
 }
 
 export const fetchAllCartItems = () => async dispatch => {
@@ -53,33 +53,33 @@ export const fetchCartItem = cartItemId => async (dispatch) => {
     }
 }
 
-export const createCartItem = cart_item => async (dispatch) => {
+export const createCartItem = cartItem => async (dispatch) => {
     const res = await csrfFetch('/api/cart_items/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(cart_item)
+        body: JSON.stringify(cartItem)
     });
 
     if(res.ok){
-        const cart_item = await res.json();
-        dispatch(retrieveCartItem(cart_item));
+        const cartItem = await res.json();
+        dispatch(retrieveCartItem(cartItem));
     }
 }
 
-export const updateCartItem = cart_item => async (dispatch) => {
-    const res = await csrfFetch(`/api/cart_items/${cart_item.id}`, {
+export const updateCartItem = cartItem => async (dispatch) => {
+    const res = await csrfFetch(`/api/cart_items/${cartItem.id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(cart_item)
+        body: JSON.stringify(cartItem)
     });
 
     if(res.ok){
-        const cart_item = await res.json();
-        dispatch(retrieveCartItem(cart_item));
+        const cartItem = await res.json();
+        dispatch(retrieveCartItem(cartItem));
     }
 }
 
@@ -96,9 +96,9 @@ export const deleteCartItem = cartItemId => async (dispatch) => {
 const cartItemReducer = (state ={}, action) => {
     switch(action.type){
         case RETRIEVE_CART_ITEMS:
-            return {...state, ...action.cart_items};
+            return {...state, ...action.cartItems};
         case RETRIEVE_CART_ITEM:
-            return { ...state, [action.cart_item.id]: action.cart_item };
+            return { ...state, [action.cartItem.id]: action.cartItem };
         case REMOVE_CART_ITEM:
             const newState = { ...state };
             delete newState[action.cartItemId];

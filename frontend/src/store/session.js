@@ -61,6 +61,7 @@ export const logout = () => async (dispatch) => {
     });
     storeCurrentUser(null);
     dispatch(removeUser());
+    window.location.reload();
     return res;
 };
 

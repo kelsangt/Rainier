@@ -1,0 +1,37 @@
+#cartItemIndex {
+    display: flex;
+    justify-content: center;
+    
+    width: 1000px
+    /* background-color: orange; */
+}
+
+#indexCartItemName {
+    font-family: Amazon Ember Regular;
+    font-size: 18px;
+}
+
+#indexCartItemPrice {
+    font-family: Amazon Ember Medium;
+    font-size: 18px;
+}
+
+#cartNameDiv {
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+#cartPriceDiv {
+    display: flex;
+    margin-top: 40px;
+}
+
+#cartItemLine {
+    background-color: #dddddd;
+    /* width: 100%; */
+    height: 1px;
+    margin-bottom: 20px;
+}

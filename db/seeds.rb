@@ -25,6 +25,12 @@ require "open-uri"
       email: 'demo@user.io', 
       password: 'password'
     )
+
+    User.create!(
+      name: 'Cat', 
+      email: 'cat@cat.net', 
+      password: 'catword'
+    )
   
     # 10.times do 
     #   User.create!({
@@ -131,6 +137,18 @@ require "open-uri"
       product_quantity: 1,
       user_id: 1,
       product_id: 1
+    )
+
+    testing2 = CartItem.create!(
+      product_quantity: 3,
+      user_id: 2,
+      product_id: 3
+    )
+
+    testing3 = CartItem.create!(
+      product_quantity: 2,
+      user_id: 1,
+      product_id: 4
     )
 
 

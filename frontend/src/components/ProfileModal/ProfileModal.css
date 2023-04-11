@@ -39,6 +39,7 @@
     padding-top: 10px;
     border: 1px rgb(132, 106, 41);
     color: black;
+    cursor: pointer;
 }
 
 #signOutEntryButton:hover {

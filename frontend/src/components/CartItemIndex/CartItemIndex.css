@@ -1,6 +1,77 @@
+/* #cartItemsIndexDiv {
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+    width: 100%;
+}
+
 #cartItemsIndexList {
     display: flex;
     justify-content: center;
     align-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
+    background-color: wheat;
+    font-family: Amazon Ember Regular;
+    width: 100%;
 }
+
+#shoppingCart {
+    font-size: 28px;
+}
+
+#cartItem {
+    width: 100%;
+} */
+
+#cartItemsIndexDiv {
+    display: flex;
+    justify-content: center;
+    background-color: #eaeded;
+    width: 100%;
+}
+
+#cartItemsIndexDivInner {
+    display: flex;
+    /* justify-content: center; */
+    background-color: white;
+    padding: 30px;
+    height: 1000px;
+   
+    /* width: 80%; */
+}
+
+#titleAndPrice {
+    /* display: flex; */
+    width: 1000px;
+}
+
+#cartTitle {
+    display: flex;
+    width: 100px;
+    font-family: Amazon Ember Regular; 
+    font-size: 22px
+}
+
+
+
+#priceTitle {
+    display: flex;
+    justify-content: right;
+    font-family: Amazon Ember Regular;
+    color: #565959;
+    /* background-color: yellow; */
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+#checkoutDiv {
+    display: flex;
+    background-color: blueviolet;
+    margin-left: 20px;
+}
+
+
