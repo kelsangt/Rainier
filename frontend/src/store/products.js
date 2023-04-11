@@ -3,7 +3,7 @@ import csrfFetch from "./csrf";
 export const RETRIEVE_PRODUCTS = 'RETRIEVE_PRODUCTS'
 export const RETRIEVE_PRODUCT = 'RETRIEVE_PRODUCT'
 
-const retrieveProducts = products => {
+export const retrieveProducts = products => {
     return {
         type: RETRIEVE_PRODUCTS,
         products 

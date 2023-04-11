@@ -6,8 +6,8 @@ import { getCartItems } from '../../store/cart_items';
 import './CartItemIndex.css'
 
 const CartItemIndex = props => {
-    const cart_items = useSelector(getCartItems);
-    // const cart_items = useSelector(state => Object.values(state.cart_items))
+    // const cart_items = useSelector(getCartItems);
+    const cart_items = useSelector(state => Object.values(state.cart_items))
     const dispatch = useDispatch();
 
     useEffect(()=>{

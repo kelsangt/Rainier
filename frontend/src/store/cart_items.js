@@ -1,4 +1,5 @@
 import csrfFetch from "./csrf";
+import { retrieveProducts } from "./products";
 
 export const RETRIEVE_CART_ITEM = 'RETRIEVE_CART_ITEM'
 export const RETRIEVE_CART_ITEMS = 'RETRIEVE_CART_ITEMS'
@@ -38,7 +39,8 @@ export const fetchAllCartItems = () => async dispatch => {
 
     if(res.ok){
         const data = await res.json()
-        dispatch(retrieveCartItems(data))
+        dispatch(retrieveCartItems(data.cartItems))
+        dispatch(retrieveProducts(data.products))
     }
 }
 
