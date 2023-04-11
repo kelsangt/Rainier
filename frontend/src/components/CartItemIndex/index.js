@@ -41,10 +41,18 @@ const CartItemIndex = props => {
                             </li>
                         )
                     })}
+                    <div id="subtotalPrice">
+                        <h1>Subtotal: </h1>
+                    </div>  
                 </ul>
             </div>
             <div id="checkoutDiv">
-                Cart Total
+                <div id="subtotalCheckout">
+                    <h1>Subtotal: </h1>
+                </div>
+                <div>
+                    <button id="checkoutButton">Proceed to Checkout</button>
+                </div>
             </div>
         </div>
         </>

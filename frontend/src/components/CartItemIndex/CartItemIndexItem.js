@@ -31,8 +31,18 @@ const CartItemIndexItem = (({cartItem})=> {
             </div>
             {/* <h2>
                 Qty: {cartItem.productQuantity}
-            </h2> */}
-            
+            </h2> */}   
+        </div>
+        <div id="infoDiv">Qty: 
+            <select name="quantitySelectorCart" id="quantitySelectorCart">
+                        <option value="one">1</option> 
+                        <option value="two">2</option> 
+                        <option value="three">3</option> 
+                        <option value="four">4</option> 
+                        <option value="five">5</option> 
+            </select>
+            <a id="deleteLink" href="/login">| Delete |</a>
+            {/* <a href="/login">Save For Later</a> */}
         </div>
         <div id="cartItemLine"></div>
         </>

@@ -31,7 +31,27 @@
 
 #cartItemLine {
     background-color: #dddddd;
-    /* width: 100%; */
     height: 1px;
     margin-bottom: 20px;
+}
+
+#infoDiv {
+    display: flex;
+    /* background-color: aqua; */
+    width: 400px;
+    position: relative;
+    font-family: Amazon Ember Regular;
+    left: 310px;
+    top: -100px;
+}
+
+#deleteLink {
+    font-family: Amazon Ember Regular;
+    margin-right: 20px;
+    font-size: 12px;
+}
+
+#quantitySelectorCart {
+    margin-right: 20px;
+    margin-left: 5px;
 }

@@ -8,7 +8,7 @@ class Api::CartItemsController < ApplicationController
     def create 
         @cart_item = CartItem.new(cart_item_params)
         if @cart_item.save 
-            render :index 
+            # render :index 
         else 
             render json: @cart_item.errors.full_messages, status: unprocessable_entity
         end
@@ -28,7 +28,7 @@ class Api::CartItemsController < ApplicationController
     end
 
     def cart_item_params 
-        params.require(:cart_item).permit(:product_quantity, :user_id, :product_id)
+        params.require(:cart_item).permit(:id, :product_quantity, :user_id, :product_id)
     end
 
 end

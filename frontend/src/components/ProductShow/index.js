@@ -4,14 +4,19 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import './ProductShow.css'
+import { createCartItem } from "../../store/cart_items";
+import { useState } from "react";
 
 
 const ProductShow = () => {
     const { productId } = useParams();
     const product = useSelector(getProduct(productId));
     const dispatch = useDispatch();
-    
-    
+    const sessionUser = useSelector(state => state.session.user);
+    const user_id = sessionUser.id;
+    const product_id = productId;
+
+    const [product_quantity, setQuantity] = useState(1);
 
     useEffect(()=>{
         dispatch(fetchProduct(productId))
@@ -20,6 +25,16 @@ const ProductShow = () => {
     if(!product) return null;
 
     const descriptionArray = product.description.split(".");
+
+    const handleAddToCart = (e) => {
+        e.preventDefault();
+        const finalProduct = {product_quantity, user_id, product_id}
+        dispatch(createCartItem(finalProduct))
+    }
+
+    const updateSelector = (e) => {
+        setQuantity(e.currentTarget.value);
+    }
 
     return (
         <>
@@ -49,18 +64,20 @@ const ProductShow = () => {
                 <span id="freeReturns">FREE Returns</span>
                 <span id="freeDelivery">FREE delivery</span>
                 <span id="inStock">In Stock</span>
-                <div id="quantityDiv">
-                    <span id="quantity">Qty:</span>
-                    <select name="quantitySelector" id="quantitySelector">
-                        <option value="one">1</option> 
-                        <option value="two">2</option> 
-                        <option value="three">3</option> 
-                        <option value="four">4</option> 
-                        <option value="five">5</option> 
-                    </select>
-                </div>
 
-                <button id="addToCart">Add to Cart</button>
+                <form onSubmit={handleAddToCart} id="addToCartForm">
+                    <div id="quantityDiv">
+                        <span id="quantity1">Qty:</span>
+                        <select name="product_quantity" id="quantitySelector" form="addToCartForm" onChange={updateSelector}>
+                            <option value="1">1</option> 
+                            <option value="2">2</option> 
+                            <option value="3">3</option> 
+                            <option value="4">4</option> 
+                            <option value="5">5</option> 
+                        </select>
+                    </div>
+                    <input type="submit" id="addToCart"/>
+                </form>
                 <button id="buyNow">Buy Now</button>
                 <div id="paymentDiv">
                     <span id="payment">Payment</span>
