@@ -2,16 +2,13 @@ import './CartItemIndexItem.css'
 import { getProduct } from '../../store/products'
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteCartItem, updateCartItem } from '../../store/cart_items';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const CartItemIndexItem = (({cartItem})=> {
     const product = useSelector(getProduct(cartItem.productId));
-    // const sessionUser = useSelector(state => state.session.user);
-    // const cartItemId = cartItem.id;
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
-    // const cartInitialQuantity = cartItem.product_quantity;
-    // const [quantityCartItem, setQuantityCartItem] = useState(cartItem.product_quantity);
+
 
     const [quantity, setQuantity] = useState(cartItem.productQuantity);
 
@@ -28,7 +25,6 @@ const CartItemIndexItem = (({cartItem})=> {
         const productId = product.id;
         const productQuantity = (parseInt(e.currentTarget.value));
         const updatedProduct = {id, productQuantity, userId, productId}
-        // setQuantityCartItem(parseInt(e.currentTarget.value));
         setQuantity(e.target.value);
         dispatch(updateCartItem(updatedProduct))
     }

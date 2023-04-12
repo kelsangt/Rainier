@@ -2,23 +2,31 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from "react-redux";
 import { fetchAllCartItems } from '../../store/cart_items';
 import CartItemIndexItem from './CartItemIndexItem';
-// import { getCartItems } from '../../store/cart_items';
 import './CartItemIndex.css'
+// import { getProduct } from '../../store/products';
 
 const CartItemIndex = props => {
-    // const cart_items = useSelector(getCartItems);
     const cartItems = useSelector(state => Object.values(state.cartItems))
+    const products = useSelector(state => Object.values(state.products))
     const dispatch = useDispatch();
 
-    // const sessionUser = useSelector(state => state.session.user);
-    
+    let subTotal = 0.00;
 
+    const subtotalHandler = cartItems.forEach(cartItem => {
+        if(cartItem){
+            products.forEach(product => {
+                if(cartItem.productId === product.id){
+                    let val = (cartItem.productQuantity * product.price);
+                    subTotal += Math.round(val)
+                } 
+            })
+        }
+    })
 
     useEffect(()=>{
         dispatch(fetchAllCartItems())
     }, [dispatch]);
 
-    // if(!sessionUser) return null
 
     return(
         <>
@@ -48,7 +56,7 @@ const CartItemIndex = props => {
             </div>
             <div id="checkoutDiv">
                 <div id="subtotalCheckout">
-                    <h1>Subtotal: </h1>
+                    <h1>Subtotal: ${subTotal}</h1>
                 </div>
                 <div>
                     <button id="checkoutButton">Proceed to Checkout</button>
