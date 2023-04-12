@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import './ProductShow.css'
 import { createCartItem } from "../../store/cart_items";
 import { useState } from "react";
+import { Redirect } from 'react-router-dom';
 
 
 const ProductShow = () => {
@@ -13,7 +14,7 @@ const ProductShow = () => {
     const product = useSelector(getProduct(productId));
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
-    const user_id = sessionUser.id;
+    
     const product_id = parseInt(productId);
 
     const [product_quantity, setQuantity] = useState(1);
@@ -28,6 +29,11 @@ const ProductShow = () => {
 
     const handleAddToCart = (e) => {
         e.preventDefault();
+        
+        if (!sessionUser){
+            return <Redirect to="/" />
+        }
+        const user_id = sessionUser.id;
         const finalProduct = {product_quantity, user_id, product_id}
         dispatch(createCartItem(finalProduct))
     }
@@ -76,7 +82,7 @@ const ProductShow = () => {
                             <option value="5">5</option> 
                         </select>
                     </div>
-                    <input type="submit" id="addToCart"/>
+                    <button type="submit" id="addToCart">Add to Cart</button>
                 </form>
                 <button id="buyNow">Buy Now</button>
                 <div id="paymentDiv">
