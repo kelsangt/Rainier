@@ -50,7 +50,7 @@ const CartItemIndex = props => {
                         )
                     })}
                     <div id="subtotalPrice">
-                        <h1>Subtotal: </h1>
+                        <h1>Subtotal: ${subTotal}</h1>
                     </div>  
                 </ul>
             </div>
