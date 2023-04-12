@@ -1,22 +1,36 @@
 import './CartItemIndexItem.css'
 import { getProduct } from '../../store/products'
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteCartItem } from '../../store/cart_items';
-// import { useState } from 'react';
+import { deleteCartItem, updateCartItem } from '../../store/cart_items';
+import { useEffect, useState } from 'react';
 
 const CartItemIndexItem = (({cartItem})=> {
     const product = useSelector(getProduct(cartItem.productId));
     // const sessionUser = useSelector(state => state.session.user);
     // const cartItemId = cartItem.id;
     const dispatch = useDispatch();
-
+    const sessionUser = useSelector(state => state.session.user);
+    // const cartInitialQuantity = cartItem.product_quantity;
     // const [quantityCartItem, setQuantityCartItem] = useState(cartItem.product_quantity);
-    
+
+    const [quantity, setQuantity] = useState(cartItem.productQuantity);
+
     if(!product) return null
 
     const deleteHandler = (e) => {
         e.preventDefault();
         dispatch(deleteCartItem(cartItem.id));
+    }
+
+    const quantityChangeHandler = (e) => {
+        const id = cartItem.id;
+        const userId = sessionUser.id;
+        const productId = product.id;
+        const productQuantity = (parseInt(e.currentTarget.value));
+        const updatedProduct = {id, productQuantity, userId, productId}
+        // setQuantityCartItem(parseInt(e.currentTarget.value));
+        setQuantity(e.target.value);
+        dispatch(updateCartItem(updatedProduct))
     }
 
     return (
@@ -45,7 +59,7 @@ const CartItemIndexItem = (({cartItem})=> {
             </h2> */}   
         </div>
         <div id="infoDiv">Qty: 
-            <select name="quantityCartItem" id="quantityCartItem">
+            <select value={quantity} name="quantityCartItem" id="quantityCartItem" onChange={quantityChangeHandler}>
                 <option value="1">1</option> 
                 <option value="2">2</option> 
                 <option value="3">3</option> 

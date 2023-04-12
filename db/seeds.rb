@@ -122,13 +122,83 @@ require "open-uri"
       adventures with Greek gods and monsters for the first time or for fans who want to devour the saga again, this gift will be prized by young and old"
     )
 
-    capybaraPlush.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/capybara_plush.jpeg"), filename: "capybara_plush.jpeg")
-    ps5.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/ps5.jpeg"), filename: "ps5.jpeg")
-    legoCrane.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/legoCrane.jpg"), filename: "legoCrane.jpg")
-    lotr.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/lotr.jpeg"), filename: "lotr.jpeg")
-    lgMonitor.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/lgMonitor.png"), filename: "lgMonitor.png")
-    lgTv.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/lgTv.png"), filename: "lgTv.png")
-    percyJacksonSet.image.attach(io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/percyJacksonSet.png"), filename: "percyJacksonSet.png")
+    capybaraPlush.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/capybara_plush.jpeg"),
+      filename: "capybara_plush.jpeg"
+    )
+
+    ps5.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/ps5.jpeg"), 
+      filename: "ps5.jpeg"
+    )
+
+    legoCrane.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/legoCrane.jpg"), 
+      filename: "legoCrane.jpg"
+    )
+
+    lotr.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/lotr.jpeg"), 
+      filename: "lotr.jpeg"
+    )
+
+    lgMonitor.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/lgMonitor.png"), 
+      filename: "lgMonitor.png"
+    )
+
+    lgTv.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/lgTv.png"), 
+      filename: "lgTv.png"
+    )
+
+    percyJacksonSet.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/percyJacksonSet.png"), 
+      filename: "percyJacksonSet.png"
+    )
+
+    pillows = Product.create!(
+      name: "Amazon Basics Down-Alternative Pillows, Soft Density for Stomach and Back Sleepers - Standard (Pack of 2), White", 
+      category: "homeGoods", 
+      price: 39.99, 
+      description: "Polyester Microfiber.
+      Imported.
+      2-pack of standard-size bed pillow offers exceptional comfort; soft density is ideal for stomach and back sleepers.
+      Down alternative fill for a plush feel; a great option for allergy sufferers.
+      100% polyester microfiber shell provides a smooth, soft surface; piping along the edge creates a neatly tailored look.
+      Machine wash warm and tumble dry low; ships in a vacuum-sealed pack; allow 24 hours to decompress, then fluff.
+      Made in OEKO-TEX Standard 100% certified factory, an independent certification system that ensures textiles meet high safety and environmental standards.
+      Dimensions: 20 x 26 inches each"
+    )
+
+    pillows.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/pillows.png"), 
+      filename: "pillows.png"
+    )
+
+    # barbieDoll = Product.create!(
+    #   name: "", 
+    #   category: "toysgames", 
+    #   price: 15.99, 
+    #   description: ""
+    # )
+
+    # example.image.attach(
+    #   io: URI.open(" "), 
+    #   filename: " "
+    # )
+
+    # example = Product.create!(
+    #   name: " ", 
+    #   category: " ", 
+    #   price: 15.99, 
+    #   description: ""
+    # )
+
+    # example.image.attach(
+    #   io: URI.open(" "), 
+    #   filename: " "
+    # )
 
 
     puts "Creating Cart Items"

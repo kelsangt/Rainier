@@ -1,4 +1,7 @@
 class Api::CartItemsController < ApplicationController
+
+    wrap_parameters include: CartItem.attribute_names + ['productQuantity', 'userId', 'productId']
+
     def index 
         @cart_items = current_user.cart_items 
         render 'api/cart_items/index'
@@ -23,11 +26,14 @@ class Api::CartItemsController < ApplicationController
     end 
 
     def update 
-        if @cart_item.update(cart_item_params)
-            render :index
-        else 
-            render json: @cart_item.errors.full_messages, status: unprocessable_entity
-        end 
+        @cart_item = CartItem.find(params[:id])
+        if @cart_item 
+            if @cart_item.update(cart_item_params)
+                render :index
+            else 
+                render json: @cart_item.errors.full_messages, status: unprocessable_entity
+            end 
+        end
     end
 
     def cart_item_params 

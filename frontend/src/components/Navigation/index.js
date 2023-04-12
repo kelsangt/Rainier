@@ -94,9 +94,9 @@ function Navigation() {
                 Toys & Games
             </div>
         </NavLink>   
-        <NavLink exact to="/" style={{textDecoration: 'none'}}>  
-            <div id="clothingCategory">
-                Clothing
+        <NavLink exact to="/fashion" style={{textDecoration: 'none'}}>  
+            <div id="fashionCategory">
+                Fashion
             </div>
         </NavLink>   
         <NavLink exact to="/categories/books" style={{textDecoration: 'none'}}>  
@@ -109,7 +109,7 @@ function Navigation() {
                 Electronics
             </div>
         </NavLink>  
-        <NavLink exact to="/" style={{textDecoration: 'none'}}>  
+        <NavLink exact to="/categories/homeGoods" style={{textDecoration: 'none'}}>  
             <div id="homeGoodsCategory">
                 Home Goods
             </div>

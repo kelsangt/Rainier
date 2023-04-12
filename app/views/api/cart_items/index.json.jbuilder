@@ -1,11 +1,13 @@
 products = []
 
 json.cartItems do 
-    @cart_items.each do |cart_item|
-        products.push(cart_item.product)
-        json.set! cart_item.id do 
-            json.extract! cart_item, :id, :product_quantity, :user_id, :product_id
-        end 
+    if @cart_items 
+        @cart_items.each do |cart_item|
+            products.push(cart_item.product)
+            json.set! cart_item.id do 
+                json.extract! cart_item, :id, :product_quantity, :user_id, :product_id
+            end 
+        end
     end
 end
 
