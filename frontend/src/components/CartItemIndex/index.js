@@ -3,16 +3,23 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchAllCartItems } from '../../store/cart_items';
 import CartItemIndexItem from './CartItemIndexItem';
 import './CartItemIndex.css'
-// import { getProduct } from '../../store/products';
+import { deleteCartItem } from '../../store/cart_items';
+import { useState } from 'react';
+import greenCheckmark from '../../images/greenCheckmark.png'
+
 
 const CartItemIndex = props => {
     const cartItems = useSelector(state => Object.values(state.cartItems))
     const products = useSelector(state => Object.values(state.products))
     const dispatch = useDispatch();
 
+    let cartContents;
+
     let subTotal = 0.00;
 
-    const subtotalHandler = cartItems.forEach(cartItem => {
+    const [checkoutSuccess, setCheckoutSuccess] = useState(false);
+
+    cartItems.forEach(cartItem => {
         if(cartItem){
             products.forEach(product => {
                 if(cartItem.productId === product.id){
@@ -27,11 +34,33 @@ const CartItemIndex = props => {
         dispatch(fetchAllCartItems())
     }, [dispatch]);
 
+    const checkoutHandler = (e) => {
+        if(subTotal > 0.00){
+            e.preventDefault();
+            cartItems.forEach(cartItem => {
+                if(cartItem){
+                    dispatch(deleteCartItem(cartItem.id))
+                }
+            })
+            setCheckoutSuccess(true);
+        }
+    }
 
-    return(
-        <>
-        {/* <div id="fillerDiv"></div> */}
-        <div id="cartItemsIndexDiv">
+    if (checkoutSuccess){
+        cartContents = (
+            <>
+            <div id="checkoutSuccessDiv">
+                <div id="innerCheckoutSuccessDiv">
+                    <h1>Thank you for placing your order!</h1>
+                    <img src={greenCheckmark} alt="greenCheckmark" className="greenCheckmarkImage" /> 
+                </div>
+                
+            </div>
+            </>
+        );
+    } else {
+        cartContents = (
+            <>
             <div id="cartItemsIndexDivInner">
                 <ul id="cartItemsIndexList" className='cartItemsList'>
                     <div id="titleAndPrice">
@@ -59,9 +88,17 @@ const CartItemIndex = props => {
                     <h1>Subtotal: ${subTotal}</h1>
                 </div>
                 <div>
-                    <button id="checkoutButton">Proceed to Checkout</button>
+                    <button id="checkoutButton" onClick={checkoutHandler}>Proceed to Checkout</button>
                 </div>
             </div>
+            </>
+        )
+    }
+
+    return(
+        <>
+        <div id="cartItemsIndexDiv">
+            {cartContents}
         </div>
         </>
     )

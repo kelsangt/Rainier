@@ -111,3 +111,32 @@
 #checkoutButton:active {
     background-color: rgb(215, 174, 69)
 }
+
+#checkoutSuccessDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    background-color: white;
+    min-height: 1500px;
+    width: 80%;
+    font-family: Amazon Ember Regular;
+}
+
+#innerCheckoutSuccessDiv {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 100px;
+    /* background-color: wheat; */
+    margin-top: 60px;
+    margin-left: 40px;
+    font-size: 24px;
+    color: green;
+}
+
+.greenCheckmarkImage {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
