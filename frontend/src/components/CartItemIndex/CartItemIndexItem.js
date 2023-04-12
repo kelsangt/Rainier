@@ -1,12 +1,23 @@
 import './CartItemIndexItem.css'
 import { getProduct } from '../../store/products'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteCartItem } from '../../store/cart_items';
+// import { useState } from 'react';
 
 const CartItemIndexItem = (({cartItem})=> {
     const product = useSelector(getProduct(cartItem.productId));
     // const sessionUser = useSelector(state => state.session.user);
+    // const cartItemId = cartItem.id;
+    const dispatch = useDispatch();
 
+    // const [quantityCartItem, setQuantityCartItem] = useState(cartItem.product_quantity);
+    
     if(!product) return null
+
+    const deleteHandler = (e) => {
+        e.preventDefault();
+        dispatch(deleteCartItem(cartItem.id));
+    }
 
     return (
         <>
@@ -34,14 +45,15 @@ const CartItemIndexItem = (({cartItem})=> {
             </h2> */}   
         </div>
         <div id="infoDiv">Qty: 
-            <select name="quantitySelectorCart" id="quantitySelectorCart">
-                        <option value="one">1</option> 
-                        <option value="two">2</option> 
-                        <option value="three">3</option> 
-                        <option value="four">4</option> 
-                        <option value="five">5</option> 
+            <select name="quantityCartItem" id="quantityCartItem">
+                <option value="1">1</option> 
+                <option value="2">2</option> 
+                <option value="3">3</option> 
+                <option value="4">4</option> 
+                <option value="5">5</option> 
             </select>
-            <a id="deleteLink" href="/login">| Delete |</a>
+            <span id="deleteLink" onClick={deleteHandler}>| Delete |</span>
+        
             {/* <a href="/login">Save For Later</a> */}
         </div>
         <div id="cartItemLine"></div>

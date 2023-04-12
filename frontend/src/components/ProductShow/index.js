@@ -14,7 +14,7 @@ const ProductShow = () => {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const user_id = sessionUser.id;
-    const product_id = productId;
+    const product_id = parseInt(productId);
 
     const [product_quantity, setQuantity] = useState(1);
 
@@ -33,7 +33,7 @@ const ProductShow = () => {
     }
 
     const updateSelector = (e) => {
-        setQuantity(e.currentTarget.value);
+        setQuantity(parseInt(e.currentTarget.value));
     }
 
     return (

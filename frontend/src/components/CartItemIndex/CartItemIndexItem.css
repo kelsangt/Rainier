@@ -51,7 +51,16 @@
     font-size: 12px;
 }
 
-#quantitySelectorCart {
+#quantityCartItem {
     margin-right: 20px;
     margin-left: 5px;
+}
+
+#deleteLink {
+    cursor: pointer;
+    color: #4093a1;
+}
+
+#deleteLink:hover {
+    text-decoration: underline;
 }

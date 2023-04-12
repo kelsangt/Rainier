@@ -8,15 +8,18 @@ class Api::CartItemsController < ApplicationController
     def create 
         @cart_item = CartItem.new(cart_item_params)
         if @cart_item.save 
-            # render :index 
+            # 'api/cart_items/index'
         else 
             render json: @cart_item.errors.full_messages, status: unprocessable_entity
         end
     end 
     
     def destroy 
-        @cart_item.destroy 
-        head :no_content 
+        @cart_item = CartItem.find(params[:id])
+        if @cart_item 
+            @cart_item.delete 
+            head :no_content 
+        end
     end 
 
     def update 
