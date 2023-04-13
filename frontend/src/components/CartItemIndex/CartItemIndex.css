@@ -50,11 +50,15 @@
 
 #cartTitle {
     display: flex;
-    width: 100px;
+    flex-direction: row;
+    width: 300px;
     font-family: Amazon Ember Regular; 
     font-size: 22px
 }
 
+#shoppingCartTitle {
+    width: 300px;
+}
 
 
 #priceTitle {

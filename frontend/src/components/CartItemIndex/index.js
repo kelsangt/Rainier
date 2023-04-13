@@ -65,7 +65,7 @@ const CartItemIndex = props => {
                 <ul id="cartItemsIndexList" className='cartItemsList'>
                     <div id="titleAndPrice">
                         <div id="cartTitle">
-                            <span id="shoppingCart">Shopping Cart</span>
+                            <span id="shoppingCartTitle">Shopping Cart</span>
                         </div>
                         <div id="priceTitle">
                             <h1 id="pricetitle">Price</h1>

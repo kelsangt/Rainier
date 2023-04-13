@@ -79,6 +79,7 @@ export const updateCartItem = cartItem => async (dispatch) => {
 
     if(res.ok){
         const cartItem = await res.json();
+        window.location.reload();
         dispatch(retrieveCartItem(cartItem));
     }
 }
