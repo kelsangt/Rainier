@@ -1,0 +1,29 @@
+#notFoundDiv {
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    flex-wrap: wrap;
+    /* background-color: aqua; */
+    width: 100%;
+    min-height: 1200px;
+}
+
+#notFoundDivInner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    /* background-color: purple; */
+    width: 50%;
+}
+
+#notFoundMessage {
+    font-family: Amazon Ember Regular;
+    font-size: 48px;
+    color: rgb(97, 96, 96);
+}
+
+.sadPuppyImage {
+    margin-top: -450px;
+    height: 50%;
+}

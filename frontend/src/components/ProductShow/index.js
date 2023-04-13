@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { fetchProduct, getProduct } from "../../store/products";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -7,6 +7,7 @@ import './ProductShow.css'
 import { createCartItem } from "../../store/cart_items";
 import { useState } from "react";
 import { Redirect } from 'react-router-dom';
+import NotFound from '../NotFound/index';
 
 
 const ProductShow = () => {
@@ -14,6 +15,7 @@ const ProductShow = () => {
     const product = useSelector(getProduct(productId));
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
+    const history = useHistory();
     
     const product_id = parseInt(productId);
 
@@ -23,7 +25,7 @@ const ProductShow = () => {
         dispatch(fetchProduct(productId))
     }, [dispatch, productId])
 
-    if(!product) return null;
+    if(!product) return <NotFound />;
 
     const descriptionArray = product.description.split(".");
 
@@ -31,11 +33,12 @@ const ProductShow = () => {
         e.preventDefault();
         
         if (!sessionUser){
-            return <Redirect to="/" />
+            history.push(`/login`)
+        } else {
+            const user_id = sessionUser.id;
+            const finalProduct = {product_quantity, user_id, product_id}
+            dispatch(createCartItem(finalProduct))
         }
-        const user_id = sessionUser.id;
-        const finalProduct = {product_quantity, user_id, product_id}
-        dispatch(createCartItem(finalProduct))
     }
 
     const updateSelector = (e) => {

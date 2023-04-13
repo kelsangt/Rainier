@@ -10,7 +10,7 @@ export const retrieveProducts = products => {
     }
 }
 
-const retrieveProduct = product => {
+export const retrieveProduct = product => {
     return {
         type: RETRIEVE_PRODUCT,
         product

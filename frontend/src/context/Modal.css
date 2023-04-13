@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 20;
     /* top: 0;
     right: 0;
     left: 0;
@@ -13,7 +14,7 @@
     position: fixed;
     background-color: black;
     opacity: 0.25;
-    top: 90px;
+    top: 94px;
     right: 0;
     left: 0;
     bottom: 0;

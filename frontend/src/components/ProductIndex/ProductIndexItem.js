@@ -2,12 +2,17 @@
 import './ProductIndexItem.css'
 import primeLogo from '../../images/primeLogo.png'
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import NotFound from '../NotFound/index';
 
 const ProductIndexItem = (({product}) => {
     const { categoryName } = useParams();
 
     if((product.category !== categoryName) && (categoryName !== "all")){
         return null;
+    }
+
+    if(!product.category){
+        return <NotFound />
     }
     
     return (

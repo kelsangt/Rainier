@@ -176,29 +176,310 @@ require "open-uri"
       filename: "pillows.png"
     )
 
-    # barbieDoll = Product.create!(
-    #   name: "", 
-    #   category: "toysgames", 
-    #   price: 15.99, 
-    #   description: ""
-    # )
+    # Toys and Games
 
-    # example.image.attach(
-    #   io: URI.open(" "), 
-    #   filename: " "
-    # )
+    barbieDoll = Product.create!(
+      name: "Barbie Dogwalking Doll & Accessories, Stroll & Play Pups Playset with Transforming Stroller, 2 Pets & Handbag, Blonde Doll", 
+      category: "toysgames", 
+      price: 22.99, 
+      description: "​Play out the ideal puppy play day with the Barbie Stroll 'n Play Pups playset that includes a Barbie doll, two pet puppies, a transforming stroller and storytelling accessories.
+      ​There are two ways to travel: seat one puppy in the stroller and one in Barbie doll's handbag; or pull the front of the stroller out, doubling its space to make room for both puppies.
+      ​The stroller features a modern, colourful design and realistic details, like treaded rolling wheels, silvery accents, a hook for Barbie doll's purse and handles she can really hold.
+      ​Includes a handbag that can store accessories or transport a puppy, plus everything the pals need to play out feeding and playtime -- 2 bowls, 2 bones, a frisbee and a water bottle.
+      ​Barbie doll is ready for a day of play in a striped t-shirt dress and pink sneakers"
+    )
 
-    # example = Product.create!(
-    #   name: " ", 
-    #   category: " ", 
-    #   price: 15.99, 
-    #   description: ""
-    # )
+    barbieDoll.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/barbieDoll.png"), 
+      filename: "barbieDoll.png"
+    )
 
-    # example.image.attach(
-    #   io: URI.open(" "), 
-    #   filename: " "
-    # )
+    rcCar = Product.create!(
+      name: "HYPER GO H16DR 1:16 Scale Ready to Run 4X4 Fast Remote Control Car, High Speed Jump RC Monster Truck, Off Road RC Cars, 4WD All Terrain RTR RC Truck with 2 LiPo Batteries for Boys and Adults", 
+      category: "toysgames", 
+      price: 99.99, 
+      description: "Aluminum Capped Oil Filled Shock: The Oil-filled shock absorbers greatly reduce the shaking of the truck when driving at high speed. More stability and much safer.
+      Excellent Performance: Ideal for big jump, popping wheelie and back flipping stunts, 2S 7.4V 1050 mAh 25C LiPo battery and 390 motor bursts out at 19+ mph for adults (speed measured by GPS), 70% throttle limited switch great for beginners or kids.
+      Perfectly Compatible: Smart 2S/3S ESC support the 3S-capable power system, furious 24+ mph (40 kph) speeds achievable in optimum conditions using a 3S LiPo battery (3S 11.1V LiPo battery and more upgrade accessories available on Amazon).
+      Exciting Gifts for Adults and Kids: The H16DR has more durable frame, whether Kids, beginners or hobby grade will like it. Out of the box for incredible speed and hit the all-terrain"
+    )
+
+    rcCar.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/rcCar.png"), 
+      filename: "rcCar.png"
+    )
+
+    animalCrossing = Product.create!(
+      name: "Animal Crossing: New Horizons - Nintendo Switch", 
+      category: "toysgames", 
+      price: 59.99, 
+      description: "Build your community from scratch on a deserted island brimming with possibility; Create your personal getaway and customize your character, home, decorations, and even the landscape itself.
+      Collect materials to construct everything from furniture to tools. Then, use what you create to give your island a personal touch.
+      Watch as the time of day and seasons match real life—even your hemisphere. Each day holds potential for surprises and discoveries.
+      Get to know the island residents, garden, fish, decorate, hunt for fossils, and more.
+      Show off your paradise – Play on the same system with a total of 4 people, or play together online or over local wireless for fun with up to 8 players"
+    )
+
+    animalCrossing.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/animalCrossing.png"), 
+      filename: "animalCrossing.png"
+    )
+
+    chessSet = Product.create!(
+      name: "AMEROUS 15 Inches Magnetic Wooden Chess Set - 2 Extra Queens - Folding Board, Handmade Portable Travel Chess Board Game Sets with Game Pieces Storage Slots - Beginner Chess Set for Kids and Adults", 
+      category: "toysgames", 
+      price: 49.99, 
+      description: "INTELLIGENT ENLIGHTENMENT - Not only suitable for adults playing with fun, this magnetic chess set could be a useful tool to enlighten your kids and stimulate their intelligence, Chess learning is no longer boring, but with joy and interest, Perfect for beginners and those indulged in electronic gadgets.
+      MAGNETIC CHESSMEN - The hand carved wood chess pieces are magnetically attached to the board and won’t fall off during the game, which allows you to play the board game on the road, in car, airplane or any mobile vehicles.
+      EASY TO CARRY - Lightweight and folding board design makes it portable to carry around and easy to travel with, Compact board size fits your luggage or bag when travelling while chess pieces are large enough to handle, playing with comfort.
+      PREMIUM QUALITY - Handmade with high quality wooden material, the smooth surface of the entire chess board ensures optimal touch comfort while playing chess and checkers game, 2 extra queens are added to the board as free accessories at your disposal.
+      PERFECT GIFT - Promote the relationship between children and friends or parents, sharing board game, suitable for indoor and outdoor, widely used in schools, families, camping and travel, is the most popular board game, can be used as a gift at Christmas, Children’s Day, birthday, New Year gift for children or adults"
+    )
+
+    chessSet.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/chessSet.png"), 
+      filename: "chessSet.png"
+    )
+
+    pikachuPlush = Product.create!(
+      name: "Pokemon 12 in Large Pikachu Plush - Officially Licensed Stuffed Animal Toy - Ages 2+", 
+      category: "toysgames", 
+      price: 39.99, 
+      description: "Cute and cuddly 12 in Pokémon Pikachu plush stuffed animal is a must have for all Pokémon fans.
+      Gotta Catch 'Em All! This super soft plush figure is great to take wherever you go.
+      The Pikachu plush toy is inspired by Pokémon anime, trading cards, Let's Go!, Sword and Shield, Scarlet and Violet and Nintendo video games series.
+      Makes a great gift for kids who love Pokemon - Your favorite Pokémon character is waiting for you.
+      Officially licensed Pokémon merchandise. Polyester. Measures approximately 12 in to top of ear. Ages: 2+"
+    )
+
+    pikachuPlush.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/pikachuPlush.png"), 
+      filename: "pikachuPlush.png"
+    )
+
+    bratzDoll = Product.create!(
+      name: "Bratz 20 Yearz Special Anniversary Edition Original Cloe Fashion Doll with 2 -Outfits, Accessories Including Holographic Poster- Gift for Collector -Adults & Kids, Toys for Girls Ages 7+ Years Old", 
+      category: "toysgames", 
+      price: 24.99, 
+      description: "20 YEARZ SPECIAL EDITION: In celebration of Bratz turning 20 yearz old, collect these special edition fashion dolls in gorgeous foil packaging, featuring a 20 yearz motif and collectible holographic poster.
+      FAN FAVE RERELEASE: A near exact replica of the dolls that started it all in 2001, Collect the iconic debut looks of the Bratz Pack.
+      SUPER STYLIN' FASHIONS: Cloe includes 2 doll outfits for tons of mix ‘n' match possibilities, Her fashion passion is exotic animal prints and sparkly fabrics.
+      INCLUDES: 1 Bratz 20 Yearz Special Edition Original Fashion Doll, fashions, shoes, accessories, bag, hair brush, and poster"
+    )
+
+    bratzDoll.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/bratzDoll.png"), 
+      filename: "bratzDoll.png"
+    )
+
+    marioOdyssey = Product.create!(
+      name: "Super Mario Odyssey - Nintendo Switch", 
+      category: "toysgames", 
+      price: 59.99, 
+      description: "Explore 3D kingdoms filled with secrets and surprises, including costumes for Mario and several ways to interact with environments.
+      Mario's new friend, Cappy, lets you master new moves like cap throw, cap jump and capture.
+      Visit astonishing new locales, such as the skyscraper-packed New Donk City, and run into familiar friends and foes as you try to save Princess Peach from Bowser's clutches and foil his dastardly wedding plans.
+      Hand a Joy-Con controller to a friend to enjoy simultaneous multiplayer: Player 1 controls Mario while Player 2 controls Mario’s new ally Cappy.
+      Unlock even more features with the exclusive new amiibo figures - Mario, Princess Peach and Bowser dressed in their wedding outfits"
+    )
+
+    marioOdyssey.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/marioOdyssey.png"), 
+      filename: "marioOdyssey.png"
+    )
+
+    # Fashion 
+
+    uaShirt = Product.create!(
+      name: "Under Armour Men's Armour Heatgear Fitted Short-sleeve T-shirt", 
+      category: "fashion", 
+      price: 29.99, 
+      description: "100% Polyester.
+      Imported.
+      Pull On closure.
+      Machine Wash.
+      Super-light HeatGear fabric delivers superior coverage without weighing you down.
+      Mesh underarm & back panels for strategic ventilation.
+      Ergonomic design keeps seams off high abrasion areas & increases durability.
+      Hybrid raglan sleeve construction for added range of motion & comfort.
+      Write-in locker tag on back of neck for your initials or number"
+    )
+
+    uaShirt.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/uaShirt.png"), 
+      filename: "uaShirt.png"
+    )
+
+    uaShoes = Product.create!(
+      name: "Under Armour SlipSpeed Training Shoes", 
+      category: "fashion", 
+      price: 149.99, 
+      description: "UA FLOW CUSHIONING: Unmatched comfort, ground contact & traction—no squeaks.
+      BREATHABLE UPPER: Reinforced supportive material with engineered venting.
+      BOA FIT SYSTEM: A personalized fit, one click at a time, with a 12-point lockdown system.
+      ISO-CHILL PADDED INTERIOR: Heel to toe interior foam padding with cool-to-the-touch Iso-Chill technology.
+      MACHINE WASHABLE: We made it easy—put them in the wash to keep them fresh & clean*.
+      CONVERTIBLE HEEL: Go from train mode to recover mode.
+      *Laundry bag not included"
+    )
+
+    uaShoes.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/uaShoes.png"), 
+      filename: "uaShoes.png"
+    )
+
+    elmoHat = Product.create!(
+      name: "Sesame Street Elmo Face Adjustable Baseball Hat", 
+      category: "fashion", 
+      price: 21.99, 
+      description: "100% Cotton.
+      Imported.
+      Most colors: adjustable strap with buckle closure; green camo: adjustable strap with hook and loop closure.
+      Spot clean with a damp cloth, air dry.
+      Sesame Street Elmo Face is 100% authentic, officially licensed Sesame Street merchandise! (SST30001).
+      Sesame Street is a longtime favorite of children and adults, and a staple of PBS, Big Bird leads a cast of characters such as Bert and Ernie, Oscar the Grouch, Elmo, Grover and many others to teach children numbers, colors and the alphabet.
+      Classic 6-panel, unstructured, embroidered hat.
+      One size fits most. 
+      Adjustable for a secure, comfortable fit"
+    )
+
+    elmoHat.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/elmoHat.png"), 
+      filename: "elmoHat.png"
+    )
+
+    cardigan = Product.create!(
+      name: "Goodthreads Men's Lambswool Long-Sleeve Shawl Collar Cardigan Sweater", 
+      category: "fashion", 
+      price: 39.99, 
+      description: "100% Lambs Wool.
+      Imported.
+      Button closure.
+      Machine Wash.
+      Comfortable and versatile, this cardigan in 100% Lambswool is perfect on its own or as a layer under a blazer or jacket.
+      Features a shawl collar, a button front closure, and welt pockets at the hip.
+      At Goodthreads, we are on a mission to create incredible clothes crafted with care"
+    )
+
+    cardigan.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/cardigan.png"), 
+      filename: "cardigan.png"
+    )
+
+
+    montanaShirt = Product.create!(
+      name: "Big Sky Montana Graphic Map Long Sleeve T-Shirt", 
+      category: "fashion", 
+      price: 26.99, 
+      description: "Solid colors: 100% Cotton; Heather Grey: 90% Cotton, 10% Polyester; All Other Heathers: 50% Cotton, 50% Polyester.
+      Imported.
+      Pull On closure.
+      Machine Wash.
+      state map and coordinates.
+      great tshirt for men and women and kids.
+      Lightweight, Classic fit, Double-needle sleeve and bottom hem"
+    )
+
+    montanaShirt.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/montanaShirt.png"), 
+      filename: "montanaShirt.png"
+    )
+
+    hanesShirts = Product.create!(
+      name: "Hanes Essentials Men's T-Shirt Pack, Men's Short Sleeve Tees, Crewneck Cotton T-Shirts for Men, Value Pack", 
+      category: "fashion", 
+      price: 25.99, 
+      description: "100% Cotton.
+      Imported.
+      No Closure closure.
+      Machine Wash.
+      ESSENTIAL QUALITY, ESSENTIAL STYLE - Outstanding quality and value you have come to expect from Hanes.
+      MIDWEIGHT COTTON - 100% cotton midweight fabric makes this a shirt you can wear all year long, Light steel colors are a cotton/polyester blend.
+      STURDY STUFF - This cotton T-shirt features shoulder-to-shoulder taping and double-needle stitching for extra sturdiness at stress points.
+      FITS JUST RIGHT - A full cut offers a roomier fit in men's tee shirts that are built for all-day comfort.
+      VALUE YOU LOVE - These men's tees come in a convenient 4 or 6-pack of a single color - so you are never without a clean Hanes t-shirt.
+      CLASSIC CREW - This men's t-shirt features a lay-flat crewneck collar and a ribbed knit neckline.
+      COLD WATER WASH - Hanes recommends machine washing this men's shirt in cold water to help reduce energy consumption."
+    )
+
+    hanesShirts.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/hanesShirts.png"), 
+      filename: "hanesShirts.png"
+    )
+
+    sunHat = Product.create!(
+      name: "Lanzom Wide Brim Straw Panama Roll up Hat Fedora Beach Sun Hat UPF50+", 
+      category: "fashion", 
+      price: 29.99, 
+      description: "90% Paper straw, 10% Polyester.
+      Imported.
+      Pull-On closure.
+      Hand Wash Only.
+      Made of 90% paper straw and 10 % polyester, Straw material, Soft comfortable and breathable to wear.
+      One Size fits most people, US Size: 7 - 7.25, UK Size: 7 - 7.125, EU Size: 56 - 58, Head Measurements: 22 - 22.6inches, brim measurements: 2.9 inches, You can adjust the size of the hat through the adjust band inside in the hat.
+      Foldable and packable: it can be easily carried inside your handbag or beach tote, packable and convenient to carry and absolutely save lots of space.
+      Cute and lightweight, breathable and comfortable for the hot summer weather, a wonderful hat for wearing while gardening, at the beach, pool, park, camping, hiking, race day events, even out in your own back yard or any outdoor activities.
+      An essential accessory for your outdoor travel, holiday, beach playing. 
+      Folding packable design for easy storage in a handbag or backpack when it is not in use, Convenient carry along"
+    )
+
+    sunHat.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/sunHat.png"), 
+      filename: "sunHat.png"
+    )
+
+    blouse = Product.create!(
+      name: "Amazon Essentials Women's Short-Sleeve Woven Blouse", 
+      category: "fashion", 
+      price: 23.99, 
+      description: "100% Viscose.
+      Imported.
+      Machine Wash.
+      This elevated blouse features clean lines and a lightweight fabric ideal for layering.
+      With a rounded shirt-tail hem, back button closure.
+      Everyday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort"
+    )
+
+    blouse.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/blouse.png"), 
+      filename: "blouse.png"
+    )
+
+    slides = Product.create!(
+      name: " ", 
+      category: "fashion", 
+      price: 15.99, 
+      description: ""
+    )
+
+    slides.image.attach(
+      io: URI.open(" "), 
+      filename: " "
+    )
+
+    rayban = Product.create!(
+      name: " ", 
+      category: "fashion", 
+      price: 15.99, 
+      description: ""
+    )
+
+    rayban.image.attach(
+      io: URI.open(" "), 
+      filename: " "
+    )
+
+    example = Product.create!(
+      name: " ", 
+      category: " ", 
+      price: 15.99, 
+      description: ""
+    )
+
+    example.image.attach(
+      io: URI.open(" "), 
+      filename: " "
+    )
 
 
     puts "Done!"

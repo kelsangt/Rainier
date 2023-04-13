@@ -7,6 +7,7 @@ import ProductIndex from './components/ProductIndex';
 import ProductShow from './components/ProductShow';
 import CartItemIndex from './components/CartItemIndex';
 import MainPage from './components/MainPage';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -34,9 +35,13 @@ function App() {
         <Route path="/signup">
           <SignupFormPage />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <Navigation />
           <MainPage />
+        </Route>
+        <Route path="/:none">
+          <Navigation />
+          <NotFound />
         </Route>
       </Switch>
     </>

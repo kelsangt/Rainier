@@ -1,5 +1,6 @@
 import csrfFetch from "./csrf";
-import { retrieveProducts } from "./products";
+import { retrieveProducts, retrieveProduct } from "./products";
+import { REMOVE_USER } from "./session";
 
 export const RETRIEVE_CART_ITEM = 'RETRIEVE_CART_ITEM'
 export const RETRIEVE_CART_ITEMS = 'RETRIEVE_CART_ITEMS'
@@ -49,7 +50,8 @@ export const fetchCartItem = cartItemId => async (dispatch) => {
 
     if (res.ok){
         const data = await res.json();
-        dispatch(retrieveCartItem(data));
+        dispatch(retrieveCartItem(data.cartItem));
+        dispatch(retrieveProduct(data.product));
     }
 }
 
@@ -63,8 +65,9 @@ export const createCartItem = cartItem => async (dispatch) => {
     });
 
     if(res.ok){
-        const cartItem = await res.json();
-        dispatch(retrieveCartItem(cartItem));
+        const data = await res.json();
+        dispatch(retrieveCartItem(data.cartItem));
+        dispatch(retrieveProduct(data.product));
     }
 }
 
@@ -78,9 +81,10 @@ export const updateCartItem = cartItem => async (dispatch) => {
     });
 
     if(res.ok){
-        const cartItem = await res.json();
-        window.location.reload();
-        dispatch(retrieveCartItem(cartItem));
+        const data = await res.json();
+        // debugger;
+        dispatch(retrieveCartItem(data.cartItem));
+        dispatch(retrieveProduct(data.product));
     }
 }
 
@@ -104,6 +108,8 @@ const cartItemReducer = (state ={}, action) => {
             const newState = { ...state };
             delete newState[action.cartItemId];
             return newState;
+        case REMOVE_USER:
+            return {};
         default:
             return state;
     }

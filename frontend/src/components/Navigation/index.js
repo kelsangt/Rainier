@@ -61,6 +61,14 @@ function Navigation() {
     <>
     
     <div id="navMainDiv">
+        <div id="aboutLinks">
+            <a href="https://github.com/kelsangt/Rainier">
+                <i class="fa fa-github" id="githubLink"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kelsang-tsering/">
+                <i class="fa fa-linkedin" id="linkedIn"></i>
+            </a>
+        </div>
         <div id="navLogo">
             <NavLink exact to="/" style={{textDecoration: 'none'}}>  
                 <img src={logo2} alt="navAmazonlogo" className="navAmazonlogo" /> 

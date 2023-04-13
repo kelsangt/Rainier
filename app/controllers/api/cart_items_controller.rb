@@ -4,14 +4,14 @@ class Api::CartItemsController < ApplicationController
 
     def index 
         @cart_items = current_user.cart_items 
-        render 'api/cart_items/index'
+        render :index
     end 
 
 
     def create 
         @cart_item = CartItem.new(cart_item_params)
         if @cart_item.save 
-            # 'api/cart_items/index'
+            render :show
         else 
             render json: @cart_item.errors.full_messages, status: unprocessable_entity
         end
@@ -29,7 +29,7 @@ class Api::CartItemsController < ApplicationController
         @cart_item = CartItem.find(params[:id])
         if @cart_item 
             if @cart_item.update(cart_item_params)
-                render :index
+                render :show
             else 
                 render json: @cart_item.errors.full_messages, status: unprocessable_entity
             end 
