@@ -6,7 +6,6 @@ import { useDispatch } from "react-redux";
 import './ProductShow.css'
 import { createCartItem } from "../../store/cart_items";
 import { useState } from "react";
-import { Redirect } from 'react-router-dom';
 import NotFound from '../NotFound/index';
 
 

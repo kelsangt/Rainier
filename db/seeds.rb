@@ -446,25 +446,97 @@ require "open-uri"
     )
 
     slides = Product.create!(
-      name: " ", 
+      name: "Nike Men's Benassi Just Do It Athletic Sandal", 
       category: "fashion", 
-      price: 15.99, 
-      description: ""
+      price: 29.99, 
+      description: "100% Synthetic.
+      Rubber sole.
+      SPORTY STYLE: Lightweight sports slide sandal for men with a bold Nike logo embellished on the strap for plush comfort and an athletic look.
+      CASUAL COMFORT: Sandal has injected Phylon midsole that doubles as an outsole for lightweight cushioning. Its soft midsole foam and jersey lining provide comfort so you can enjoy a relaxed, premium experience.
+      NATURAL MOTION: Men's Nike slides have flex grooves help the slide move with your foot, while foam outsole provides impact protection.
+      SPORT SANDAL: Men's slides with one-piece, synthetic leather strap for durability that has jersey lining for a soft feel.
+      NIKE SLIDES: Imported with synthetic sole"
     )
 
     slides.image.attach(
-      io: URI.open(" "), 
-      filename: " "
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/slides.png"), 
+      filename: "slides.png"
     )
 
     rayban = Product.create!(
-      name: " ", 
+      name: "Ray-Ban RB2140 Original Wayfarer Sunglasses", 
       category: "fashion", 
+      price: 159.99, 
+      description: "Unisex sunglasses: The Original Ray-Ban Wayfarer features legendary G-15 lenses, in both polarized and non-polarized options, perfect for everyone, Made from high-quality glass, Ray-Ban lenses are prescription ready.
+      100% UV protection: To protect your eyes from harmful UV rays, these sunglasses include lenses that are coated with 100% UV protection.
+      Reduce eye strain: Ray-Ban Wayfarer sunglasses feature precision-cut, scratch-resistant glass lenses that improve visual clarity, and help Reduce eye strain while outdoors.
+      Durable acetate frames: Our Original Wayfarer sunglasses are exceptionally strong, The frame is made from lightweight yet strong acetate construction.
+      Multiple frame and lens colors: Choose from multiple colors of frames—including black and tortoise—and lenses—including non-polarized and polarized crystal green G-15 and gradient options.
+      Multiple size options: Choose from a variety of size options including 50 millimeter & 54 millimeter.
+      Case & lens cloth included: Each pair of Ray-Ban sunglasses come with a case and lens cloth to clean and protect them from scratches and damage"
+    )
+
+    rayban.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/rayban.png"), 
+      filename: "rayban.png"
+    )
+
+    theHobbit = Product.create!(
+      name: "The Hobbit (The Lord of the Rings)", 
+      category: "books", 
+      price: 9.99, 
+      description: "'In a hole in the ground, there lived a hobbit' So begins one of the most beloved and delightful tales in the English language.
+      Set in the imaginary world of Middle-earth, at once a classic myth and a modern fairy tale, Tolkien's The Hobbit is one of literature's most enduring and well-loved novels, The text in this 372-page paperback edition is based on that first published in Great Britain by Collins Modern Classics and includes a note on the text by Douglas A Anderson.
+      Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely traveling any farther than his pantry or cellar, But his contentment is disturbed when the wizard Gandalf and a company of dwarves arrive on his doorstep one day to whisk him away on an adventure, They have launched a plot to raid the treasure hoard guarded by Smaug the Magnificent, a large and very dangerous dragon.
+      Bilbo reluctantly joins their quest, unaware that on his journey to the Lonely Mountain he will encounter both a magic ring and a frightening creature known as Gollum.
+      Written for Tolkien's own children, The Hobbit has sold many millions of copies worldwide and established itself as a modern classic"
+    )
+
+    # Books
+
+    theHobbit.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/theHobbit.png"), 
+      filename: "theHobbit.png"
+    )
+
+    catcherInTheRye = Product.create!(
+      name: "The Catcher in the Rye", 
+      category: "books", 
+      price: 12.99, 
+      description: "Anyone who has read JD Salinger's New Yorker stories--particularly A Perfect Day for Bananafish, Uncle Wiggily in Connecticut, The Laughing Man, and For Esme With Love and Squalor--will not be surprised by the fact that his first novel is full of children, The hero-narrator of The Catcher in the Rye is an ancient child of sixteen, a native New Yorker named Holden Caulfield.
+      Through circumstances that tend to preclude adult, secondhand description, he leaves his prep school in Pennsylvania and goes underground in New York City for three days, The boy himself is at once too simple and too complex for us to make any final comment about him or his story, Perhaps the safest thing we can say about Holden is that he was born in the world not just strongly attracted to beauty but, almost, hopelessly impaled on it.
+      There are many voices in this novel: children's voices, adult voices, underground voices-but Holden's voice is the most eloquent of all, Transcending his own vernacular, yet remaining marvelously faithful to it, he issues a perfectly articulated cry of mixed pain and pleasure, However, like most lovers and clowns and poets of the higher orders, he keeps most of the pain to, and for, himself, The pleasure he gives away, or sets aside, with all his heart, It is there for the reader who can handle it to keep"
+    )
+
+    catcherInTheRye.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/catcherInTheRye.png"), 
+      filename: "catcherInTheRye.png"
+    )
+
+    charlottesWeb = Product.create!(
+      name: "Charlotte's Web: A Newbery Honor Award Winner", 
+      category: "books", 
+      price: 9.99, 
+      description: "Don’t miss one of America’s top 100 most-loved novels, selected by PBS’s The Great American Read.
+      This beloved book by EB White, author of Stuart Little and The Trumpet of the Swan, is a classic of children's literature that is 'just about perfect,' This paper-over-board edition includes a foreword by two-time Newbery winning author Kate DiCamillo.
+      Some Pig, Humble, Radiant, These are the words in Charlotte's Web, high up in Zuckerman's barn, Charlotte's spiderweb tells of her feelings for a little pig named Wilbur, who simply wants a friend, They also express the love of a girl named Fern, who saved Wilbur's life when he was born the runt of his litter.
+      EB White's Newbery Honor Book is a tender novel of friendship, love, life, and death that will continue to be enjoyed by generations to come, It contains illustrations by Garth Williams, the acclaimed illustrator of EB White's Stuart Little and Laura Ingalls Wilder's Little House series, among many other books.
+      Whether enjoyed in the classroom or for homeschooling or independent reading, Charlotte's Web is a proven favorite"
+    )
+
+    charlottesWeb.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/charlottesWeb.png"), 
+      filename: "charlottesWeb.png"
+    )
+
+    example = Product.create!(
+      name: " ", 
+      category: "books", 
       price: 15.99, 
       description: ""
     )
 
-    rayban.image.attach(
+    example.image.attach(
       io: URI.open(" "), 
       filename: " "
     )
