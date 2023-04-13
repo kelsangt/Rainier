@@ -1,0 +1,60 @@
+#mainPageDiv {
+    width: 100%;
+    background-color: #e3e6e6;
+}
+
+#selectionsDiv {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* background-color: red; */
+    /* width: 80%; */
+    min-height: 1200px;
+    z-index: 1;
+}
+
+#electronicsDiv, #fashionDiv, #homegoodsDiv, #toysgamesDiv, #booksDiv {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: white;
+    font-family: Amazon Ember Medium;
+    height: 420px;
+    width: 350px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 310px;
+    z-index: 3;
+}
+
+#bannerDiv {
+    width: 80%;
+    height: 45%;
+    position: absolute;
+    top: 7.3%;
+    z-index: 2;
+}
+
+.earthDayImage {
+    width: 100%;
+    height: 100%;
+}
+
+.toysGamesDivImage, .homegoodsDivImage, .electronicsDivImage, .fashionDivImage {
+    width: 80%;
+    height: 60%;
+}
+
+#toysGamesH1, #electronicsH1, #fashionH1, #homegoodsH1 {
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+#homegoodsAnchor, #fashionAnchor, #electronicsAnchor, #toysgamesAnchor {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;;
+}

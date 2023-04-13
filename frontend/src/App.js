@@ -6,7 +6,7 @@ import Navigation from './components/Navigation';
 import ProductIndex from './components/ProductIndex';
 import ProductShow from './components/ProductShow';
 import CartItemIndex from './components/CartItemIndex';
-
+import MainPage from './components/MainPage';
 
 function App() {
   return (
@@ -36,6 +36,7 @@ function App() {
         </Route>
         <Route path="/">
           <Navigation />
+          <MainPage />
         </Route>
       </Switch>
     </>

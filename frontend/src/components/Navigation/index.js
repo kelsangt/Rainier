@@ -73,7 +73,7 @@ function Navigation() {
                 <option value="clothing">Clothing</option> 
                 <option value="books">Books</option> 
                 <option value="electronics">Electronics</option> 
-                <option value="homeGoods">Home Goods</option> 
+                <option value="homegoods">Home Goods</option> 
             </select>
         </div>
         <div id="searchBarDiv">
@@ -109,8 +109,8 @@ function Navigation() {
                 Electronics
             </div>
         </NavLink>  
-        <NavLink exact to="/categories/homeGoods" style={{textDecoration: 'none'}}>  
-            <div id="homeGoodsCategory">
+        <NavLink exact to="/categories/homegoods" style={{textDecoration: 'none'}}>  
+            <div id="homegoodsCategory">
                 Home Goods
             </div>
         </NavLink>  

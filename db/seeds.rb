@@ -159,7 +159,7 @@ require "open-uri"
 
     pillows = Product.create!(
       name: "Amazon Basics Down-Alternative Pillows, Soft Density for Stomach and Back Sleepers - Standard (Pack of 2), White", 
-      category: "homeGoods", 
+      category: "homegoods", 
       price: 39.99, 
       description: "Polyester Microfiber.
       Imported.
@@ -199,27 +199,6 @@ require "open-uri"
     #   io: URI.open(" "), 
     #   filename: " "
     # )
-
-
-    puts "Creating Cart Items"
-    
-    testing1 = CartItem.create!(
-      product_quantity: 1,
-      user_id: 1,
-      product_id: 1
-    )
-
-    testing2 = CartItem.create!(
-      product_quantity: 3,
-      user_id: 2,
-      product_id: 3
-    )
-
-    testing3 = CartItem.create!(
-      product_quantity: 2,
-      user_id: 1,
-      product_id: 4
-    )
 
 
     puts "Done!"
