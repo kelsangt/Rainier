@@ -7,7 +7,9 @@ import cart from '../../images/cart.png'
 import magnifyingGlass from '../../images/magnifying_glass.png';
 import LoginModal from '../LoginModal/index'
 import ProfileModal from '../ProfileModal/index'
+import SearchBar from './SearchBar';
 import './Navigation.css';
+
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -63,10 +65,10 @@ function Navigation() {
     <div id="navMainDiv">
         <div id="aboutLinks">
             <a href="https://github.com/kelsangt/Rainier">
-                <i class="fa fa-github" id="githubLink"></i>
+                <i className="fa fa-github" id="githubLink"></i>
             </a>
             <a href="https://www.linkedin.com/in/kelsang-tsering/">
-                <i class="fa fa-linkedin" id="linkedIn"></i>
+                <i className="fa fa-linkedin" id="linkedIn"></i>
             </a>
         </div>
         <div id="navLogo">
@@ -84,16 +86,17 @@ function Navigation() {
                 <option value="homegoods">Home Goods</option> 
             </select>
         </div>
-        <div id="searchBarDiv">
+        <SearchBar />
+        {/* <div id="searchBarDiv">
             <div id="innerSearchBarDiv">
                 <input id="searchBar" type="text" placeholder="Search Rainier"></input>
             </div>
-        </div>
-        <div id="magnifyingGlassDiv">
+        </div> */}
+        {/* <div id="magnifyingGlassDiv">
             <NavLink exact to="/" style={{textDecoration: 'none'}}>
                 <img src={magnifyingGlass} alt="magnifyingGlassIcon" className="magnifyingGlassIcon" /> 
             </NavLink>
-        </div>
+        </div> */}
         {links}
     </div>
     <div id="navMainDivLower">   

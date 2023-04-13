@@ -61,7 +61,7 @@ const ProductShow = () => {
                     {descriptionArray.map((sentence)=>{
                         return (
                             <li id="sentence">
-                                {sentence}
+                                key={sentence}
                             </li>
                         )
                     })}

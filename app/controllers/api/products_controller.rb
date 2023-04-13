@@ -13,4 +13,8 @@ class Api::ProductsController < ApplicationController
         end 
     end 
 
+    def search 
+        @products = Product.where("lower(name) LIKE?", "%#{params[:q]}%")
+        render :search
+    end
 end 

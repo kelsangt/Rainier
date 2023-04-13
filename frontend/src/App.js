@@ -8,6 +8,7 @@ import ProductShow from './components/ProductShow';
 import CartItemIndex from './components/CartItemIndex';
 import MainPage from './components/MainPage';
 import NotFound from './components/NotFound';
+import Search from './components/SearchShowPage/SearchShowPage';
 
 function App() {
   return (
@@ -38,6 +39,10 @@ function App() {
         <Route exact path="/">
           <Navigation />
           <MainPage />
+        </Route>
+        <Route path="/search">
+            <Navigation />
+            <Search />
         </Route>
         <Route path="/:none">
           <Navigation />
