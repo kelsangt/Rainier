@@ -1,6 +1,6 @@
 # Rainier
 
-<a hreh="https://rainier.onrender.com/">Live Link</a>
+<a href="https://rainier.onrender.com/">Live Link</a>
 
 
 ## Introduction 
