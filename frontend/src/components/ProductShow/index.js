@@ -60,8 +60,8 @@ const ProductShow = () => {
                 <ul id="descriptionList">
                     {descriptionArray.map((sentence)=>{
                         return (
-                            <li id="sentence">
-                                key={sentence}
+                            <li id="sentence" key={Math.random()}>
+                                {sentence}
                             </li>
                         )
                     })}
@@ -89,7 +89,8 @@ const ProductShow = () => {
                 <button id="buyNow">Buy Now</button>
                 <div id="paymentDiv">
                     <span id="payment">Payment</span>
-                    <a href="/" id="secureTransaction">Secure transaction</a>
+                    {/* <a href="/" id="secureTransaction">Secure transaction</a> */}
+                    <span id="secureTransaction">Secure transaction</span>
                 </div>
                 <div id="shipsFromDiv">
                     <span id="shipsFrom">Ships from</span>
@@ -101,7 +102,8 @@ const ProductShow = () => {
                 </div>
                 <div id="returnsDiv">
                     <span id="returns">Returns</span>
-                    <a href="/" id="eligibleForReturn">Eligible for Return, Refund or Replacement within 30 days of receipt</a>
+                    {/* <a href="/" id="eligibleForReturn">Eligible for Return, Refund or Replacement within 30 days of receipt</a> */}
+                    <span id="eligibleForReturn">Eligible for Return, Refund or Replacement within 30 days of receipt</span>
                 </div>
                 
             </div>

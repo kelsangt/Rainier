@@ -529,29 +529,389 @@ require "open-uri"
       filename: "charlottesWeb.png"
     )
 
-    example = Product.create!(
-      name: " ", 
+    faultInOurStars = Product.create!(
+      name: "The Fault in Our Stars", 
       category: "books", 
-      price: 15.99, 
-      description: ""
+      price: 7.99, 
+      description: "The beloved, #1 global bestseller by John Green, author of The Anthropocene Reviewed and Turtles All the Way Down.
+      'John Green is one of the best writers alive' –E Lockhart, #1 bestselling author of We Were Liars.
+      'The greatest romance story of this decade' –Entertainment Weekly.
+      #1 New York Times Bestseller • #1 Wall Street Journal Bestseller • #1 USA Today Bestseller • #1 International Bestseller.
+      Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis, But when a gorgeous plot twist named Augustus Waters suddenly appears at Cancer Kid Support Group, Hazel’s story is about to be completely rewritten.
+      From John Green, #1 bestselling author of The Anthropocene Reviewed and Turtles All the Way Down, The Fault in Our Stars is insightful, bold, irreverent, and raw, It brilliantly explores the funny, thrilling, and tragic business of being alive and in love"
     )
 
-    example.image.attach(
-      io: URI.open(" "), 
-      filename: " "
+    faultInOurStars.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/faultInOurStars.png"), 
+      filename: "faultInOurStars.png"
     )
 
-    example = Product.create!(
-      name: " ", 
-      category: " ", 
-      price: 15.99, 
-      description: ""
+    nineteen84 = Product.create!(
+      name: "1984", 
+      category: "books", 
+      price: 11.99, 
+      description: "George Orwell, born in 1903 in India was an English novelist, essayist and critic, He was a man of strong opinions who addressed some of the major political movements of his times, including imperialism, fascism and communism.
+      Orwell was the author of six novels as well as numerous essays and non-fiction works. His famous works include 'Animal Farm' and 'Burmese days'"
     )
 
-    example.image.attach(
-      io: URI.open(" "), 
-      filename: " "
+    nineteen84.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/nineteen84.png"), 
+      filename: "nineteen84.png"
     )
+
+    shoeDog = Product.create!(
+      name: "Shoe Dog: A Memoir by the Creator of NIKE", 
+      category: "books", 
+      price: 16.99, 
+      description: "In 1962, fresh out of business school, Phil Knight borrowed $50 from his father and created a company with a simple mission: import high-quality, low-cost athletic shoes from Japan. Selling the shoes from the boot of his Plymouth, Knight grossed $8000 in his first year, 
+      Today, Nike's annual sales top $30 billion. In an age of start-ups, Nike is the ne plus ultra of all start-ups, and the swoosh has become a revolutionary, globe-spanning icon, one of the most ubiquitous and recognisable symbols in the world today"
+    )
+
+    shoeDog.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/shoeDog.png"), 
+      filename: "shoeDog.png"
+    )
+
+    fahrenheit451 = Product.create!(
+      name: "Fahrenheit 451", 
+      category: "books", 
+      price: 8.99, 
+      description: "Nearly seventy years after its original publication, Ray Bradbury’s internationally acclaimed novel Fahrenheit 451 stands as a classic of world literature set in a bleak, dystopian future, Today its message has grown more relevant than ever before.
+      Guy Montag is a fireman, His job is to destroy the most illegal of commodities, the printed book, along with the houses in which they are hidden, Montag never questions the destruction and ruin his actions produce, returning each day to his bland life and wife, Mildred, who spends all 
+      day with her television 'family,' But when he meets an eccentric young neighbor, Clarisse, who introduces him to a past where people didn’t live in fear and to a present where one sees the world through the ideas in books instead of the mindless chatter of television, Montag begins to question everything he has ever known"
+    )
+
+    fahrenheit451.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/fahrenheit451.png"), 
+      filename: "fahrenheit451.png"
+    )
+
+    hamlet = Product.create!(
+      name: "Hamlet", 
+      category: "books", 
+      price: 9.99, 
+      description: "A new pocket edition of William Shakespeare's classic tragic play The Tragedy of Hamlet, Prince of Denmark, Hamletis a story of family and political intrigue, revenge, and madness and remains one of Shakespeare's most enduringly popular and influential works, featuring many of his most memorable characters and verses.
+      This pocket edition is based on the original Cambridge editions, first published for the general public in the 1860s, and is designed for reading ease -- the size of a standard mass market paperback, it is convenient enough to fit in your pocket, briefcase, or purse, but it features font size sufficient for easy reading and paper durable enough for reading again and again"
+    )
+
+    hamlet.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/hamlet.png"), 
+      filename: "hamlet.png"
+    )
+
+    grapesOfWrath = Product.create!(
+      name: "The Grapes of Wrath", 
+      category: "books", 
+      price: 17.99, 
+      description: "First published in 1939, Steinbeck’s Pulitzer Prize-winning epic of the Great Depression chronicles the Dust Bowl migration of the 1930s and tells the story of one Oklahoma farm family, the Joads—driven from their homestead and forced to travel west to the promised land of California. Out of their trials and their repeated collisions against the hard realities 
+      of an America divided into Haves and Have-Nots evolves a drama that is intensely human yet majestic in its scale and moral vision, elemental yet plainspoken, tragic but ultimately stirring in its human dignity. A portrait of the conflict between the powerful and the powerless, of one man’s fierce reaction to injustice, and of one woman’s stoical strength, the novel captures 
+      the horrors of the Great Depression and probes into the very nature of equality and justice in America. At once a naturalistic epic, captivity narrative, road novel, and transcendental gospel, Steinbeck’s powerful landmark novel is perhaps the most American of American Classics"
+    )
+
+    grapesOfWrath.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/grapesOfWrath.png"), 
+      filename: "grapesOfWrath.png"
+    )
+
+    dune = Product.create!(
+      name: "Dune", 
+      category: "books", 
+      price: 29.99, 
+      description: "Frank Herbert’s epic masterpiece—a triumph of the imagination and the bestselling science fiction novel of all time.
+      Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a noble family tasked with ruling an inhospitable world where the only thing of value is the “spice” melange, a drug capable of extending life and enhancing consciousness.
+      When House Atreides is betrayed, the destruction of Paul’s family will set the boy on a journey toward a destiny greater than he could ever have imagined. And as he evolves into the mysterious man known as Muad’Dib, he will bring to fruition humankind’s most ancient and unattainable dream.
+      A stunning blend of adventure and mysticism, environmentalism and politics, Dune won the first Nebula Award, shared the Hugo Award, and formed the basis of what is undoubtedly the grandest epic in science fiction"
+    )
+
+    dune.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/dune.png"), 
+      filename: "dune.png"
+    )
+
+    # Electronics
+
+    alienware = Product.create!(
+      name: "Alienware AW3423DW 34.18-inch Quantom Dot-OLED Curved Gaming Monitor, 3440x1440 pixels at 175Hz, 1800R Curvature, True 0.1ms gray-to-gray, 1Million:1 Contrast Ratio, 1.07 Billions Colors - Lunar Light", 
+      category: "electronics", 
+      price: 1299.99, 
+      description: "Alienware AW3423DW 34,18-inch Quantom Dot-OLED Curved Gaming Monitor, 3440x1440 pixels at 175Hz, 1800R Curvature, True 0,1ms gray-to-gray, 1Million:1 Contrast Ratio, 1,07 Billions Colors - Lunar Light"
+    )
+
+    alienware.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/alienware.png"), 
+      filename: "alienware.png"
+    )
+
+    g502 = Product.create!(
+      name: "Logitech G502 HERO High Performance Wired Gaming Mouse, HERO 25K Sensor, 25,600 DPI, RGB, Adjustable Weights, 11 Programmable Buttons, On-Board Memory, PC / Mac, Black", 
+      category: "electronics", 
+      price: 44.99, 
+      description: "Hero 25K sensor through a software update from G HUB, this upgrade is free to all players: Our most advanced, with 1:1 tracking, 400-plus ips, and 100 - 25,600 max dpi sensitivity plus zero smoothing, filtering, or acceleration.
+      11 customizable buttons and onboard memory: Assign custom commands to the buttons and save up to five ready to play profiles directly to the mouse.
+      Adjustable weight system: Arrange up to five removable 3,6 grams weights inside the mouse for personalized weight and balance tuning.
+      Programmable RGB Lighting and Lightsync technology: Customize lighting from nearly 16,8 million colors to match your team's colors, sport your own or sync colors with other Logitech G gear.
+      Mechanical switch button tensioning: Metal spring tensioning system and pivot hinges are built into left and right gaming mouse buttons for a crisp, clean click feel with rapid click feedback.
+      1 year hardware limited warranty"
+    )
+
+    g502.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/g502.png"), 
+      filename: "g502.png"
+    )
+
+    k95 = Product.create!(
+      name: "Corsair K95 RGB Platinum XT Mechanical Gaming Keyboard, Backlit RGB LED, Cherry MX Speed RGB Silver, Black (CH-9127414-NA)", 
+      category: "electronics", 
+      price: 139.99, 
+      description: "Per-key RGB backlighting and a 19-zone LightEdge across the top of the keyboard delivers dynamic and vibrant lighting effects with near-limitless customization.
+      Tuned for low noise operation even at full load; MTBF hours.
+      Gain an in-game advantage with six dedicated macro keys fully programmable for complex macros and key remaps or swap to the included S-key keycaps and program special streaming commands through Elgato Stream Deck software.
+      Cherry MX Speed RGB Silver mechanical key switches provide ultra-fast 1,2 millimeter actuation and proven reliability with 100 million keystrokes.
+      A detachable soft textured cushioned leatherette palm rest offers the plush comfort to breeze through marathon gaming sessions"
+    )
+
+    k95.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/k95.png"), 
+      filename: "k95.png"
+    )
+
+    hyperX = Product.create!(
+      name: "HyperX CloudX, Official Xbox Licensed Gaming Headset, Compatible with Xbox One and Series X|S, Memory Foam Ear Cushions, Detachable Noise-Cancelling Mic, in-line Audio Controls, Silver", 
+      category: "electronics", 
+      price: 49.99, 
+      description: "Headphones fit type: Over-Ear.
+      Official Xbox licensed headset: CloudX was tested by Microsoft and works with Xbox controllers that have a 3,5 millimeter headset jack.
+      Signature HyperX comfort: Cloud's legendary comfort will keep you gaming strong during those marathon gaming sessions.
+      Durable aluminum frame: The sturdy aluminum frame provides reliable durability and stability.
+      Immersive in-game audio: Enhanced bass reproduction and crystal clear lows, mids, and highs help fully immerse you in your gaming.
+      [Convenient in-line audio control]: Intuitive in-line audio controls allow you to adjust volume and mute mic without having to dig into console settings.
+      Detachable noise-cancellation microphone: The flexible, detachable mic can be easily positioned as you like it, and removed if you're enjoying music.
+      Flexible braided cable: The tough braided cable is engineered to withstand the perils of daily gaming and is flexible to allow you to move freely"
+    )
+
+    hyperX.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/hyperX.png"), 
+      filename: "hyperX.png"
+    )
+
+    airpodPro = Product.create!(
+      name: "Apple AirPods Pro (2nd Generation) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio, MagSafe Charging Case, Bluetooth Headphones for iPhone", 
+      category: "electronics", 
+      price: 199.99, 
+      description: "RICHER AUDIO EXPERIENCE – The Apple-designed H2 chip pushes advanced audio performance even further, resulting in smarter noise cancellation and more immersive sound, The low-distortion, custom-built driver delivers crisp, clear high notes and deep, rich bass in stunning definition, So every sound is more vivid than ever, Note : If the size of the earbud tips does not match the size of your ear canals or the headset is not worn properly in your ears, you may not obtain the correct sound qualities or call performance, Change the earbud tips to ones that fit more snugly in your ear.
+      NEXT-LEVEL ACTIVE NOISE CANCELLATION – Up to 2x more Active Noise Cancellation than the previous AirPods Pro for dramatically less noise on your commute, or when you want to focus, Adaptive Transparency lets you comfortably hear the world around you, adjusting for intense noise—like sirens or construction—in real time.
+      CUSTOMIZABLE FIT – Now with four pairs of silicone tips (XS, S, M, L) to fit a wider range of ears and provide all-day comfort, The tips create an acoustic seal to help keep out noise and secure AirPods Pro in place"
+    )
+
+    airpodPro.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/airpodPro.png"), 
+      filename: "airpodPro.png"
+    )
+
+    airpodMax = Product.create!(
+      name: "Apple AirPods Max Wireless Over-Ear Headphones. Active Noise Cancelling, Transparency Mode, Spatial Audio, Digital Crown for Volume Control. Bluetooth Headphones for iPhone - Silver", 
+      category: "electronics", 
+      price: 479.99, 
+      description: "Apple-designed dynamic driver provides high-fidelity audio.
+      Active Noise Cancellation blocks outside noise, so you can immerse yourself in music.
+      Transparency mode for hearing and interacting with the world around you.
+      Spatial audio with dynamic head tracking provides theater-like sound that surrounds you.
+      Computational audio combines custom acoustic design with the Apple H1 chip and software for breakthrough listening experiences.
+      Designed with a knit-mesh canopy and memory foam ear cushions for an exceptional fit.
+      Magical experience with effortless setup, on-head detection, and seamless switching between devices.
+      Easily share audio between two sets of AirPods on your iPhone, iPad, iPod touch, or Apple TV.
+      20 hours of listening, movie watching, or talk time with Active Noise Cancellation and spatial audio enabled.
+      Store in ultra low-power mode with the slim Smart Case"
+    )
+
+    airpodMax.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/airpodMax.png"), 
+      filename: "airpodMax.png"
+    )
+
+    ipadAir = Product.create!(
+      name: "Apple 2022 iPad Air (10.9-inch, Wi-Fi, 64GB) - Space Gray (5th Generation)", 
+      category: "electronics", 
+      price: 559.99, 
+      description: "10,9-inch Liquid Retina display with True Tone, P3 wide color, and an antireflective coating.
+      Apple M1 chip with Neural Engine.
+      12MP Wide camera.
+      12MP Ultra Wide front camera with Center Stage.
+      Up to 256GB of storage.
+      Available in blue, purple, pink, starlight, and space gray.
+      Stereo landscape speakers.
+      Touch ID for secure authentication and Apple Pay.
+      All-day battery life.
+      5G capable"
+    )
+
+    ipadAir.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/ipadAir.png"), 
+      filename: "ipadAir.png"
+    )
+
+    # Home Goods
+
+    lamp = Product.create!(
+      name: "Amazon Brand – Stone & Beam Ceramic Geometric Cut-Out Table Desk Lamp With LED Light Bulb, 22 in H, White", 
+      category: "homegoods", 
+      price: 79.99, 
+      description: "This lamp will bring a touch of glamorous style to your living room or bedroom, The Off White ceramic pillar has geometric cut-outs for an artistic flair, A wide linen shade tops off this modern but graceful style.
+      Ceramic base, polished nickel hardware, and Off White linen shade.
+      LED bulb included.
+      Simple assembly.
+      Actual Size: 13 in (L) x 13 in (W) x 22 in (H); Measure: 35,5cm (L) x 35,5cm (W) X 64cm (H).
+      For indoor use only"
+    )
+
+    lamp.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/lamp.png"), 
+      filename: "lamp.png"
+    )
+
+    chair = Product.create!(
+      name: "Amazon Basics Mesh, Mid-Back, Adjustable, Swivel Office Desk Chair with Armrests, Black", 
+      category: "homegoods", 
+      price: 64.99, 
+      description: "NOTE: To ensure proper assembly, please follow all steps provided in the User manual.
+      Comfortable office chair with contoured mesh back for breathability.
+      Pneumatic seat-height adjustment; padded seat for comfort.
+      Stable 5-point base with dual-wheel casters; 275-pound maximum weight capacity.
+      User manual with assembly instructions included.
+      BIFMA Certified.
+      Chair Dimensions: 25,2 x 24 x 35,6 - 40,3 inches (DxWxH)"
+    )
+
+    chair.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/chair.png"), 
+      filename: "chair.png"
+    )
+
+    espressoMachine = Product.create!(
+      name: "Mr. Coffee Espresso and Cappuccino Machine, Programmable Coffee Maker with Automatic Milk Frother and 15-Bar Pump, Stainless Steel", 
+      category: "homegoods", 
+      price: 199.99, 
+      description: "Craft delectable, robust coffeehouse-quality espressos, cappuccinos, and lattes with the Mr. Coffee Café Barista. 
+      Featuring an electric 15-bar pump that creates powerful pressure to extract bold, rich flavors during the brew. 
+      Anyone can become a cafe expert with the simple-to-use espresso maker. 
+      One-touch controls let you choose between single or double shots and automatically froths milk with an adjustable control knob. 
+      The milk reservoir is removable to store leftover milk not used during the brew in the refrigerator, so you just fill it and let the Café Barista determine the amount needed.
+      A recipe book is included to easily create impressive coffee drinks or inspire you to invent original recipes all from the comfort of your home"
+    )
+
+    espressoMachine.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/espressoMachine.png"), 
+      filename: "espressoMachine.png"
+    )
+
+    keurig = Product.create!(
+      name: "Keurig K-Classic Coffee Maker K-Cup Pod, Single Serve, Programmable, 6 to 10 oz. Brew Sizes, Black", 
+      category: "homegoods", 
+      price: 109.99, 
+      description: "Brews multiple k-cup pod sizes: (6, 8, 10 ounce) – the most popular k-cup pod brew sizes, Use the 6 ounce brew size to achieve the strongest brew.
+      Large 48 ounce water reservoir: Allows you to brew 6 plus cups before having to refill, saving you time and simplifying your morning routine, The water reservoir is removable, making it easy to refill whenever you need to.
+      Descaling: An important part of cleaning your keurig brewer, This process helps to remove calcium deposits, or scale, that can build up inside a coffee maker over time.
+      Auto-off: An auto-off feature is easily programmed to turn off your coffee maker after it has been idle for 2 hours, helping to save energy.
+      Simple button controls: Just insert a pod, select your desired cup brew size, and brew a great-tasting cup in under a minute.
+      Fabric type: Plastic"
+    )
+
+    keurig.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/keurig.png"), 
+      filename: "keurig.png"
+    )
+
+    airPurifier = Product.create!(
+      name: "LEVOIT Air Purifier for Home Allergies Pets Hair in Bedroom, H13 True HEPA Filter, Covers Up to 1095 Sq.Foot, 24db Filtration System, Remove 99.97% Dust Smoke Mold Pollen, Core 300, White", 
+      category: "homegoods", 
+      price: 99.99, 
+      description: "WHISPER QUIET AIR CLEANER: Choose Sleep Mode at night and then forget all about your air purifier while you sleep, QuietKEAP Technology reduces noise levels to a near-silent 24dB, ensuring the Core 300 won’t get in the way of a good night’s rest.
+      SLEEK DESIGN: The Core 300 practically serves your home while blending in with your decor, Its award-winning design (Red Dot, 2020) and modern white finish help your air purifier fit anywhere in your home/bedroom/room.
+      FIND RELIEF: Ease sneezing, congestion, and other allergy symptoms caused by airborne contaminants, The H13 True HEPA Filter works alongside the Pre-Filter and High-Efficiency Activated Carbon Filter to capture 99,97% of airborne particles 0,3 microns in size, such as dust, smoke, pollen, odor"
+    )
+
+    airPurifier.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/airPurifier.png"), 
+      filename: "airPurifier.png"
+    )
+
+    vacuum = Product.create!(
+      name: "Eureka Airspeed Ultra-Lightweight Compact Bagless Upright Vacuum Cleaner, Replacement Filter, Green", 
+      category: "homegoods", 
+      price: 59.99, 
+      description: "Quick release handle for effortless above floor cleaning, Attach the crevice tool or dusting brush to the end of the handle for cleaning upholstery, windows and other hard to reach places.
+      Powerful all floor suction extracts dirt and hair from hard floors and carpets ease, It’s 10,5 in wide cleaning path gets the job done quickly.
+      Lightweight at only 7,7 pounds with its compact and featherweight design this vacuum can store in any space in your home and be carried anywhere.
+      Contains one washable filter which can be rinsed and left to dry for no maintenance costs.
+      Includes a crevice tool and dusting brush which snaps on the vacuum and are within reach at any time during cleaning"
+    )
+
+    vacuum.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/vacuum.png"), 
+      filename: "vacuum.png"
+    )
+
+    airFryer = Product.create!(
+      name: "Ninja AF101 Air Fryer that Crisps, Roasts, Reheats, & Dehydrates, for Quick, Easy Meals, 4 Quart Capacity, & High Gloss Finish, Black/Grey", 
+      category: "homegoods", 
+      price: 99.99, 
+      description: "Wide temperature range: 105 degree Fahrenheit to 400 degrees Fahrenheit allows you to gently remove moisture from foods or quickly cook and crisp foods with convection heat.
+      4 quart ceramic coated nonstick basket and crisper plate fit 2 pounds of french fries, Cord length (feet) - 2,6.
+      The unit will need time to preheat before coming up to temperature, We recommend that you preheat the unit for 3 minutes before adding your ingredients to achieve the best results.
+      Dehydrate: Create flat, chip like dehydrated foods for fun, homemade snacks pounds; The combination of low fan speed and low temperature enables thorough dehydration.
+      Dishwasher safe parts: Easy to clean basket, crisper plate, and multi-layer rack"
+    )
+
+    airFryer.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/airFryer.png"), 
+      filename: "airFryer.png"
+    )
+
+    dyson = Product.create!(
+      name: "Dyson Pure Cool™ TP01 Air Purifier and Fan - White/Silver", 
+      category: "homegoods", 
+      price: 299.99, 
+      description: "Air Multiplier technology generates the circulation power to draw distant pollutants into the machine, projecting purified air throughout the whole room.
+      The filter is quick and easy to change, With automatic filter-life notifications on the machine.
+      Program your machine to turn off after pre-set intervals.
+      Curved and magnetized remote stores neatly on the machine.
+      Sleep time mode for a comfortable night's sleep, The LED display will turn off after 10 seconds of inactivity"
+    )
+
+    dyson.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/dyson.png"), 
+      filename: "dyson.png"
+    )
+
+    waterBottle = Product.create!(
+      name: "Hydro Flask", 
+      category: "homegoods", 
+      price: 54.99, 
+      description: "TempShield️ double-wall vacuum insulation keeps contents cold up to 24 hours.
+      Insulated Flex Straw Cap is leakproof when closed.
+      Made with 18/8 pro-grade stainless steel for durability, pure taste and no flavor transfer.
+      Wide Mouth opening is ice-cube friendly.
+      Color Last powder coat stays clean and colorful.
+      Bottle fits most backcountry water filters.
+      BPA-Free"
+    )
+
+    waterBottle.image.attach(
+      io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/waterBottle.png"), 
+      filename: "waterBottle.png"
+    )
+
+    # example = Product.create!(
+    #   name: " ", 
+    #   category: " ", 
+    #   price: 15.99, 
+    #   description: ""
+    # )
+
+    # example.image.attach(
+    #   io: URI.open(" "), 
+    #   filename: " "
+    # )
 
 
     puts "Done!"

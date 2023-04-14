@@ -103,6 +103,7 @@
     font-size: 14px;
     color: #007185;
     margin-bottom: 20px;
+    cursor: not-allowed;
 }
 
 #freeDelivery {
@@ -110,6 +111,7 @@
     font-size: 14px;
     color: #007185;
     margin-bottom: 20px;
+    cursor: not-allowed;
 }
 
 #inStock {
@@ -195,9 +197,10 @@ a {
 #secureTransaction, #eligibleForReturn {
     font-size: 12px;
     color: #358d9d;
+    cursor: not-allowed;
 }
 
-#secureTransaction:hover, #eligibleForReturn:hover {
+#secureTransaction:hover, #eligibleForReturn:hover, #freeReturns:hover, #freeDelivery:hover {
     color: orange;
 }
 

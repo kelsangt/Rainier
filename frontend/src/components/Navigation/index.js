@@ -25,11 +25,11 @@ function Navigation() {
     links = (
         <>
         <ProfileModal user={sessionUser}/>
-        <NavLink to="/" style={{textDecoration: 'none'}}>
+        {/* <NavLink to="/" style={{textDecoration: 'none'}}> */}
             <div id="returnsOrders">
                 <p>Returns <br></br> & Orders</p>
             </div>
-        </NavLink>
+        {/* </NavLink> */}
         <NavLink to="/cart" style={{textDecoration: 'none'}}>
             <div id="shoppingCart">
                 <div id="innerCartDiv">
@@ -45,11 +45,11 @@ function Navigation() {
     links = (
         <>
         <LoginModal />
-        <NavLink to="/login" style={{textDecoration: 'none'}}>
+        {/* <NavLink to="/login" style={{textDecoration: 'none'}}> */}
             <div id="returnsOrders">
                 <p>Returns <br></br> & Orders</p>
             </div>
-        </NavLink>
+        {/* </NavLink> */}
         <NavLink to="/login" style={{textDecoration: 'none'}}>
             <div id="shoppingCart">
                 <div id="innerCartDiv">
@@ -99,7 +99,7 @@ function Navigation() {
                 Toys & Games
             </div>
         </NavLink>   
-        <NavLink exact to="/fashion" style={{textDecoration: 'none'}}>  
+        <NavLink exact to="/categories/fashion" style={{textDecoration: 'none'}}>  
             <div id="fashionCategory">
                 Fashion
             </div>

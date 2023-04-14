@@ -181,6 +181,7 @@
     height: 50px;
     font-family: Amazon Ember Regular;
     font-size: 14px;
+    cursor: not-allowed;
 }
 
 /* For Nav's Lower Components */

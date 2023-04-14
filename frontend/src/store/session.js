@@ -61,7 +61,7 @@ export const logout = () => async (dispatch) => {
     });
     storeCurrentUser(null);
     dispatch(removeUser());
-    // window.location.reload();
+    window.location.reload();
     return res;
 };
 
@@ -91,7 +91,7 @@ const sessionReducer = (state = initialState, action) => {
         case SET_USER:
             return { ...state, user: action.payload }
         case REMOVE_USER:
-            return { user: null };
+            return { ...state, user: null };
         default: 
             return state; 
     }
