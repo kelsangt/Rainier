@@ -165,6 +165,7 @@
     border: 1px rgb(132, 106, 41);
     cursor: pointer;
     border-radius: 200px;
+    cursor: not-allowed;
 }
 
 #buyNow:hover {

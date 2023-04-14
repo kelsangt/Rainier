@@ -15,9 +15,9 @@ function Navigation() {
   
   let quantityCount = 0;
     cartItems.forEach(cartItem => {
-            if(cartItem){
-                quantityCount += cartItem.productQuantity;
-            }
+        if(cartItem){
+            quantityCount += cartItem.productQuantity;
+        }
     })
 
   let links;

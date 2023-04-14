@@ -7,12 +7,12 @@ import NotFound from '../NotFound/index';
 const ProductIndexItem = (({product}) => {
     const { categoryName } = useParams();
 
-    if((product.category !== categoryName) && (categoryName !== "all")){
-        return null;
-    }
-
     if(!product.category){
         return <NotFound />
+    }
+    
+    if((product.category !== categoryName) && (categoryName !== "all")){
+        return null;
     }
     
     return (

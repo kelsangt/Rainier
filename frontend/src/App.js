@@ -20,12 +20,12 @@ function App() {
           <ProductIndex />
           <Footer />
         </Route>
-        <Route path="/products/:productId">
+        <Route exact path="/products/:productId">
           <Navigation />
           <ProductShow />
           <Footer />
         </Route>
-        <Route path="/products">
+        <Route exact path="/products">
           <Navigation />
           <ProductIndex />
           <Footer />
@@ -46,12 +46,12 @@ function App() {
           <MainPage />
           <Footer />
         </Route>
-        <Route path="/search">
+        <Route exact path="/search">
           <Navigation />
           <Search />
           <Footer />
         </Route>
-        <Route path="/:none">
+        <Route path="*">
           <Navigation />
           <NotFound />
           <Footer />
