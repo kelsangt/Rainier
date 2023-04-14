@@ -68,7 +68,6 @@ export const createCartItem = cartItem => async (dispatch) => {
         const data = await res.json();
         dispatch(retrieveCartItem(data.cartItem));
         dispatch(retrieveProduct(data.product));
-
     }
 }
 
