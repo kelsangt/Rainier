@@ -1,5 +1,5 @@
 import csrfFetch from "./csrf";
-import { retrieveProducts, retrieveProduct } from "./products";
+import { retrieveProducts } from "./products";
 // import { REMOVE_USER } from "./session";
 
 export const RETRIEVE_CART_ITEM = 'RETRIEVE_CART_ITEM'
@@ -80,7 +80,6 @@ export const updateCartItem = cartItem => async (dispatch) => {
 
     if(res.ok){
         const data = await res.json();
-        // debugger;
         window.location.reload();
         dispatch(retrieveCartItem(data));
     }
