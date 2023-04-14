@@ -1,7 +1,9 @@
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { fetchSearchResults } from "../../store/search";
+import magnifyingGlass from '../../images/magnifying_glass.png';
+import './SearchBar.css'
 
 const SearchBar = () => {
     const dispatch = useDispatch();
@@ -22,10 +24,26 @@ const SearchBar = () => {
         }
     }
 
+    function searchSubmitHandlerEnter(e) {
+        if(e.key === "Enter"){
+            e.preventDefault();
+            if(searchText.length > 0){
+                history.push(`/search?keyword=${searchText}`);
+            }
+        }
+    }
+
     return (
         <>
-            <input type="text" onChange={searchHandler} placeholder="Search Rainier"></input>
-            <button onClick={searchSubmitHandler}>search</button>
+            <div id="searchBarDiv">
+                <div id="innerSearchBarDiv">
+                    <input id="searchBar" type="text" onChange={searchHandler} onKeyDown={searchSubmitHandlerEnter} placeholder="Search Rainier"></input>
+                </div>
+            </div>
+            <div id="magnifyingGlassDiv">
+                <button id="searchButton" onClick={searchSubmitHandler}><img src={magnifyingGlass} alt="magnifyingGlassIcon" className="magnifyingGlassIcon" /></button>
+            </div>
+           
         </>
     )
 }

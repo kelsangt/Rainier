@@ -1,10 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-// import ProfileButton from './ProfileButton';
 import logo2 from '../../images/amazonlogo2.png';
 import cart from '../../images/cart.png'
-import magnifyingGlass from '../../images/magnifying_glass.png';
 import LoginModal from '../LoginModal/index'
 import ProfileModal from '../ProfileModal/index'
 import SearchBar from './SearchBar';
@@ -13,14 +11,19 @@ import './Navigation.css';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
+  const cartItems = useSelector(state => Object.values(state.cartItems));
+  
+  let quantityCount = 0;
+    cartItems.forEach(cartItem => {
+            if(cartItem){
+                quantityCount += cartItem.productQuantity;
+            }
+    })
 
   let links;
   if (sessionUser) {
     links = (
         <>
-        {/* <div id="profileDiv">
-            <ProfileButton user={sessionUser} />
-        </div> */}
         <ProfileModal user={sessionUser}/>
         <NavLink to="/" style={{textDecoration: 'none'}}>
             <div id="returnsOrders">
@@ -29,7 +32,11 @@ function Navigation() {
         </NavLink>
         <NavLink to="/cart" style={{textDecoration: 'none'}}>
             <div id="shoppingCart">
-                <img src={cart} alt="cartImage" className="cartImage" /> 
+                <div id="innerCartDiv">
+                    <h1 id="cartCount">{quantityCount}</h1>
+                    <img src={cart} alt="cartImage" className="cartImage" /> 
+                </div>
+               
                 <p id="cartText">Cart</p>
             </div>
         </NavLink>
@@ -39,11 +46,6 @@ function Navigation() {
     links = (
         <>
         <LoginModal />
-        {/* <div id="signInDiv">
-            <NavLink to="/login" style={{textDecoration: 'none'}}>
-               <p id="signInDivText">Hello, sign in <br></br>Account & Lists</p>
-            </NavLink>
-        </div> */}
         <NavLink to="/login" style={{textDecoration: 'none'}}>
             <div id="returnsOrders">
                 <p>Returns <br></br> & Orders</p>
@@ -52,6 +54,7 @@ function Navigation() {
         <NavLink to="/login" style={{textDecoration: 'none'}}>
             <div id="shoppingCart">
                 <img src={cart} alt="cartImage" className="cartImage" /> 
+                <h1 id="cartCount">{quantityCount}</h1>
                 <p id="cartText">Cart</p>
             </div>
         </NavLink>
@@ -87,16 +90,6 @@ function Navigation() {
             </select>
         </div>
         <SearchBar />
-        {/* <div id="searchBarDiv">
-            <div id="innerSearchBarDiv">
-                <input id="searchBar" type="text" placeholder="Search Rainier"></input>
-            </div>
-        </div> */}
-        {/* <div id="magnifyingGlassDiv">
-            <NavLink exact to="/" style={{textDecoration: 'none'}}>
-                <img src={magnifyingGlass} alt="magnifyingGlassIcon" className="magnifyingGlassIcon" /> 
-            </NavLink>
-        </div> */}
         {links}
     </div>
     <div id="navMainDivLower">   

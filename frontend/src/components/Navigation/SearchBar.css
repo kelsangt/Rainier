@@ -1,0 +1,8 @@
+#searchButton {
+    background: none;
+    color: inherit;
+    outline: inherit;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+}

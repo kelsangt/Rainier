@@ -9,6 +9,7 @@ import CartItemIndex from './components/CartItemIndex';
 import MainPage from './components/MainPage';
 import NotFound from './components/NotFound';
 import Search from './components/SearchShowPage/SearchShowPage';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,18 +18,22 @@ function App() {
         <Route exact path="/categories/:categoryName">
           <Navigation />
           <ProductIndex />
+          <Footer />
         </Route>
         <Route path="/products/:productId">
           <Navigation />
           <ProductShow />
+          <Footer />
         </Route>
         <Route path="/products">
           <Navigation />
           <ProductIndex />
+          <Footer />
         </Route>
         <Route path="/cart">
-            <Navigation />
-            <CartItemIndex />
+          <Navigation />
+          <CartItemIndex />
+          <Footer />
         </Route>
         <Route path="/login">
           <LoginFormPage />
@@ -39,14 +44,17 @@ function App() {
         <Route exact path="/">
           <Navigation />
           <MainPage />
+          <Footer />
         </Route>
         <Route path="/search">
-            <Navigation />
-            <Search />
+          <Navigation />
+          <Search />
+          <Footer />
         </Route>
         <Route path="/:none">
           <Navigation />
           <NotFound />
+          <Footer />
         </Route>
       </Switch>
     </>
