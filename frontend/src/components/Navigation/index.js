@@ -36,7 +36,6 @@ function Navigation() {
                     <h1 id="cartCount">{quantityCount}</h1>
                     <img src={cart} alt="cartImage" className="cartImage" /> 
                 </div>
-               
                 <p id="cartText">Cart</p>
             </div>
         </NavLink>
@@ -53,8 +52,10 @@ function Navigation() {
         </NavLink>
         <NavLink to="/login" style={{textDecoration: 'none'}}>
             <div id="shoppingCart">
-                <img src={cart} alt="cartImage" className="cartImage" /> 
-                <h1 id="cartCount">{quantityCount}</h1>
+                <div id="innerCartDiv">
+                    <h1 id="cartCount">{quantityCount}</h1>
+                    <img src={cart} alt="cartImage" className="cartImage" /> 
+                </div>
                 <p id="cartText">Cart</p>
             </div>
         </NavLink>
