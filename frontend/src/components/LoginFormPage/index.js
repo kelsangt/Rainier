@@ -3,7 +3,7 @@ import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
-import logo from '../../images/amazonlogo.png';
+import rainierLogo2 from '../../images/rainierLogo2.png';
 import './LoginForm.css';
 
 function LoginFormPage() {
@@ -49,7 +49,7 @@ function LoginFormPage() {
         <div id="loginMainDiv">
             <div id="logo">
                 <NavLink to="/">  
-                    <img src={logo} alt="amazonlogo" className="amazonlogo" /> 
+                    <img src={rainierLogo2} alt="rainierlogo2" className="rainierlogo2" /> 
                 </NavLink>
             </div>
             <div id="loginSubDiv">

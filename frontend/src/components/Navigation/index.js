@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import logo2 from '../../images/amazonlogo2.png';
+import rainierLogo from '../../images/rainierLogo.png'
 import cart from '../../images/cart.png'
 import LoginModal from '../LoginModal/index'
 import ProfileModal from '../ProfileModal/index'
@@ -77,7 +77,7 @@ function Navigation() {
         </div>
         <div id="navLogo">
             <NavLink exact to="/" style={{textDecoration: 'none'}}>  
-                <img src={logo2} alt="navAmazonlogo" className="navAmazonlogo" /> 
+                <img src={rainierLogo} alt="rainierlogo" className="rainierlogo" /> 
             </NavLink>
         </div>
         <div id="categoryDiv">

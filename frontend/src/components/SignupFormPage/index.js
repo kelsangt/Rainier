@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { NavLink } from 'react-router-dom';
 import * as sessionActions from "../../store/session";
-import logo from '../../images/amazonlogo.png';
+import rainierLogo2 from '../../images/rainierLogo2.png';
 import './SignupForm.css';
 
 function SignupFormPage() {
@@ -41,7 +41,7 @@ function SignupFormPage() {
     <div className= "signupMainDiv"> 
         <div id="signupLogo">
             <NavLink to="/">  
-                <img src={logo} alt="amazonlogo" className="amazonlogo" /> 
+                <img src={rainierLogo2} alt="rainierlogo2" className="rainierlogo2" /> 
             </NavLink>
         </div>
         <div id="signupSubDiv">
