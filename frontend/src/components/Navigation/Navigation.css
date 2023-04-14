@@ -83,6 +83,7 @@
     background-color: #e7e9ec;;
     border: none;
     outline-color: orange;
+    cursor: not-allowed;
 }
 
 
