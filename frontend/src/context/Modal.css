@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 20;
+    z-index: 100;
     /* top: 0;
     right: 0;
     left: 0;
@@ -11,13 +11,14 @@
 }
 
 #backgroundModal {
-    position: fixed;
+    /* position: fixed; */
     background-color: black;
     opacity: 0.25;
-    top: 94px;
+    top: 10vh;
     right: 0;
     left: 0;
     bottom: 0;
+    /* z-index: 99; */
 }
 
 #contentModal {

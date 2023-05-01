@@ -30,7 +30,7 @@ export function Modal({ whenClosing, children }){
 
     return (
         <div id="modal">
-            <div id="backgroundModal"  />
+            <div id="backgroundModal"/>
             <div id="contentModal" onMouseLeave={whenClosing}>           
                 {children}
             </div>

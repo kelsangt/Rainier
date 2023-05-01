@@ -7,7 +7,7 @@
     margin-left: 20px;
     margin-right: 20px;
     font-size: 14px;
-    z-index: 20;
+    z-index: 100;
 }
 
 #modalEntryDiv {
@@ -29,6 +29,9 @@
     left: 500px;
 } */
 
+#signInEntryButtonContainer {
+    z-index: 100;
+}
 
 
 #signInEntryButton {
