@@ -1,24 +1,32 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import rainierLogo from '../../images/rainierLogo.png'
 import cart from '../../images/cart.png'
 import LoginModal from '../LoginModal/index'
 import ProfileModal from '../ProfileModal/index'
 import SearchBar from './SearchBar';
 import './Navigation.css';
+import { fetchAllCartItems } from '../../store/cart_items';
+import { useEffect } from 'react';
 
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
   const cartItems = useSelector(state => Object.values(state.cartItems));
+  const dispatch = useDispatch();
   
   let quantityCount = 0;
-    cartItems.forEach(cartItem => {
-        if(cartItem){
-            quantityCount += cartItem.productQuantity;
-        }
-    })
+
+  cartItems.forEach(cartItem => {
+    if(cartItem){
+        quantityCount += cartItem.productQuantity;
+    }
+  })
+
+//   useEffect(()=>{
+//     dispatch(fetchAllCartItems)
+//   }, [dispatch]);
 
   let links;
   if (sessionUser) {
@@ -61,7 +69,9 @@ function Navigation() {
         </NavLink>
         </>
     );
+
   }
+
 
   return (
     <>

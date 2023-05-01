@@ -50,6 +50,5 @@ const productReducer = (state ={}, action) => {
     }
 }
 
-// testing
 
 export default productReducer;

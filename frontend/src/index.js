@@ -9,6 +9,7 @@ import { ModalProvider } from './context/Modal';
 import configureStore from './store';
 import csrfFetch from './store/csrf';
 import * as sessionActions from './store/session'
+import * as cartActions from './store/cart_items'
 
 
 const store = configureStore();
@@ -44,4 +45,5 @@ if (sessionStorage.getItem("X-CSRF-Token") === null || sessionStorage.getItem("c
   store.dispatch(sessionActions.restoreSession()).then(renderApplication);
 } else {
   renderApplication();
+  store.dispatch(cartActions.fetchAllCartItems());
 }

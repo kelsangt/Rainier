@@ -6,6 +6,7 @@ import fashionDivImage from '../../images/fashionDivImage.png'
 import electronicsDivImage from '../../images/electronicsDivImage.png'
 
 const MainPage = props => {
+
     return (
         <>
         {/* <div id="fillerDiv"></div> */}
