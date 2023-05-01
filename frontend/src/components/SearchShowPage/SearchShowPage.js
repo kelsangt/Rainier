@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import primeLogo from '../../images/primeLogo.png'
+import ItemsNotFound from "../ItemsNotFound";
 
 const Search = () => {
     const dispatch = useDispatch();
@@ -14,6 +15,11 @@ const Search = () => {
         dispatch(fetchSearchResults(query))
     }, [dispatch, history.location.search]);
     const searchResults = useSelector((state) => state.searchResults );
+
+    if(Object.keys(searchResults).length === 0){
+        return <ItemsNotFound />
+    }
+
     return(
         <>
         <div id="fillerDiv"></div>
