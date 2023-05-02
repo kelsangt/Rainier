@@ -14,11 +14,6 @@ function LoginFormPage() {
     const [errors, setErrors] = useState([]);
   
     if (sessionUser) return <Redirect to="/" />;
-
-    // const handleContinueEmail = (e) => {
-    //     e.preventDefault();
-    //     setCredential()
-    // }
   
     const submitProcessor = (e) => {
       e.preventDefault();

@@ -73,6 +73,7 @@ function SignupFormPage() {
                     <input
                     id="signupCredentialInput"
                     type="email"
+                    placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -98,6 +99,7 @@ function SignupFormPage() {
                     <input
                     id="signupConfirmInput"
                     type="password"
+                    placeholder="Re-enter password"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     required
@@ -108,6 +110,14 @@ function SignupFormPage() {
                 <button className="signupButton2" type="submit">Sign Up</button>
             </div>
             </form>
+        </div>
+        <div id="welcomeDiv">
+            <p>Already have a Rainier account?</p>
+        </div>
+        <div id="creationDiv">
+            <NavLink to="/login">
+                <button id="accountCreation">Sign in to Rainier</button>
+            </NavLink>
         </div>
     </div>
   );

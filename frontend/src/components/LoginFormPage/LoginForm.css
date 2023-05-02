@@ -111,10 +111,11 @@
     font-family: Amazon Ember Regular;
     font-weight: lighter;
     color: black;
-    background-color: #e7e9ec;
+    /* background-color: #e7e9ec; */
     width: 327px;
     height: 29px;
-    border-color: #adb1b8 #a2a6ac #8d9096;
+    /* border-color: #adb1b8 #a2a6ac #8d9096; */
+    border: 1px solid gray;
     padding-left: 11px;
     padding-right: 10px;
     margin-top: 20px;
@@ -126,7 +127,7 @@
 }
 
 #accountCreation:active {
-    background-color: #cac9c9;
+    background-color: #c2c0c0;
 }
 
 #demoDiv {
