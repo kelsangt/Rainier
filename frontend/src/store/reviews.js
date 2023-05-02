@@ -1,3 +1,5 @@
+import csrfFetch from "./csrf"
+
 export const RETRIEVE_REVIEW = 'RETRIEVE_REVIEW'
 export const RETRIEVE_REVIEWS = 'RETRIEVE_REVIEWS'
 export const REMOVE_REVIEW = 'REMOVE_REVIEW'
@@ -93,14 +95,12 @@ const reviewReducer = (state ={}, action) => {
     switch(action.type){
         case RETRIEVE_REVIEWS:
             return {...state, ...action.reviews};
-        case RETREIVE_REVIEW:
+        case RETRIEVE_REVIEW:
             return { ...state, [action.review.id]: action.review };
         case REMOVE_REVIEW:
             const newState = { ...state };
             delete newState[action.reviewId];
             return newState;
-        case REMOVE_USER:
-            return {};
         default:
             return state;
     }
