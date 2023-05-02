@@ -47,7 +47,7 @@
 
 
 #signupNameLabel, #signupCredentialLabel, #signupPasswordLabel, #signupConfirmLabel {
-    font-family: Amazon Ember Medium;
+    font-family: Amazon Ember Regular;
     font-weight: bolder;
     font-size: 13px;
     width: 280px;
