@@ -9,4 +9,10 @@ class Product < ApplicationRecord
         foreign_key: :product_id, 
         class_name: :CartItem, 
         dependent: :destroy
+    
+    has_many :reviews, 
+        primary_key: :id, 
+        foreign_key: :product_id, 
+        class_name: :Review, 
+        dependent: :destroy
 end
