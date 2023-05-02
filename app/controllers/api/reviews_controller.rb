@@ -1,6 +1,9 @@
 class Api::ReviewsController < ApplicationController
+
+    wrap_parameters include: Review.attribute_names + ['title', 'body', 'rating', 'userId', 'productId']
+    
     def index 
-        @reviews = product.reviews 
+        @reviews = Review.all
         render :index
     end 
     

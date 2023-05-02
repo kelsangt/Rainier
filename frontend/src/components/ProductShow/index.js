@@ -7,6 +7,9 @@ import './ProductShow.css'
 import { createCartItem } from "../../store/cart_items";
 import { useState } from "react";
 import NotFound from '../NotFound/index';
+import ReviewIndex from "../ReviewIndex";
+import ReviewCreationForm from "../ReviewCreationForm";
+import { fetchAllReviews } from "../../store/reviews";
 
 
 const ProductShow = () => {
@@ -21,7 +24,8 @@ const ProductShow = () => {
     const [product_quantity, setQuantity] = useState(1);
 
     useEffect(()=>{
-        dispatch(fetchProduct(productId))
+        dispatch(fetchProduct(productId));
+        dispatch(fetchAllReviews());
     }, [dispatch, productId])
 
     if(!product) return <NotFound />;
@@ -107,7 +111,8 @@ const ProductShow = () => {
                 </div>
                 
             </div>
-            <div></div>
+            <ReviewCreationForm product={product}/>
+            <ReviewIndex product={product}/>
         </div>
         </>
     )
