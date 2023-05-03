@@ -21,30 +21,31 @@ const ProductShow = () => {
     let productShowPage;
     const product_id = parseInt(productId);
 
-    const reviews = useSelector(state => Object.values(state.reviews));
-
-    let reviewsSum = 0;
-    let reviewsCount = 0;
-
-    reviews.forEach(review => {
-        if(review && product){
-            if(review.productId === product.id) {
-                reviewsSum += review.rating;
-                reviewsCount += 1;
-            }
-        }
-    })
-
-    let reviewsAverage = reviewsSum / reviewsCount;
 
     const [product_quantity, setQuantity] = useState(1);
 
     useEffect(()=>{
         dispatch(fetchProduct(productId));
-        dispatch(fetchAllReviews());
+        // dispatch(fetchAllReviews());
     }, [dispatch, productId])
 
     if(!product) return <NotFound />;
+
+    let reviewsAverage = 0;
+
+    const reviews = product.reviews;
+    if(reviews){
+        let reviewsSum = 0;
+        let reviewsCount = Object.keys(reviews).length;
+        const values = Object.values(reviews);
+        values.forEach((value)=> {
+            if(value && product){
+                reviewsSum += value.rating;
+            }
+        })
+        
+        reviewsAverage = reviewsSum / reviewsCount;
+    } 
 
     const descriptionArray = product.description.split(".");
 

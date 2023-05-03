@@ -11,7 +11,7 @@ const rootReducer = combineReducers({
     products: productReducer,
     cartItems: cartItemReducer,
     searchResults: searchReducer,
-    reviews: reviewReducer
+    // reviews: reviewReducer
 })
 
 let enhancer;

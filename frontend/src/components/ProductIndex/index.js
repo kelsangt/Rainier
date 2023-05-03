@@ -13,7 +13,7 @@ const ProductIndex = props => {
 
     useEffect(()=>{
         dispatch(fetchAllProducts())
-        dispatch(fetchAllReviews())
+        // dispatch(fetchAllReviews())
     }, [dispatch]);
 
     const { categoryName } = useParams();

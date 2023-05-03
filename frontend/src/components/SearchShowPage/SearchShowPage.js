@@ -14,7 +14,7 @@ const Search = () => {
     useEffect(() => {
         const query = history.location.search.split("=")[1];
         dispatch(fetchSearchResults(query));
-        dispatch(fetchAllReviews());
+        // dispatch(fetchAllReviews());
     }, [dispatch, history.location.search]);
 
     const searchResults = useSelector((state) => state.searchResults );

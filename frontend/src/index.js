@@ -47,5 +47,4 @@ if (sessionStorage.getItem("X-CSRF-Token") === null || sessionStorage.getItem("c
 } else {
   renderApplication();
   store.dispatch(cartActions.fetchAllCartItems());
-  // store.dispatch(reviewActions.fetchAllReviews());
 }

@@ -11,9 +11,9 @@ const ProductIndexItem = (({product}) => {
     const { categoryName } = useParams();
     const dispatch = useDispatch();
 
-    useEffect(()=>{
-        dispatch(fetchAllReviews());
-    }, [dispatch])
+    // useEffect(()=>{
+    //     // dispatch(fetchAllReviews());
+    // }, [dispatch])
 
     let reviewsAverage = 0;
 

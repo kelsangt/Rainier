@@ -5,9 +5,17 @@ import ReviewIndexItem from "./ReviewIndexItem";
 import './ReviewIndex.css';
 
 const ReviewIndex = ({product}) => {
-    const reviews = useSelector(state => Object.values(state.reviews));
+    // const reviews = useSelector(state => Object.values(state.reviews));
+
 
     const dispatch = useDispatch();
+    if(!product.reviews){
+        return null;
+    }
+
+    const reviews = Object.values(product.reviews);
+   
+
 
     return (
         <div id="reviewsMainContainer">
