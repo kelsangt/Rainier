@@ -1,25 +1,12 @@
-// import { useState } from "react"
-import './ProductIndexItem.css'
-import primeLogo from '../../images/primeLogo.png'
-import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
-import NotFound from '../NotFound/index';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { fetchAllReviews } from '../../store/reviews';
+import { useSelector } from "react-redux";
+import primeLogo from '../../images/primeLogo.png';
 
-const ProductIndexItem = (({product}) => {
-    const { categoryName } = useParams();
-    const dispatch = useDispatch();
-
-    useEffect(()=>{
-        dispatch(fetchAllReviews());
-    }, [dispatch])
-
+const SearchShowItem = (({product}) => {
     const reviews = useSelector(state => Object.values(state.reviews));
 
     let reviewsSum = 0;
     let reviewsCount = 0;
-
+    
     reviews.forEach(review => {
         if(review && product){
             if(review.productId === product.id) {
@@ -30,19 +17,6 @@ const ProductIndexItem = (({product}) => {
     })
 
     let reviewsAverage = reviewsSum / reviewsCount;
-
-    
-
-    if(!product.category){
-        return <NotFound />
-    }
-    
-    if((product.category !== categoryName) && (categoryName !== "all")){
-        return null;
-    }
-
-
-    
     return (
         <div id="productIndex" key={product.id}>
             <a id="productShowAnchor" href={`/products/${product.id}`}>
@@ -66,4 +40,4 @@ const ProductIndexItem = (({product}) => {
     )
 })
 
-export default ProductIndexItem
+export default SearchShowItem;
