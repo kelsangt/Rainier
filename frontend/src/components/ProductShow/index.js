@@ -51,6 +51,7 @@ const ProductShow = () => {
     if (sessionUser) { 
         productShowPage = (
             <>
+            <div id="showMainDiv">
                 <div id="imageDiv">
                     <img id="showImage" src={product.photoUrl} alt=""/>
                 </div>
@@ -110,13 +111,15 @@ const ProductShow = () => {
                     </div>
                     
                 </div>
-                <ReviewCreationForm product={product}/>
-                <ReviewIndex product={product}/>
+            </div>
+            <ReviewCreationForm product={product}/>
+            <ReviewIndex product={product}/>
             </>
         )
     } else {
         productShowPage = (
             <>
+            <div id="showMainDiv">
                 <div id="imageDiv">
                     <img id="showImage" src={product.photoUrl} alt=""/>
                 </div>
@@ -176,17 +179,17 @@ const ProductShow = () => {
                     </div>
                     
                 </div>
-                <ReviewIndex product={product}/>
+                
+            </div>
+            <ReviewIndex product={product}/>
             </>
         )
     }
 
     return (
         <>
-          <div id="fillerDiv"></div>
-            <div id="showMainDiv">
-                {productShowPage}
-            </div>
+          <div id="fillerDiv"></div> 
+          {productShowPage} 
         </>
     )
 

@@ -13,9 +13,9 @@ const ReviewIndex = ({product}) => {
             {reviews.map((review) => {
                 if (review.productId === product.id) {
                     return (
-                        <li id="review" key={review.id}>
+                        <div id="review" key={review.id}>
                             <ReviewIndexItem review={review} />
-                        </li>
+                        </div>
                     )
                 }
             })}
