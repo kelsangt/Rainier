@@ -1,0 +1,16 @@
+#reviewsMainContainer {
+    background-color: aqua;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    font-family: Amazon Ember Regular;
+}
+
+#review {
+    margin-bottom: 50px;
+    width: 50vw;
+    padding-left: 10vw;
+    background-color: wheat;
+}

@@ -2,6 +2,7 @@ import { getReviews } from "../../store/reviews";
 import { useDispatch, useSelector } from "react-redux";
 import { getReview } from "../../store/reviews";
 import ReviewIndexItem from "./ReviewIndexItem";
+import './ReviewIndex.css';
 
 const ReviewIndex = ({product}) => {
     const reviews = useSelector(state => Object.values(state.reviews));
@@ -9,7 +10,7 @@ const ReviewIndex = ({product}) => {
     const dispatch = useDispatch();
 
     return (
-        <div>
+        <div id="reviewsMainContainer">
             {reviews.map((review) => {
                 if (review.productId === product.id) {
                     return (

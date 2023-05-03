@@ -21,6 +21,22 @@ const ProductShow = () => {
     let productShowPage;
     const product_id = parseInt(productId);
 
+    const reviews = useSelector(state => Object.values(state.reviews));
+
+    let reviewsSum = 0;
+    let reviewsCount = 0;
+
+    reviews.forEach(review => {
+        if(review && product){
+            if(review.productId === product.id) {
+                reviewsSum += review.rating;
+                reviewsCount += 1;
+            }
+        }
+    })
+
+    let reviewsAverage = reviewsSum / reviewsCount;
+
     const [product_quantity, setQuantity] = useState(1);
 
     useEffect(()=>{
@@ -57,7 +73,7 @@ const ProductShow = () => {
                 </div>
                 <div id="descriptionDiv">
                     <h1 id="productTitle">{product.name}</h1>
-                    <h1 id="productRatings">Ratings</h1>
+                    <h1 id="productRatings">{reviewsAverage}</h1>
                     <div id="lineSeparator"></div>
                     <h1 id="productPrice1">${product.price}</h1>
                     <span id="freeReturns">FREE Returns</span>
@@ -125,7 +141,7 @@ const ProductShow = () => {
                 </div>
                 <div id="descriptionDiv">
                     <h1 id="productTitle">{product.name}</h1>
-                    <h1 id="productRatings">Ratings</h1>
+                    <h1 id="productRatings">{reviewsAverage}</h1>
                     <div id="lineSeparator"></div>
                     <h1 id="productPrice1">${product.price}</h1>
                     <span id="freeReturns">FREE Returns</span>
