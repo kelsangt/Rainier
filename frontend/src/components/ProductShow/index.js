@@ -24,6 +24,8 @@ const ProductShow = () => {
 
     const [product_quantity, setQuantity] = useState(1);
 
+    let reviewsAverage = 0;
+
     useEffect(()=>{
         dispatch(fetchProduct(productId));
         // dispatch(fetchAllReviews());
@@ -31,7 +33,7 @@ const ProductShow = () => {
 
     if(!product) return <NotFound />;
 
-    let reviewsAverage = 0;
+    
 
     const reviews = product.reviews;
     if(reviews){

@@ -1,4 +1,5 @@
 import csrfFetch from "./csrf"
+import { retrieveProduct } from "./products"
 
 export const RETRIEVE_REVIEW = 'RETRIEVE_REVIEW'
 export const RETRIEVE_REVIEWS = 'RETRIEVE_REVIEWS'
@@ -63,6 +64,7 @@ export const createReview = review => async (dispatch) => {
     if(res.ok){
         const data = await res.json();
         dispatch(retrieveReview(data.review));
+        dispatch(retrieveProduct(data.product));
     }
 }
 
