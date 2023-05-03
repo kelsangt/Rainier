@@ -5,6 +5,7 @@ import ProductIndexItem from './ProductIndexItem';
 import './ProductIndex.css';
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import NotFound from '../NotFound';
+import { fetchAllReviews } from '../../store/reviews';
 
 const ProductIndex = props => {
     const products = useSelector(state => Object.values(state.products))
@@ -12,6 +13,7 @@ const ProductIndex = props => {
 
     useEffect(()=>{
         dispatch(fetchAllProducts())
+        dispatch(fetchAllReviews())
     }, [dispatch]);
 
     const { categoryName } = useParams();

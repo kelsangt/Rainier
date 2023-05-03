@@ -15,23 +15,21 @@ const ProductIndexItem = (({product}) => {
         dispatch(fetchAllReviews());
     }, [dispatch])
 
-    const reviews = useSelector(state => Object.values(state.reviews));
+    let reviewsAverage = 0;
 
-    let reviewsSum = 0;
-    let reviewsCount = 0;
-
-    reviews.forEach(review => {
-        if(review && product){
-            if(review.productId === product.id) {
-                reviewsSum += review.rating;
-                reviewsCount += 1;
+    const reviews = product.reviews;
+    if(reviews){
+        let reviewsSum = 0;
+        let reviewsCount = Object.keys(reviews).length;
+        const values = Object.values(reviews);
+        values.forEach((value)=> {
+            if(value && product){
+                reviewsSum += value.rating;
             }
-        }
-    })
-
-    let reviewsAverage = reviewsSum / reviewsCount;
-
-    
+        })
+        
+        reviewsAverage = reviewsSum / reviewsCount;
+    } 
 
     if(!product.category){
         return <NotFound />
