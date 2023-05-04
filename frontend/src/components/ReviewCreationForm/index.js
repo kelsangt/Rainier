@@ -10,33 +10,33 @@ const ReviewCreationForm = ({product}) => {
     const [rating, setRating] = useState("");
     const userId = sessionUser.id;
     const productId = product.id;
-    const [errors, setErrors] = useState([]);
+    // const [errors, setErrors] = useState([]);
 
    
 
     const formHandler = (e) => {
         e.preventDefault();
-        setErrors([]);
+        // setErrors([]);
         return dispatch(createReview({title, body, rating, userId, productId}))
-            .catch(async (res) => {
-                let data;
-                try {
-                data = await res.clone().json();
-                } catch {
-                data = await res.text(); 
-                }
-                if (data?.errors) setErrors(data.errors);
-                else if (data) setErrors([data]);
-                else setErrors([res.statusText]);
-            });
+            // .catch(async (res) => {
+            //     let data;
+            //     try {
+            //         data = await res.clone().json();
+            //     } catch {
+            //         data = await res.text(); 
+            //     }
+            //     if (data?.errors) setErrors(data.errors);
+            //     else if (data) setErrors([data]);
+            //     else setErrors([res.statusText]);
+            // });
     }
 
     return (
         <div>
             <form onSubmit={formHandler}>
-                {/* <div id="errors">
-                    <ul id="signupErrors">
-                        {errors}
+                {/* <div>
+                    <ul>
+                        {errors.map(error => <li id="loginError" key={error}>{error}</li>)}
                     </ul>
                 </div> */}
                 <label>
@@ -45,6 +45,7 @@ const ReviewCreationForm = ({product}) => {
                     type="string"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
+                    required
                     />
                 </label>
                 <label>
@@ -53,11 +54,12 @@ const ReviewCreationForm = ({product}) => {
                     type="text"
                     value={body}
                     onChange={(e) => setBody(e.target.value)}
+                    required
                     />
                 </label>
                 <label>
                     Rating
-                    <select value={rating} onChange={(e) => setRating(e.target.value)}>
+                    <select value={rating} onChange={(e) => setRating(e.target.value)} required>
                         <option value="" disabled selected>Please select a rating</option>
                         <option value="1">1</option>
                         <option value="2">2</option>

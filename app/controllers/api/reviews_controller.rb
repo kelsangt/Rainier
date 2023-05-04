@@ -12,7 +12,7 @@ class Api::ReviewsController < ApplicationController
         if @review.save 
             render :show
         else 
-            render json: { errors: ['Cannot post more than one review per product']}, status: :unprocessable_entity
+            render json: { errors: @review.errors.full_messages }, status: :unprocessable_entity
         end
     end 
 
@@ -39,7 +39,7 @@ class Api::ReviewsController < ApplicationController
             if @review.update(cart_item_params)
                 render :show
             else 
-                render json: @review.errors.full_messages, status: unprocessable_entity
+                render json: @review.errors.full_messages, status: :unprocessable_entity
             end 
         end
     end

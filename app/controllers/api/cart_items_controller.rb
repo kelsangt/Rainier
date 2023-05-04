@@ -13,7 +13,7 @@ class Api::CartItemsController < ApplicationController
         if @cart_item.save 
             render :show
         else 
-            render json: @cart_item.errors.full_messages, status: unprocessable_entity
+            render json: @cart_item.errors.full_messages, status: :unprocessable_entity
         end
     end 
     
