@@ -64,8 +64,9 @@ const ProductShow = () => {
             history.push(`/login`)
         } else {
             const user_id = sessionUser.id;
-            const finalProduct = {product_quantity, user_id, product_id}
-            dispatch(createCartItem(finalProduct))
+            const finalProduct = {product_quantity, user_id, product_id};
+            dispatch(createCartItem(finalProduct));
+            history.push(`/cart`);
         }
     }
 

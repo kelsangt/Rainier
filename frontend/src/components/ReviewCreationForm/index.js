@@ -6,12 +6,14 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { getProduct } from "../../store/products";
 import { fetchProduct } from "../../store/products";
 import { useEffect } from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import NotFound from "../NotFound";
 
 const ReviewCreationForm = () => {
     const {productId} = useParams();
     const product = useSelector(getProduct(productId));
     const dispatch = useDispatch();
+    const history = useHistory();
     const sessionUser = useSelector(state => state.session.user);
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
@@ -32,7 +34,8 @@ const ReviewCreationForm = () => {
     const formHandler = (e) => {
         e.preventDefault();
         // setErrors([]);
-        return dispatch(createReview({title, body, rating, userId, productId}))
+        dispatch(createReview({title, body, rating, userId, productId}));
+        history.push(`/products/${productId}`);
             // .catch(async (res) => {
             //     let data;
             //     try {
@@ -56,7 +59,7 @@ const ReviewCreationForm = () => {
                 </div> */}
                 <div id="createReviewMain">Create Review</div>
                 <div id="productInfo">
-                    <img id="reviewImage" src={product.photoUrl}></img>
+                    <img id="reviewImage" alt="reviewimage" src={product.photoUrl}></img>
                     {product.name}
                 </div>
                 <div id="reviewLine"></div>
