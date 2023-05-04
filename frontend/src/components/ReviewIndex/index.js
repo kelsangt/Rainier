@@ -7,25 +7,13 @@ import { useEffect } from "react";
 import { fetchProduct } from "../../store/products";
 
 const ReviewIndex = ({product}) => {
-    // const reviews = useSelector(state => Object.values(state.reviews));
-
-
+    const reviews = useSelector(state => Object.values(state.reviews));
     const dispatch = useDispatch();
     
-   
-    // useEffect(()=> {
-    //     // dispatch(fetchAllReviews());
-    //     dispatch(fetchProduct(product.id))
-    // }, [dispatch])
-
-    const reviews = useSelector(state => Object.values(product.reviews || {}))
 
     if(!product){
         return null;
     }
-
-    // const reviews = Object.values(product.reviews);
-
 
     return (
         <div id="reviewsMainContainer">

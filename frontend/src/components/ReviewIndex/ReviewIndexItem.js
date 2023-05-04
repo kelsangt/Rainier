@@ -5,11 +5,6 @@ import userIcon from '../../images/userIcon.png'
 
 const ReviewIndexItem = ({review}) => {
     const dispatch = useDispatch();
-    
-
-    // if(review.productId !== product.id) {
-    //     return null;
-    // }
 
     return (
         <>
