@@ -26,6 +26,7 @@ const ProductShow = () => {
 
     let reviewsSum = 0;
     let reviewsCount = 0;
+    let reviewsAverage = 0;
 
     useEffect(()=>{
         dispatch(fetchProduct(productId));
@@ -46,7 +47,9 @@ const ProductShow = () => {
             
     })
 
-    let reviewsAverage = reviewsSum / reviewsCount;
+    if(reviewsCount > 0){
+        reviewsAverage = reviewsSum / reviewsCount;
+    }
 
     if(!product) return <NotFound />;
 

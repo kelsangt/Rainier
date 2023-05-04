@@ -4,7 +4,7 @@ class Api::ReviewsController < ApplicationController
     
     def index 
         @reviews = Review.all
-        render :index
+        render '/api/reviews/index'
     end 
     
     def create 
@@ -12,8 +12,17 @@ class Api::ReviewsController < ApplicationController
         if @review.save 
             render :show
         else 
-            render json: @review.errors.full_messages, status: unprocessable_entity
+            render json: @review.errors.full_messages, status: :unprocessable_entity
         end
+    end 
+
+    def show 
+        @review = Review.find_by(id: params[:id])
+        if @review 
+            render 'api/reviews/show'
+        else 
+            render json: { errors: @review.errors.full_messages }, status: :unprocessable_entity
+        end 
     end 
 
     def destroy 
