@@ -2,16 +2,64 @@
     display: flex;
     /* align-items: center; */
     justify-content: center;
-    height: 200px;
-    width: 400px;
+    height: 800px;
+    /* width: 400px;
+     */
+    width: 50vw;
+    margin-top: 10vh;
     /* flex-wrap: wrap; */
     /* flex-direction: row; */
-    background-color: wheat;
-    border: 1px solid black;
+    /* background-color: wheat; */
+    /* border: 1px solid black; */
     font-family: Amazon Ember Regular;
 }
 
 #reviewForm {
     display: flex;
     flex-direction: column;
+}
+
+#reviewImage {
+    height: 100px;
+}
+
+.reviewLabel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-family: Amazon Ember Regular;
+}
+
+.reviewInput {
+    margin-top: 10px;
+    font-family: Amazon Ember Regular;
+}
+
+#reviewBody {
+    display: flex;
+    /* align-items: center; */
+    margin-top: 10px;
+    height: 100px;
+    /* width: 200px; */
+    /* width: 1000px; */
+    font-family: Amazon Ember Regular;
+}
+
+#createReviewMain {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#productInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: Amazon Ember Regular;
+}
+
+#reviewLine {
+    background-color: #dddddd;
+    height: 1px;
+    margin-bottom: 20px;
 }
