@@ -42,7 +42,7 @@ const ProductShow = () => {
             if (review.productId === product.id){
                 reviewsSum += review.rating;
                 reviewsCount += 1;
-            }
+            } 
         }
             
     })

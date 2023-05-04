@@ -10,21 +10,35 @@ const ReviewCreationForm = ({product}) => {
     const [rating, setRating] = useState("");
     const userId = sessionUser.id;
     const productId = product.id;
-
-    // if(!user_id) {
-    //     return null;
-    // }
+    const [errors, setErrors] = useState([]);
 
    
 
     const formHandler = (e) => {
         e.preventDefault();
-        dispatch(createReview({title, body, rating, userId, productId}))
+        setErrors([]);
+        return dispatch(createReview({title, body, rating, userId, productId}))
+            .catch(async (res) => {
+                let data;
+                try {
+                data = await res.clone().json();
+                } catch {
+                data = await res.text(); 
+                }
+                if (data?.errors) setErrors(data.errors);
+                else if (data) setErrors([data]);
+                else setErrors([res.statusText]);
+            });
     }
 
     return (
         <div>
             <form onSubmit={formHandler}>
+                {/* <div id="errors">
+                    <ul id="signupErrors">
+                        {errors}
+                    </ul>
+                </div> */}
                 <label>
                     Title
                     <input 
