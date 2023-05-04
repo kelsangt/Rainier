@@ -1,15 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
 import { createReview } from "../../store/reviews";
 import { useState } from "react";
+import './ReviewCreationForm.css';
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
-const ReviewCreationForm = ({product}) => {
+const ReviewCreationForm = () => {
+    const { productId } = useParams();
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
     const [rating, setRating] = useState("");
     const userId = sessionUser.id;
-    const productId = product.id;
+    // const productId = product.id;
     // const [errors, setErrors] = useState([]);
 
    
@@ -32,8 +35,8 @@ const ReviewCreationForm = ({product}) => {
     }
 
     return (
-        <div>
-            <form onSubmit={formHandler}>
+        <div id="reviewCreationFormMain">
+            <form id="reviewForm" onSubmit={formHandler}>
                 {/* <div>
                     <ul>
                         {errors.map(error => <li id="loginError" key={error}>{error}</li>)}

@@ -10,6 +10,7 @@ import MainPage from './components/MainPage';
 import NotFound from './components/NotFound';
 import Search from './components/SearchShowPage/SearchShowPage';
 import Footer from './components/Footer';
+import ReviewCreationForm from './components/ReviewCreationForm';
 
 function App() {
   return (
@@ -28,6 +29,11 @@ function App() {
         <Route exact path="/products">
           <Navigation />
           <ProductIndex />
+          <Footer />
+        </Route>
+        <Route exact path="/createReview/:productId">
+          <Navigation />
+          <ReviewCreationForm />
           <Footer />
         </Route>
         <Route path="/cart">
