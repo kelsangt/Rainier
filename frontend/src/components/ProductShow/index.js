@@ -19,11 +19,7 @@ const ProductShow = () => {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const history = useHistory();
-    let productShow;
     const product_id = parseInt(productId);
-    
-
-
     const [product_quantity, setQuantity] = useState(1);
 
     let reviewsSum = 0;
@@ -35,8 +31,6 @@ const ProductShow = () => {
         dispatch(fetchAllReviews());
     }, [dispatch, productId])
 
-
-    
 
     const reviews = useSelector(state => Object.values(state.reviews));
     reviews.forEach(review => {
@@ -174,7 +168,6 @@ const ProductShow = () => {
             <ReviewIndex product={product}/>
         </>
     )
-
 }
 
 export default ProductShow;

@@ -18,6 +18,8 @@ const ProductIndexItem = (({product}) => {
     let reviewsAverage = 0;
 
     const reviews = product.reviews;
+
+
     if(reviews){
         let reviewsSum = 0;
         let reviewsCount = Object.keys(reviews).length;
@@ -38,7 +40,6 @@ const ProductIndexItem = (({product}) => {
     if((product.category !== categoryName) && (categoryName !== "all")){
         return null;
     }
-
 
     
     return (
