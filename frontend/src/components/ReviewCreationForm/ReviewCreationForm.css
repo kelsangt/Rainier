@@ -17,10 +17,16 @@
 #reviewForm {
     display: flex;
     flex-direction: column;
+    width: 30vw;
 }
 
 #reviewImage {
     height: 100px;
+    margin-right: 20px;
+}
+
+#productName {
+    line-height: normal;
 }
 
 .reviewLabel {

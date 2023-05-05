@@ -60,7 +60,7 @@ const ReviewCreationForm = () => {
                 <div id="createReviewMain">Create Review</div>
                 <div id="productInfo">
                     <img id="reviewImage" alt="reviewimage" src={product.photoUrl}></img>
-                    {product.name}
+                    <p id="productName">{product.name}</p>
                 </div>
                 <div id="reviewLine"></div>
                 <label className="reviewLabel">
