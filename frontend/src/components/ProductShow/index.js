@@ -21,7 +21,7 @@ const ProductShow = () => {
     const history = useHistory();
     const product_id = parseInt(productId);
     const [product_quantity, setQuantity] = useState(1);
-
+   
     let reviewsSum = 0;
     let reviewsCount = 0;
     let reviewsAverage = 0;
