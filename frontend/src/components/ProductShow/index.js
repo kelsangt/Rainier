@@ -105,8 +105,10 @@ const ProductShow = () => {
                 </div>
                 <div id="descriptionDiv">
                     <h1 id="productTitle">{product.name}</h1>
-                    <h1 id="productRatings">{reviewsAverage}</h1>
-                    {reviewsAmount}
+                    <div id="ratingsDiv">
+                        <h1 id="productRatings">{reviewsAverage}</h1>
+                        <h1 id="reviewsAmountH1">{reviewsAmount}</h1>
+                    </div>
                     <div id="lineSeparator"></div>
                     <h1 id="productPrice1">${product.price}</h1>
                     <span id="freeReturns">FREE Returns</span>

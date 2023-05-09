@@ -212,3 +212,13 @@ a {
 #quantity1 {
     margin-right: 5px;
 }
+
+#ratingsDiv {
+    display: flex;
+}
+
+#reviewsAmountH1 {
+    margin-left: 20px;
+    font-family: Amazon Ember Regular;
+    color: #63a5b1;
+}
