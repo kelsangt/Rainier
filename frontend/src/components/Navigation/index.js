@@ -90,7 +90,7 @@ function Navigation() {
                 <img src={rainierLogo} alt="rainierlogo" className="rainierlogo" /> 
             </NavLink>
         </div>
-        <div id="categoryDiv">
+        {/* <div id="categoryDiv">
             <select name="categoriesSelector" id="categoriesSelector">
                 <option value="all">All</option> 
                 <option value="toysGames">Toys & Games</option> 
@@ -99,7 +99,7 @@ function Navigation() {
                 <option value="electronics">Electronics</option> 
                 <option value="homegoods">Home Goods</option> 
             </select>
-        </div>
+        </div> */}
         <SearchBar />
         {links}
     </div>
