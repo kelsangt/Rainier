@@ -8,6 +8,7 @@ import { fetchProduct } from "../../store/products";
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import NotFound from "../NotFound";
+import loading from '../../images/loading.gif';
 
 const ReviewCreationForm = () => {
     const {productId} = useParams();
@@ -21,17 +22,22 @@ const ReviewCreationForm = () => {
     // const [errors, setErrors] = useState([]);
 
     useEffect(()=>{
-        dispatch(fetchProduct(productId));
-    }, [])
+        dispatch(fetchProduct(productId))
+            .then(()=> setInitialized(true))
+            .then(()=> setInitialized(true));
+    }, [dispatch])
 
     const product = useSelector(getProduct(productId));
 
-    if (!sessionUser) {
-        return <NotFound />
+   
+    if(!initialized){
+        return <div id="loadingDiv">
+            <img alt="loadingIcon" id="loadingIcon" src={loading}></img>
+        </div>
     }
 
-    if (!product){
-        return null;
+    if (!product || !sessionUser) {
+        return <NotFound />
     }
 
 

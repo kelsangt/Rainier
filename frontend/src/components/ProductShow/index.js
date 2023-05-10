@@ -11,6 +11,7 @@ import ReviewIndex from "../ReviewIndex";
 import ReviewCreationForm from "../ReviewCreationForm";
 import { fetchAllReviews } from "../../store/reviews";
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import loading from '../../images/loading.gif';
 
 
 const ProductShow = () => {
@@ -21,7 +22,7 @@ const ProductShow = () => {
     const history = useHistory();
     const product_id = parseInt(productId);
     const [product_quantity, setQuantity] = useState(1);
-    const [loaded, setLoaded] = useState(false);
+    const [initialized, setInitialized] = useState(false);
    
     let reviewsSum = 0;
     let reviewsCount = 0;
@@ -29,8 +30,8 @@ const ProductShow = () => {
 
     useEffect(()=>{
         dispatch(fetchProduct(productId))
-            .then(()=> setLoaded(true))
-            .catch(() => setLoaded(true));
+            .then(()=> setInitialized(true))
+            .catch(() => setInitialized(true));
         dispatch(fetchAllReviews());
     }, [dispatch, productId])
 
@@ -49,8 +50,10 @@ const ProductShow = () => {
         reviewsAverage = reviewsSum / reviewsCount;
     }
 
-    if(!loaded){
-        return <div></div>
+    if(!initialized){
+        return <div id="loadingDiv">
+            <img alt="loadingIcon" id="loadingIcon" src={loading}></img>
+        </div>
     }
 
     let descriptionArray = [];

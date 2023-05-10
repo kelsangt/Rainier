@@ -69,3 +69,17 @@
     height: 1px;
     margin-bottom: 20px;
 }
+
+#loadingDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    height: 800px;
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+#loadingIcon {
+    width: 70px;
+    height: 70px;
+}
