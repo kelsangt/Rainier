@@ -1,10 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { createReview, fetchAllReviews, fetchReview, updateReview } from "../../store/reviews";
+import { fetchReview, updateReview } from "../../store/reviews";
 import { useState } from "react";
 import '../ReviewCreationForm/ReviewCreationForm.css';
-import { useLocation, useParams } from "react-router-dom/cjs/react-router-dom.min";
-import { getProduct } from "../../store/products";
-import { fetchProduct } from "../../store/products";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import NotFound from "../NotFound";
@@ -25,7 +23,7 @@ const ReviewEditForm = () => {
         dispatch(fetchReview(reviewId))
             .then(()=> setInitialized(true))
             .catch(()=> setInitialized(true));
-    }, [dispatch])
+    }, [dispatch, reviewId])
     
     const review = useSelector(getReview(reviewId));
 

@@ -25,7 +25,7 @@ const ReviewCreationForm = () => {
         dispatch(fetchProduct(productId))
             .then(()=> setInitialized(true))
             .catch(()=> setInitialized(true));
-    }, [dispatch])
+    }, [dispatch, productId])
 
     const product = useSelector(getProduct(productId));
 
