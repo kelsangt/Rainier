@@ -21,13 +21,16 @@ const ProductShow = () => {
     const history = useHistory();
     const product_id = parseInt(productId);
     const [product_quantity, setQuantity] = useState(1);
+    const [loaded, setLoaded] = useState(false);
    
     let reviewsSum = 0;
     let reviewsCount = 0;
     let reviewsAverage = 0;
 
     useEffect(()=>{
-        dispatch(fetchProduct(productId));
+        dispatch(fetchProduct(productId))
+            .then(()=> setLoaded(true))
+            .catch(() => setLoaded(true));
         dispatch(fetchAllReviews());
     }, [dispatch, productId])
 
@@ -46,11 +49,18 @@ const ProductShow = () => {
         reviewsAverage = reviewsSum / reviewsCount;
     }
 
-    if(!product) return <NotFound />;
+    if(!loaded){
+        return <div></div>
+    }
 
+    let descriptionArray = [];
+
+    if(product && product.description){
+        descriptionArray = product.description.split(".");
+    } else {
+        return <NotFound />
+    }
     
-
-    const descriptionArray = product.description.split(".");
 
     const handleAddToCart = (e) => {
         e.preventDefault();
