@@ -3,11 +3,12 @@ import primeLogo from '../../images/primeLogo.png';
 
 const SearchShowItem = (({product}) => {
     let reviewsAverage = 0;
+    let reviewsCount;
 
     const reviews = product.reviews;
     if(reviews){
         let reviewsSum = 0;
-        let reviewsCount = Object.keys(reviews).length;
+        reviewsCount = Object.keys(reviews).length;
         const values = Object.values(reviews);
         values.forEach((value)=> {
             if(value && product){
@@ -30,7 +31,9 @@ const SearchShowItem = (({product}) => {
                 </h1>
             </a>
             <h1 id="indexProductReview">
-                {reviewsAverage} 
+                <h1>{reviewsAverage} </h1>
+                
+                <h1 id="reviewsCountH1">{reviewsCount}</h1>
             </h1>
             <h1 id="indexProductPrice">
                 ${product.price}

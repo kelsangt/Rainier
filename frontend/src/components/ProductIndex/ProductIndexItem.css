@@ -31,9 +31,15 @@
 }
 
 #indexProductReview {
+    display: flex;
     margin-left: 5px;
     margin-bottom: 10px;
     color: #ffa41c;
+}
+
+#reviewsCountH1 {
+    margin-left: 10px;
+    color: #2b8899;
 }
 
 #indexProductPrice {
