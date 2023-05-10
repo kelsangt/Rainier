@@ -6,24 +6,34 @@ import { useEffect } from "react";
 import ItemsNotFound from "../ItemsNotFound";
 import { fetchAllReviews } from "../../store/reviews";
 import SearchShowItem from "./SearchShowItem";
+import { useState } from "react";
+import loading from '../../images/loading.gif';
 
 const Search = () => {
     const dispatch = useDispatch();
     const history = useHistory();
+    const [initialized, setInitialized] = useState(false);
 
     useEffect(() => {
         const query = history.location.search.split("=")[1];
-        dispatch(fetchSearchResults(query));
-        // dispatch(fetchAllReviews());
+        dispatch(fetchSearchResults(query))
+            .then(()=> setInitialized(true))
+            .catch(() => setInitialized(true));
     }, [dispatch, history.location.search]);
 
     const searchResults = useSelector((state) => state.searchResults );
 
-
+    if(!initialized){
+        return <div id="loadingDiv">
+            <img alt="loadingIcon" id="loadingIcon" src={loading}></img>
+        </div>
+    }
+    
     if(Object.keys(searchResults).length === 0){
         return <ItemsNotFound />
     }
 
+    
 
     return(
         <>
