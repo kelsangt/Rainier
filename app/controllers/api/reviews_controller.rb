@@ -21,7 +21,7 @@ class Api::ReviewsController < ApplicationController
         if @review 
             render '/api/reviews/show'
         else 
-            render json: { errors: @review.errors.full_messages }, status: :unprocessable_entity
+            render json: { review: nil }
         end 
     end 
 

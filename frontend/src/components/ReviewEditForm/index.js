@@ -9,6 +9,8 @@ import { useEffect } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import NotFound from "../NotFound";
 import { getReview } from "../../store/reviews";
+import loading from '../../images/loading.gif';
+
 
 const ReviewEditForm = () => {
     const {reviewId} = useParams();
@@ -20,18 +22,29 @@ const ReviewEditForm = () => {
 
 
     useEffect(()=>{
-        dispatch(fetchReview(reviewId)).then(()=>setInitialized(true));
-    }, [reviewId])
+        dispatch(fetchReview(reviewId))
+            .then(()=> setInitialized(true))
+            .catch(()=> setInitialized(true));
+    }, [dispatch])
     
     const review = useSelector(getReview(reviewId));
+
+   
 
     const [title, setTitle] = useState(review?.title);
     const [body, setBody] = useState(review?.body);
     const [rating, setRating] = useState(review?.rating);
 
-    if(!review){
-        return null;
+    if(!initialized){
+        return <div id="loadingDiv">
+            <img alt="loadingIcon" id="loadingIcon" src={loading}></img>
+        </div>
     }
+
+    if(!review || review.userId !== sessionUser.id){
+        return <NotFound />
+    }
+    
 
     const userId = review.userId;
     const productId = review.productId;
