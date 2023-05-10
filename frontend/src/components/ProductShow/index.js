@@ -46,11 +46,7 @@ const ProductShow = () => {
         reviewsAverage = reviewsSum / reviewsCount;
     }
 
-    if(productId > 50 || productId < 0) {
-        return <NotFound/>
-    }
-
-    if(!product) return null;
+    if(!product) return <NotFound />;
 
     
 
