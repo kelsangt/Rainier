@@ -50,6 +50,28 @@ const ProductShow = () => {
         reviewsAverage = reviewsSum / reviewsCount;
     }
 
+    let stars = [];
+
+    for(let i = 0; i < Math.floor(reviewsAverage); i++){
+        stars.push(<i id="starIcon" className="fa fa-star"></i>);
+    }
+
+    let averageDifference = reviewsAverage - Math.floor(reviewsAverage);
+
+    if(averageDifference !== 0){
+        for(let j = 0; j < Math.ceil(averageDifference); j++) {
+            stars.push(<i id="starIconHalf" className="fa fa-star-half-o"></i>)
+        }
+    }
+
+    let averageRemainder = 5 - Math.ceil(reviewsAverage);
+
+    if(averageRemainder > 0 ){
+        for(let k = 0; k < Math.ceil(averageRemainder); k++) {
+            stars.push(<i id="starIconEmpty" className="fa fa-star-o"></i>)
+        }
+    }
+
     if(!initialized){
         return <div id="loadingDiv">
             <img alt="loadingIcon" id="loadingIcon" src={loading}></img>
@@ -119,8 +141,10 @@ const ProductShow = () => {
                 </div>
                 <div id="descriptionDiv">
                     <h1 id="productTitle">{product.name}</h1>
+                    
                     <div id="ratingsDiv">
                         <h1 id="productRatings">{reviewsAverage}</h1>
+                        <h1 id="stars">{stars}</h1>
                         <h1 id="reviewsAmountH1">{reviewsAmount}</h1>
                     </div>
                     <div id="lineSeparator"></div>

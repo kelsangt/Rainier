@@ -18,6 +18,30 @@ const SearchShowItem = (({product}) => {
         
         reviewsAverage = reviewsSum / reviewsCount;
     } 
+
+    let stars = [];
+
+    for(let i = 0; i < Math.floor(reviewsAverage); i++){
+        stars.push(<i id="starIcon" className="fa fa-star"></i>);
+    }
+
+    let averageDifference = reviewsAverage - Math.floor(reviewsAverage);
+
+    if(averageDifference !== 0){
+        for(let j = 0; j < Math.ceil(averageDifference); j++) {
+            stars.push(<i id="starIconHalf" className="fa fa-star-half-o"></i>)
+        }
+    }
+
+    let averageRemainder = 5 - Math.ceil(reviewsAverage);
+
+    if(averageRemainder > 0 ){
+        for(let k = 0; k < Math.ceil(averageRemainder); k++) {
+            stars.push(<i id="starIconEmpty" className="fa fa-star-o"></i>)
+        }
+    }
+
+
     return (
         <div id="productIndex" key={product.id}>
             <a id="productShowAnchor" href={`/products/${product.id}`}>
@@ -31,7 +55,7 @@ const SearchShowItem = (({product}) => {
                 </h1>
             </a>
             <h1 id="indexProductReview">
-                <h1>{reviewsAverage} </h1>
+                <h1>{stars}</h1>
                 
                 <h1 id="reviewsCountH1">{reviewsCount}</h1>
             </h1>

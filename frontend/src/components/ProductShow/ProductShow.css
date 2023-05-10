@@ -44,7 +44,7 @@
 
 #productRatings {
     font-family: Amazon Ember Regular;
-    color: #ffa41c;
+    color: black;
     margin-bottom: 10px;
 }
 
@@ -222,3 +222,21 @@ a {
     font-family: Amazon Ember Regular;
     color: #63a5b1;
 }
+
+#stars {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#starIcon {
+    color: #ffa41c;
+}
+
+#starIconHalf {
+    color: #ffa41c;
+}
+
+#starIconEmpty {
+    color: #ffa41c;
+}
+
