@@ -28,16 +28,16 @@ const ReviewEditForm = () => {
     const review = useSelector(getReview(reviewId));
 
    
-
-    const [title, setTitle] = useState(review?.title);
-    const [body, setBody] = useState(review?.body);
-    const [rating, setRating] = useState(review?.rating);
+    const [title, setTitle] = useState();
+    const [body, setBody] = useState();
+    const [rating, setRating] = useState();
 
     if(!initialized){
         return <div id="loadingDiv">
             <img alt="loadingIcon" id="loadingIcon" src={loading}></img>
         </div>
     }
+
 
     if(!review || review.userId !== sessionUser.id){
         return <NotFound />
@@ -72,7 +72,7 @@ const ReviewEditForm = () => {
                 <div id="reviewLine"></div>
                 <label className="reviewLabel">
                     Rating
-                    <select className="reviewInput" value={rating} onChange={(e) => setRating(e.target.value)} required>
+                    <select className="reviewInput" defaultValue = {review.rating} value={rating} onChange={(e) => setRating(e.target.value)} required>
                         <option value="" disabled selected>Please select a rating</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -87,6 +87,7 @@ const ReviewEditForm = () => {
                     <input 
                     className="reviewInput"
                     type="string"
+                    defaultValue = {review.title}
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     placeholder="What's most important to know?"
@@ -99,6 +100,7 @@ const ReviewEditForm = () => {
                     <textarea 
                     id="reviewBody"
                     type="text"
+                    defaultValue = {review.body}
                     value={body}
                     onChange={(e) => setBody(e.target.value)}
                     placeholder="What did you like or dislike? What did you use this product for?"
