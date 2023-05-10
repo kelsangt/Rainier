@@ -40,14 +40,19 @@ const ProductShow = () => {
                 reviewsCount += 1;
             } 
         }
-            
     })
 
     if(reviewsCount > 0){
         reviewsAverage = reviewsSum / reviewsCount;
     }
 
-    if(!product) return <NotFound />;
+    if(productId > 50 || productId < 0) {
+        return <NotFound/>
+    }
+
+    if(!product) return null;
+
+    
 
     const descriptionArray = product.description.split(".");
 

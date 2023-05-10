@@ -19,7 +19,7 @@ class Api::ReviewsController < ApplicationController
     def show 
         @review = Review.find_by(id: params[:id])
         if @review 
-            render 'api/reviews/show'
+            render '/api/reviews/show'
         else 
             render json: { errors: @review.errors.full_messages }, status: :unprocessable_entity
         end 
@@ -36,7 +36,7 @@ class Api::ReviewsController < ApplicationController
     def update 
         @review = Review.find(params[:id])
         if @review 
-            if @review.update(cart_item_params)
+            if @review.update(review_params)
                 render :show
             else 
                 render json: @review.errors.full_messages, status: :unprocessable_entity

@@ -1,72 +1,62 @@
 import { useDispatch, useSelector } from "react-redux";
-import { createReview } from "../../store/reviews";
+import { createReview, fetchAllReviews, fetchReview, updateReview } from "../../store/reviews";
 import { useState } from "react";
-import './ReviewCreationForm.css';
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import '../ReviewCreationForm/ReviewCreationForm.css';
+import { useLocation, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { getProduct } from "../../store/products";
 import { fetchProduct } from "../../store/products";
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import NotFound from "../NotFound";
+import { getReview } from "../../store/reviews";
 
-const ReviewCreationForm = () => {
-    const {productId} = useParams();
-    const dispatch = useDispatch();
-    const history = useHistory();
+const ReviewEditForm = () => {
+    const {reviewId} = useParams();
     const sessionUser = useSelector(state => state.session.user);
-    const [title, setTitle] = useState("");
-    const [body, setBody] = useState("");
-    const [rating, setRating] = useState("");
+    const dispatch = useDispatch();
     const [initialized, setInitialized] = useState(false);
-    // const [errors, setErrors] = useState([]);
+    const history = useHistory();
+   
+
 
     useEffect(()=>{
-        dispatch(fetchProduct(productId));
-    }, [])
+        dispatch(fetchReview(reviewId)).then(()=>setInitialized(true));
+    }, [reviewId])
+    
+    const review = useSelector(getReview(reviewId));
 
-    const product = useSelector(getProduct(productId));
+    const [title, setTitle] = useState(review?.title);
+    const [body, setBody] = useState(review?.body);
+    const [rating, setRating] = useState(review?.rating);
 
-    if (!sessionUser) {
-        return <NotFound />
-    }
-
-    if (!product){
+    if(!review){
         return null;
     }
 
+    const userId = review.userId;
+    const productId = review.productId;
+    const id = review.id;
 
-    const userId = sessionUser.id;
 
-    const formHandler = (e) => {
+
+    const updateHandler = (e) => {
         e.preventDefault();
-        // setErrors([]);
-        dispatch(createReview({title, body, rating, userId, productId}));
+        dispatch(updateReview({id, title, body, rating, userId, productId}));
         history.push(`/products/${productId}`);
-            // .catch(async (res) => {
-            //     let data;
-            //     try {
-            //         data = await res.clone().json();
-            //     } catch {
-            //         data = await res.text(); 
-            //     }
-            //     if (data?.errors) setErrors(data.errors);
-            //     else if (data) setErrors([data]);
-            //     else setErrors([res.statusText]);
-            // });
     }
 
     return (
         <div id="reviewCreationFormMain">
-            <form id="reviewForm" onSubmit={formHandler}>
+            <form id="reviewForm" onSubmit={updateHandler}>
                 {/* <div>
                     <ul>
                         {errors.map(error => <li id="loginError" key={error}>{error}</li>)}
                     </ul>
                 </div> */}
-                <div id="createReviewMain">Create Review</div>
+                <div id="createReviewMain">Edit Review</div>
                 <div id="productInfo">
-                    <img id="reviewImage" alt="reviewimage" src={product.photoUrl}></img>
-                    <p id="productName">{product.name}</p>
+                    <img id="reviewImage" alt="reviewimage" src={review.photoUrl}></img>
+                    <p id="productName">{review.name}</p>
                 </div>
                 <div id="reviewLine"></div>
                 <label className="reviewLabel">
@@ -112,4 +102,4 @@ const ReviewCreationForm = () => {
     )
 }
 
-export default ReviewCreationForm;
+export default ReviewEditForm;

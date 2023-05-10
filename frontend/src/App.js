@@ -11,6 +11,7 @@ import NotFound from './components/NotFound';
 import Search from './components/SearchShowPage/SearchShowPage';
 import Footer from './components/Footer';
 import ReviewCreationForm from './components/ReviewCreationForm';
+import ReviewEditForm from './components/ReviewEditForm';
 
 function App() {
   return (
@@ -34,6 +35,11 @@ function App() {
         <Route exact path="/createReview/:productId">
           <Navigation />
           <ReviewCreationForm />
+          <Footer />
+        </Route>
+        <Route exact path="/editReview/:reviewId">
+          <Navigation />
+          <ReviewEditForm />
           <Footer />
         </Route>
         <Route path="/cart">

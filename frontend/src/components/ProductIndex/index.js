@@ -4,21 +4,22 @@ import { fetchAllProducts } from '../../store/products';
 import ProductIndexItem from './ProductIndexItem';
 import './ProductIndex.css';
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
-import NotFound from '../NotFound';
+
 import { fetchAllReviews } from '../../store/reviews';
+import NotFound from '../NotFound';
 
 const ProductIndex = props => {
     const products = useSelector(state => Object.values(state.products))
     const dispatch = useDispatch();
 
     useEffect(()=>{
-        dispatch(fetchAllProducts())
+        dispatch(fetchAllProducts());
     }, [dispatch]);
 
     const { categoryName } = useParams();
 
     if(categoryName !== "toysgames" && categoryName !== "fashion" && categoryName !== "books" && categoryName !== "electronics" && categoryName !== "homegoods" && categoryName !== "all"){
-        return <NotFound />;
+        return <NotFound />
     }
 
    
