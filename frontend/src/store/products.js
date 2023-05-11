@@ -23,6 +23,10 @@ export const getProduct = productId => state => {
     return state?.products ? state.products[productId] : null;
 }
 
+export const getProducts = state => {
+    return state?.products ? Object.values(state.products) : [];
+}
+
 export const fetchAllProducts = () => async (dispatch) => {
     const res = await csrfFetch('/api/products')
 

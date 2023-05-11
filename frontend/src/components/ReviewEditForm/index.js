@@ -66,8 +66,8 @@ const ReviewEditForm = () => {
                 </div> */}
                 <div id="createReviewMain">Edit Review</div>
                 <div id="productInfo">
-                    <img id="reviewImage" alt="reviewimage" src={review.photoUrl}></img>
-                    <p id="productName">{review.name}</p>
+                    <img id="reviewImage" alt="reviewimage" src={review.product.photoUrl}></img>
+                    <p id="productName">{review.product.name}</p>
                 </div>
                 <div id="reviewLine"></div>
                 <label className="reviewLabel">
