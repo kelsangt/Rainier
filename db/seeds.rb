@@ -919,12 +919,14 @@ require "open-uri"
       product_id: "1"
     )
 
+    puts "Creating Reviews"
+
     # review1 = Review.create!(
     #   title: " ",
     #   body: " ",
     #   rating: " ",
-    #   userId: " ",
-    #   productId: " "
+    #   user_id: " ",
+    #   product_id: " "
     # )
 
     # example = Product.create!(
