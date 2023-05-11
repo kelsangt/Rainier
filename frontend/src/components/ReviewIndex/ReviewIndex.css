@@ -1,5 +1,5 @@
 #reviewsMainContainer {
-    background-color: aqua;
+    background-color: wheat;
     display: flex;
     /* justify-content: center; */
     align-items: center;
@@ -12,5 +12,6 @@
     margin-bottom: 50px;
     width: 50vw;
     padding-left: 10vw;
-    background-color: wheat;
+    background-color: white;
+    border: 1px solid gray;
 }
