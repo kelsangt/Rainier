@@ -1,17 +1,18 @@
 #reviewsMainContainer {
-    background-color: wheat;
+    /* background-color: wheat; */
     display: flex;
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     width: 100vw;
     font-family: Amazon Ember Regular;
+    margin-top: 20px;
 }
 
 #review {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     width: 50vw;
     padding-left: 10vw;
     background-color: white;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
 }

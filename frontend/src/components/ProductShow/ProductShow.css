@@ -240,3 +240,63 @@ a {
     color: #ffa41c;
 }
 
+#reviewsUpperDiv {
+    margin-top: 80px;
+    display: flex;
+    font-family: Amazon Ember Regular;
+    /* background-color: red; */
+    width: 50vw;
+}
+
+#customerReviewsDiv {
+    width: 50vw;
+    font-size: 24px;
+    margin-left: 5vw;
+}
+
+#reviewEntry {
+    display: flex;
+    width: 50vw;
+    /* background-color: rebeccapurple; */
+    align-items: start;
+    flex-direction: column;
+}
+#shareYourThoughts {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#accountCreation {
+    border-radius: 7px;
+    background-color: #ffffff;
+    box-shadow: 1px 3px 3px #e9ecec;
+    border: 1px solid #d5d9d9;
+}
+
+#customerRatingsDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+#customerRatingsInnerDiv {
+    display: flex;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#customerStarsH1 {
+    margin-right: 10px;
+}
+
+#customerReviewsAmountH1 {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#separatorLine {
+    width: 95vw;
+    background-color: #bbbfbf;
+    height: 1px;
+    margin-top: 50px;
+}
+

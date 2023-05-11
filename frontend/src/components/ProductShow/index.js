@@ -202,9 +202,27 @@ const ProductShow = () => {
                 </div>
             
             </div>
-            <div id="createReviewDiv">
-                {reviewForm}
+            <div id="separatorLine"></div>
+            <div id="reviewsUpperDiv">
+                <div id="customerReviewsDiv">
+                    <h1>Customer Reviews</h1>
+                    <div id="customerRatingsDiv">
+                        <div id="customerRatingsInnerDiv">
+                            <h1 id="customerStarsH1">{stars}</h1>
+                            <h1 id="customerProductRatings">{reviewsAverage} out of 5</h1>
+                        </div>
+                        <h1 id="customerReviewsAmountH1">{reviewsAmount}</h1>
+                    </div>
+                </div>
+                <div id="reviewEntry">
+                    <h1>Review this product</h1>
+                    <h2 id="shareYourThoughts">Share your thoughts with other customers</h2>
+                    <div id="createReviewDiv">
+                        {reviewForm}
+                    </div>
+                </div>
             </div>
+            <div id="separatorLine"></div>
             <ReviewIndex product={product}/>
         </>
     )
