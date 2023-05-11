@@ -27,9 +27,9 @@ require "open-uri"
     )
 
     User.create!(
-      name: 'Cat', 
-      email: 'cat@cat.net', 
-      password: 'catword'
+      name: 'Thomas Matthews', 
+      email: 'thomasm120@gmail.com', 
+      password: 'thomas1'
     )
   
     # 10.times do 
@@ -900,6 +900,32 @@ require "open-uri"
       io: URI.open("https://rainier-seeds-dev.s3.amazonaws.com/waterBottle.png"), 
       filename: "waterBottle.png"
     )
+
+    # Reviews
+
+    review1 = Review.create!(
+      title: "Great",
+      body: "The best purchase I have made so far. Item arrived very quickly!",
+      rating: "5",
+      user_id: "1",
+      product_id: "1"
+    )
+
+    review2 = Review.create!(
+      title: "Awesome",
+      body: "Would have given it 5/5 stars, but due to shipping delays I had to remove a star. Still a great purchase!",
+      rating: "4",
+      user_id: "2",
+      product_id: "1"
+    )
+
+    # review1 = Review.create!(
+    #   title: " ",
+    #   body: " ",
+    #   rating: " ",
+    #   userId: " ",
+    #   productId: " "
+    # )
 
     # example = Product.create!(
     #   name: " ", 
