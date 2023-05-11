@@ -73,3 +73,11 @@
     box-shadow: 1px 3px 3px #e9ecec;
     cursor: pointer;
 }
+
+#editReviewButton:hover {
+    background-color: #f4f2f2;
+}
+
+#deleteReviewButton:hover {
+    background-color: #f4f2f2;
+}
