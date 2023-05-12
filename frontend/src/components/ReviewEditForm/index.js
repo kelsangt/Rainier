@@ -18,7 +18,6 @@ const ReviewEditForm = () => {
     const history = useHistory();
    
 
-
     useEffect(()=>{
         dispatch(fetchReview(reviewId))
             .then(()=> setInitialized(true))
@@ -27,7 +26,6 @@ const ReviewEditForm = () => {
     
     const review = useSelector(getReview(reviewId));
 
-   
     const [title, setTitle] = useState();
     const [body, setBody] = useState();
     const [rating, setRating] = useState();
@@ -38,17 +36,13 @@ const ReviewEditForm = () => {
         </div>
     }
 
-
     if(!sessionUser || !review || review.userId !== sessionUser.id){
         return <NotFound />
     }
     
-
     const userId = review.userId;
     const productId = review.productId;
     const id = review.id;
-
-
 
     const updateHandler = (e) => {
         e.preventDefault();
