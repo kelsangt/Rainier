@@ -244,7 +244,6 @@ a {
     margin-top: 80px;
     display: flex;
     font-family: Amazon Ember Regular;
-    /* background-color: red; */
     width: 50vw;
 }
 
@@ -257,8 +256,7 @@ a {
 #reviewEntry {
     display: flex;
     width: 50vw;
-    /* background-color: rebeccapurple; */
-    align-items: start;
+    align-items: flex-start;
     flex-direction: column;
 }
 #shareYourThoughts {
