@@ -39,7 +39,7 @@ const ReviewEditForm = () => {
     }
 
 
-    if(!review || review.userId !== sessionUser.id){
+    if(!sessionUser || !review || review.userId !== sessionUser.id){
         return <NotFound />
     }
     

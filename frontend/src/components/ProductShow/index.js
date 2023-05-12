@@ -27,6 +27,7 @@ const ProductShow = () => {
     let reviewsSum = 0;
     let reviewsCount = 0;
     let reviewsAverage = 0;
+    let hasReview = false;
 
     useEffect(()=>{
         dispatch(fetchProduct(productId))
@@ -43,6 +44,11 @@ const ProductShow = () => {
                 reviewsSum += review.rating;
                 reviewsCount += 1;
             } 
+            if(sessionUser){
+                if (review.productId === product.id && review.userId === sessionUser.id){
+                    hasReview = true;
+                }
+            }
         }
     })
 
@@ -118,13 +124,21 @@ const ProductShow = () => {
 
     let reviewForm;
 
-    if(sessionUser){
+    if(sessionUser && !hasReview){
         reviewForm = (
             <a href={`/createReview/${product.id}`}>
                 <button id="accountCreation">Write a customer review</button>
             </a>
         )
-    } else {
+    } 
+    else if (sessionUser) {
+        reviewForm = (
+            <a href={`/products/${product.id}`}>
+                <button id="accountCreation">Write a customer review</button>
+            </a>
+        )
+    }
+    else {
         reviewForm = (
             <a href={`/login`}>
                 <button id="accountCreation">Write a customer review</button>
