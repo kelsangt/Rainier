@@ -31,6 +31,42 @@ require "open-uri"
       email: 'thomasm120@gmail.com', 
       password: 'thomas1'
     )
+
+    User.create!(
+      name: 'Kevin Liu', 
+      email: 'kliu2650@gmail.com', 
+      password: 'kliu1'
+    )
+
+    User.create!(
+      name: 'Kathy Mendez', 
+      email: 'kmendez121@gmail.com', 
+      password: 'kmendez'
+    )
+
+    User.create!(
+      name: 'Steven Choi', 
+      email: 'schoi50@gmail.com', 
+      password: 'schoi1'
+    )
+
+    User.create!(
+      name: 'Sarah Weiss', 
+      email: 'sweiss09@gmail.com', 
+      password: 'sweiss1'
+    )
+
+    User.create!(
+      name: 'Jose Castillo', 
+      email: 'jcastillo95@gmail.com', 
+      password: 'jcastillo1'
+    )
+
+    User.create!(
+      name: 'Daniel Westfield', 
+      email: 'dwestfield@gmail.com', 
+      password: 'dwestfield1'
+    )
   
     # 10.times do 
     #   User.create!({
