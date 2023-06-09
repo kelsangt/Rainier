@@ -35,7 +35,7 @@ require "open-uri"
     User.create!(
       name: 'Kevin Liu', 
       email: 'kliu2650@gmail.com', 
-      password: 'kliu1'
+      password: 'kliu123'
     )
 
     User.create!(
@@ -47,7 +47,7 @@ require "open-uri"
     User.create!(
       name: 'Steven Choi', 
       email: 'schoi50@gmail.com', 
-      password: 'schoi1'
+      password: 'schoi11'
     )
 
     User.create!(
@@ -955,6 +955,7 @@ require "open-uri"
       product_id: "1"
     )
 
+    
     puts "Creating Reviews"
 
     # review1 = Review.create!(
