@@ -7,8 +7,6 @@ import LoginModal from '../LoginModal/index'
 import ProfileModal from '../ProfileModal/index'
 import SearchBar from './SearchBar';
 import './Navigation.css';
-import { fetchAllCartItems } from '../../store/cart_items';
-import { useEffect } from 'react';
 
 
 function Navigation() {
@@ -24,20 +22,15 @@ function Navigation() {
     }
   })
 
-//   useEffect(()=>{
-//     dispatch(fetchAllCartItems)
-//   }, [dispatch]);
 
   let links;
   if (sessionUser) {
     links = (
         <>
         <ProfileModal user={sessionUser}/>
-        {/* <NavLink to="/" style={{textDecoration: 'none'}}> */}
             <div id="returnsOrders">
                 <p>Returns <br></br> & Orders</p>
             </div>
-        {/* </NavLink> */}
         <NavLink to="/cart" style={{textDecoration: 'none'}}>
             <div id="shoppingCart">
                 <div id="innerCartDiv">
@@ -53,11 +46,9 @@ function Navigation() {
     links = (
         <>
         <LoginModal />
-        {/* <NavLink to="/login" style={{textDecoration: 'none'}}> */}
             <div id="returnsOrders">
                 <p>Returns <br></br> & Orders</p>
             </div>
-        {/* </NavLink> */}
         <NavLink to="/login" style={{textDecoration: 'none'}}>
             <div id="shoppingCart">
                 <div id="innerCartDiv">
@@ -90,16 +81,6 @@ function Navigation() {
                 <img src={rainierLogo} alt="rainierlogo" className="rainierlogo" /> 
             </NavLink>
         </div>
-        {/* <div id="categoryDiv">
-            <select name="categoriesSelector" id="categoriesSelector">
-                <option value="all">All</option> 
-                <option value="toysGames">Toys & Games</option> 
-                <option value="clothing">Clothing</option> 
-                <option value="books">Books</option> 
-                <option value="electronics">Electronics</option> 
-                <option value="homegoods">Home Goods</option> 
-            </select>
-        </div> */}
         <SearchBar />
         {links}
     </div>

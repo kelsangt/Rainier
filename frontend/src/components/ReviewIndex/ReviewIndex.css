@@ -1,7 +1,5 @@
 #reviewsMainContainer {
-    /* background-color: wheat; */
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     width: 100vw;
@@ -14,5 +12,4 @@
     width: 50vw;
     padding-left: 10vw;
     background-color: white;
-    /* border: 1px solid gray; */
 }

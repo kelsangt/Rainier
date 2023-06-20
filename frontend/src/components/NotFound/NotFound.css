@@ -1,9 +1,7 @@
 #notFoundDiv {
     display: flex;
     justify-content: center;
-    /* align-content: center; */
     flex-wrap: wrap;
-    /* background-color: aqua; */
     width: 100%;
     min-height: 1200px;
 }
@@ -13,7 +11,6 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 100px;
-    /* background-color: purple; */
     width: 50%;
 }
 

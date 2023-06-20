@@ -79,7 +79,6 @@
     font-size: 28px;
     padding-bottom: 20px;
     margin-top: 20px;
-    /* margin: 20px; */
 }
 
 .rainierlogo2 {
@@ -111,10 +110,8 @@
     font-family: Amazon Ember Regular;
     font-weight: lighter;
     color: black;
-    /* background-color: #e7e9ec; */
     width: 327px;
     height: 29px;
-    /* border-color: #adb1b8 #a2a6ac #8d9096; */
     border: 1px solid gray;
     padding-left: 11px;
     padding-right: 10px;

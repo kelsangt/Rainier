@@ -1,9 +1,7 @@
 #cartItemIndex {
     display: flex;
     justify-content: center;
-    
     width: 1000px
-    /* background-color: orange; */
 }
 
 #indexCartItemName {
@@ -37,7 +35,6 @@
 
 #infoDiv {
     display: flex;
-    /* background-color: aqua; */
     width: 400px;
     position: relative;
     font-family: Amazon Ember Regular;

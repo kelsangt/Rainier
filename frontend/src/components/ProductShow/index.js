@@ -8,9 +8,7 @@ import { createCartItem } from "../../store/cart_items";
 import { useState } from "react";
 import NotFound from '../NotFound/index';
 import ReviewIndex from "../ReviewIndex";
-import ReviewCreationForm from "../ReviewCreationForm";
 import { fetchAllReviews } from "../../store/reviews";
-import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import loading from '../../images/loading.gif';
 
 

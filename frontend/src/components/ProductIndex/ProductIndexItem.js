@@ -1,19 +1,12 @@
-// import { useState } from "react"
 import './ProductIndexItem.css'
 import primeLogo from '../../images/primeLogo.png'
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import NotFound from '../NotFound/index';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { fetchAllReviews } from '../../store/reviews';
+import { useDispatch } from 'react-redux';
 
 const ProductIndexItem = (({product}) => {
     const { categoryName } = useParams();
     const dispatch = useDispatch();
-
-    // useEffect(()=>{
-    //     // dispatch(fetchAllReviews());
-    // }, [dispatch])
 
     let reviewsAverage = 0;
 

@@ -9,7 +9,6 @@ const MainPage = props => {
 
     return (
         <>
-        {/* <div id="fillerDiv"></div> */}
         <div id="bannerDiv">
             <img src={earthDayImage} alt="earthDayImage" className="earthDayImage" /> 
         </div>

@@ -2,12 +2,10 @@ import { useDispatch, useSelector } from "react-redux";
 import './ReviewIndexItem.css';
 import userIcon from '../../images/userIcon.png'
 import { deleteReview } from "../../store/reviews";
-// import { getProduct } from "../../store/products";
 
 const ReviewIndexItem = ({review}) => {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
-    // const product = useSelector(getProduct(review.productId));
   
 
     const handleReviewDelete = (e) => {

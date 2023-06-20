@@ -1,29 +1,3 @@
-/* #cartItemsIndexDiv {
-    display: flex;
-    justify-content: center;
-    background-color: aqua;
-    width: 100%;
-}
-
-#cartItemsIndexList {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-color: wheat;
-    font-family: Amazon Ember Regular;
-    width: 100%;
-}
-
-#shoppingCart {
-    font-size: 28px;
-}
-
-#cartItem {
-    width: 100%;
-} */
-
 #cartItemsIndexDiv {
     display: flex;
     justify-content: center;
@@ -33,18 +7,13 @@
 
 #cartItemsIndexDivInner {
     display: flex;
-    /* justify-content: center; */
     background-color: white;
     padding: 30px;
     min-height: 1500px;
-    /* height: 1000px; */
     margin-top: 30px;
-   
-    /* width: 80%; */
 }
 
 #titleAndPrice {
-    /* display: flex; */
     width: 1000px;
 }
 
@@ -66,7 +35,6 @@
     justify-content: right;
     font-family: Amazon Ember Regular;
     color: #565959;
-    /* background-color: yellow; */
     border-bottom: 1px solid #dddddd;
     padding-bottom: 5px;
     margin-bottom: 10px;
@@ -131,7 +99,6 @@
     justify-content: center;
     width: 60%;
     height: 100px;
-    /* background-color: wheat; */
     margin-top: 60px;
     margin-left: 40px;
     font-size: 24px;

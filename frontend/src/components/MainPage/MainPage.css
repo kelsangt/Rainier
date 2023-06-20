@@ -7,8 +7,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* background-color: red; */
-    /* width: 80%; */
     min-height: 1200px;
     z-index: 1;
 }

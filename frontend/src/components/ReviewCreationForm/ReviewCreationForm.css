@@ -1,16 +1,9 @@
 #reviewCreationFormMain {
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     height: 800px;
-    /* width: 400px;
-     */
     width: 50vw;
     margin-top: 10vh;
-    /* flex-wrap: wrap; */
-    /* flex-direction: row; */
-    /* background-color: wheat; */
-    /* border: 1px solid black; */
     font-family: Amazon Ember Regular;
 }
 
@@ -44,11 +37,8 @@
 
 #reviewBody {
     display: flex;
-    /* align-items: center; */
     margin-top: 10px;
     height: 100px;
-    /* width: 200px; */
-    /* width: 1000px; */
     font-family: Amazon Ember Regular;
 }
 
@@ -76,7 +66,6 @@
     margin-top: 10vh;
     height: 800px;
     width: 100%;
-    /* background-color: aqua; */
 }
 
 #loadingIcon {

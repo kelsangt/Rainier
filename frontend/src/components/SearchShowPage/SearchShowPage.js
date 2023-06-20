@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import ItemsNotFound from "../ItemsNotFound";
-import { fetchAllReviews } from "../../store/reviews";
 import SearchShowItem from "./SearchShowItem";
 import { useState } from "react";
 import loading from '../../images/loading.gif';

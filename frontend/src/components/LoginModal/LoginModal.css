@@ -17,17 +17,6 @@
     margin-top: -8px;
 }
 
-/* #modalOpenedDiv {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    background-color: white;
-    width: 300px;
-    height: 300px;
-    top: -260px;
-    left: 500px;
-} */
 
 #signInEntryButtonContainer {
     z-index: 100;
